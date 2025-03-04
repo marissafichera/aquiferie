@@ -1,0 +1,26 @@
+Description,Question
+Aquifer(s) name,What is the name of the aquifer(s) focused on in the study?
+Aquifer boundary definition,"Did the study define the aquifer boundaries in 2D, 3D, or neither?"
+Data used to define aquifer boundary,What data was used to define the aquifer boundaries?
+Digital product of aquifer boundary,Did the study publish a digital product that defined the aquifer boundaries?
+Hydrostratigraphy,Did the study define the hydrostratigraphy of the subsurface?
+Data used to define hydrostratigraphy,What data was used to define the hydrostratigraphy?
+Data sources - hydrostratigraphy,What were the hydrostratigraphy data sources?
+Structural controls,Did the study define subsurface structural controls on groundwater flow?
+Data used to define structural controls,What data was used to define the structural controls?
+Data sources - structural controls,What were the associated data sources?
+Recharge and discharge zones,Did the study define recharge and discharge zones?
+Data used to define recharge and discharge zones,What data was used to define recharge and discharge zones?
+Recharge and discharge rates,Did the study quantify recharge and discharge rates or amounts?
+Data used to define recharge and discharge rates,What data was used to quantify recharge and discharge rates or amounts?
+Water table elevation or depth to water map,Did the study produce a water table elevation map or a depth to water map?
+Data used to create WTE or DTW map,What data was used to create the water table elevation map or depth to water map?
+WTE DTW map data collected or compiled,Was the data collected for the study or compiled from other sources?
+WTE DTW data sources,What were the data sources used to create the water table elevation map or depth to water map?
+Water quality data,Does the study include water quality data?
+Water quality data collected or compiled,Was the data collected for the study or compiled from other sources?
+Water quality data sources,What were the water quality data sources?
+Hydrogeologic properties,"Does the study report hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, or transmissivity?"
+Hydrogeo properties collected or compiled,Were properties determined for the study or compiled from other sources?
+Hydrogeo properties data sources,What were the hydrogeologic properties data sources?
+Future work recommendations,What are the future work recommendations for this study?

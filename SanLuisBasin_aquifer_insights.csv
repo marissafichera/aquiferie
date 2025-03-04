@@ -1,0 +1,93 @@
+,0
+Report Name,reports\report_0.pdf
+Aquifer(s) name,"The study focuses on the basin-fill aquifers, which are referred to as the Santa Fe Group sediments."
+Aquifer boundary definition,"The study defined the aquifer boundaries in 2D, as it includes a geologic map, a subsurface bedrock map, geologic cross sections, and fence diagrams, along with a water table elevation map. These elements provide a two-dimensional representation of the aquifer's extent and characteristics."
+Data used to define aquifer boundary,"The aquifer boundaries in the Arroyo Seco Area were defined using a combination of geologic, hydrologic, and geophysical data. Specifically, the study utilized:
+
+1. Geologic mapping, including existing maps and new fieldwork, to understand the distribution of geologic units and faults that influence groundwater flow.
+2. Subsurface interpretations from well logs, including the identification of basalt and bedrock layers, which helped delineate the extent and depth of aquifers.
+3. Water level measurements from 43 domestic wells, supplemented by data from Glorieta Geoscience, Inc. and the Taos Soil and Water Conservation District, to map the water table and identify groundwater flow patterns.
+4. Hydraulic properties of the aquifers, determined from aquifer tests, which provided insights into the transmissivity and hydraulic conductivity of the aquifer materials.
+5. Groundwater elevation contours, drawn from water level data, to visualize the flow directions and gradients, which helped in defining the extent of the aquifers.
+
+These data collectively contributed to the conceptual hydrogeologic model of the area, outlining the aquifer boundaries and the influence of geologic structures on groundwater flow."
+Digital product of aquifer boundary,"No, the study did not publish a digital product that defined the aquifer boundaries."
+Hydrostratigraphy,"The study did not establish a detailed hydrostratigraphy of the subsurface. Although several outcrops were examined to characterize the basin-fill sediments, poor and noncontinuous outcrop precluded subdividing the basin fill into mappable hydrostratigraphic units. The descriptions provided were useful for illustrating variations in clast composition, grain size, and sedimentary structures, which are typical of the subsurface stratigraphy, but a continuous stratigraphic correlation in the Santa Fe Group sediments could not be made from the available data."
+Data used to define hydrostratigraphy,"The hydrostratigraphy in the Arroyo Seco area was defined using a combination of geologic, hydrologic, and geophysical data. Specifically, the data included:
+
+1. Geologic Mapping: This involved fieldwork and the refinement of existing geologic maps, focusing on the orientation and characteristics of geological formations, particularly the sedimentary facies of the basin-fill sediments.
+
+2. Well Data: Water levels were measured in 43 domestic wells, and additional data was obtained from Glorieta Geoscience, Inc., and the Taos Soil and Water Conservation District. These data provided insights into the distribution and flow patterns of groundwater.
+
+3. Driller's Logs: These logs were used to understand the subsurface geology and to identify the depth and composition of aquifers and confining layers.
+
+4. Aquifer Tests: Hydraulic properties of the aquifers were estimated through aquifer tests conducted by Glorieta Geoscience, Inc., which provided values for transmissivity and hydraulic conductivity.
+
+5. Groundwater Elevation Contours: These were drawn based on water level measurements to understand groundwater flow patterns and interactions with surface water.
+
+6. Geophysical Data: Preliminary aeromagnetic data helped delineate subsurface features such as faults and buried bedrock benches that influence groundwater flow.
+
+These combined data sources allowed for the development of a conceptual hydrogeologic model that describes the groundwater system's behavior in response to geological controls and potential future changes."
+Data sources - hydrostratigraphy,"The hydrostratigraphy data sources in the report were compiled from existing geologic, hydrologic, and geophysical data, new geologic mapping, and water level measurements in 43 domestic wells. Additionally, hydrologic data were collected by Glorieta Geoscience, Inc., through aquifer tests and well logs, and the Taos Soil and Water Conservation District provided a well inventory assembled by Tony Benson and students from UNM-Taos."
+Structural controls,"Yes, the study defined subsurface structural controls on groundwater flow. It identified that the Sangre de Cristo fault, composed of several interlinked strands, and variations in aquifer transmissivity significantly affect groundwater flow patterns. The study also noted the influence of buried basalt and dacite, along with associated gravel layers, which comprise a high transmissivity unit affecting local groundwater flow, particularly near the Gates of Valdez. Additionally, the study highlighted the impact of faults on the vertical distribution of hydraulic head, leading to upward, downward, and horizontal groundwater flow paths near and across these faults."
+Data used to define structural controls,"The structural controls in the Arroyo Seco Area study were defined using several types of data:
+
+1. **Geologic Mapping**: Existing geologic maps by Lipman and Reed (1989) and Kelson (1986), along with unpublished mapping of Proterozoic rocks by J. Grambling, were used. Fieldwork in August 2004 involved reconnaissance and field checking of these maps, refining geologic contacts, and collecting additional orientation data, particularly on joints in crystalline rocks.
+
+2. **Subsurface Interpretations**: Well data and drillers' logs provided information on subsurface structures, including the presence of basalt and bedrock. Specific wells, such as ES-23 and DM-44, helped delineate the location of buried faults and bedrock benches.
+
+3. **Aeromagnetic Data**: Preliminary interpretations of aeromagnetic data by V. J. S. Grauch of the U.S. Geological Survey were used to identify buried discontinuities and fault zones.
+
+4. **Well Logs**: Examination of well logs for lithology and depth to basalt or bedrock helped in constructing subsurface structure maps and understanding fault geometries.
+
+These data collectively helped in defining the structural controls, such as the Sangre de Cristo fault system and its influence on groundwater flow patterns."
+Data sources - structural controls,"The associated data sources for the report include:
+
+1. Existing geologic, hydrologic, and geophysical data compiled by the author.
+2. New geologic mapping and water level measurements in 43 domestic wells conducted by Geoffrey C. Rawling.
+3. Data from the New Mexico Office of the State Engineer (NMOSE) Hydrology Bureau.
+4. Geologic maps and unpublished mapping from Lipman and Reed (1989), Kelson (1986), and J. Grambling.
+5. Well data and aquifer test reports provided by Glorieta Geoscience, Inc. (GGI).
+6. Well inventory assembled by Tony Benson and students from UNM-Taos.
+7. Tritium data collected by Drakos et al. (2004b).
+8. Historical snowfall and precipitation data for Taos and Red River, NM.
+9. Streamflow data for the Rio Hondo and Rio Lucero.
+10. Aeromagnetic data from the U.S. Geological Survey and Bankey et al. (2004).
+11. References cited in the report, including various geological and hydrological studies and reports."
+Recharge and discharge zones,"Yes, the study identified recharge and discharge zones in the Arroyo Seco area. Recharge zones were identified along streams and small drainages, particularly during the spring runoff period. The study noted that losing streams, such as the lower reaches of the Arroyo Seco, contribute to groundwater recharge. Discharge zones were identified in gaining reaches of streams, such as the upstream portion of the Rio Hondo, where groundwater flows into the stream. The study also highlighted the influence of mountain front recharge in the El Salto area."
+Data used to define recharge and discharge zones,"Recharge and discharge zones were defined using groundwater elevation contours and stream flow measurements. Groundwater elevation contours were drawn by hand using water level measurements from wells, and these contours were used to identify gaining and losing reaches of streams. Gaining streams have groundwater contours that bend upstream, indicating that groundwater is discharging into the stream, while losing streams have contours that bend downstream, indicating that the stream is losing water to the groundwater system. Additionally, stream flow measurements, such as those conducted by Drakos et al. (2004a), helped confirm the gaining or losing nature of streams. Recharge zones were identified where streams and small drainages were actively recharging groundwater, as indicated by local recharge mounds under drainages and unlined acequias."
+Recharge and discharge rates,"No, the study did not quantify specific recharge and discharge rates or amounts. It discussed the interaction of groundwater with surface water and identified areas of gaining and losing streams, but it did not provide specific numerical values for recharge and discharge rates."
+Data used to define recharge and discharge rates,"The report does not provide specific quantitative data on recharge and discharge rates or amounts. Instead, it relies on qualitative assessments and observations such as groundwater elevation contours, streamflow measurements, and tritium isotopic data to infer recharge and discharge behaviors. The report discusses gaining and losing stream reaches, recharge from surface water, and the impact of drought on recharge, but it does not include precise numerical values for recharge and discharge rates."
+Water table elevation or depth to water map,The study produced a water table elevation map.
+Data used to create WTE or DTW map,"The water table elevation map or depth to water map was created using data from three main sources: 
+
+1. **New Measurements**: Water levels were measured in 43 domestic wells in the Arroyo Seco area from mid-April to mid-May, 2005. These measurements were taken using a steel tape, and the wells were located using a handheld GPS unit.
+
+2. **Glorieta Geoscience, Inc. (GGI) Data**: GGI provided locations, water level data, and selected chemistry and aquifer test data for 7 wells that they collected in the course of their consulting work. Although some of this data was up to 10 years old, it was considered reliable.
+
+3. **Taos Soil and Water Conservation District Inventory**: This inventory, assembled by Tony Benson and students from UNM-Taos, included well locations accurately determined with handheld GPS units. However, the water elevation data from this source was derived from driller’s well records, which varied greatly in accuracy.
+
+These datasets were used to plot well locations and water level measurements using ArcGIS software, and groundwater elevation contours were drawn by hand and then digitized."
+WTE DTW map data collected or compiled,"The data for the study was both collected and compiled from other sources. The author, Geoffrey C. Rawling, compiled existing geologic, hydrologic, and geophysical data and also performed new geologic mapping and measured water levels in 43 domestic wells to improve the understanding of the groundwater system in the Arroyo Seco Area."
+WTE DTW data sources,"The data sources used to create the water table elevation map included:
+
+1. Water levels measured in 43 domestic wells in the Arroyo Seco area from mid-April to mid-May, 2005.
+2. Locations, water level data, and selected chemistry and aquifer test data provided by Glorieta Geoscience, Inc. (GGI) for 7 wells.
+3. Water level data from the Taos Soil and Water Conservation District well inventory assembled by Tony Benson and students from UNM-Taos."
+Water quality data,"No, the study does not include water quality data. It focuses on the geology, hydrogeology, groundwater flow patterns, and aquifer properties in the Arroyo Seco area but does not provide specific information on the chemical or quality aspects of the groundwater."
+Water quality data collected or compiled,"The data for the study was both collected and compiled from other sources. The author performed new geologic mapping, measured water levels in 43 domestic wells, and compiled existing geologic, hydrologic, and geophysical data to improve the understanding of the groundwater system in the Arroyo Seco area."
+Water quality data sources,"The water quality data sources mentioned in the report include data provided by Glorieta Geoscience, Inc. (GGI) from their consulting work, which included selected chemistry and aquifer test data for 7 wells. Additionally, the Taos Soil and Water Conservation District well inventory assembled by Tony Benson and students from UNM-Taos is mentioned, although the focus was primarily on water level data rather than water quality."
+Hydrogeologic properties,"Yes, the study reports on hydrogeologic properties such as transmissivity and hydraulic conductivity. Transmissivity values are provided for various wells, and hydraulic conductivity is estimated based on these transmissivity values and assumed saturated thicknesses. Specific values include transmissivity ranging from 34.5 to 550 feet²/day and hydraulic conductivity ranging from 0.4 to 9.2 feet/day."
+Hydrogeo properties collected or compiled,"The properties of the aquifers in the study area were determined by Glorieta Geoscience, Inc. (GGI) through aquifer tests conducted in the course of their groundwater consulting work in the northern Taos Valley. These tests provided estimates of hydraulic properties, such as transmissivity and hydraulic conductivity, for the basin-fill sediments."
+Hydrogeo properties data sources,"The hydrogeologic properties data sources in the report include:
+
+1. Water levels measured in 43 domestic wells in the Arroyo Seco area from mid-April to mid-May, 2005.
+2. Data provided by Glorieta Geoscience, Inc. (GGI), which included locations, water level data, selected chemistry, and aquifer test data for 7 wells.
+3. Water level data from the Taos Soil and Water Conservation District well inventory assembled by Tony Benson and students from UNM-Taos."
+Future work recommendations,"The future work recommendations for this study include:
+
+1. Collect more water level measurements in specific areas to better delineate groundwater contours and establish geologic controls on groundwater flow. These areas include the high-transmissivity area around the Gates of Valdez, north of the Rio Hondo, and along the mountain front north of the El Salto area.
+
+2. Conduct aquifer tests in the El Salto area and north of the Rio Hondo to determine the spatial variability of the aquifers.
+
+3. Continue monitoring a subset of both shallow and deep wells to document changes in water levels over time. This would help determine the relative impacts of variations in recharge and increased residential use on groundwater storage and water levels."
