@@ -17,7 +17,6 @@ import os
 # Configuration
 # OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # STUDYAREA = 'TularosaBasin'
-OPENAI_API_KEY = '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'
 # REPORTS_CSV = os.path.join(STUDYAREA, f"{STUDYAREA}_aquiferie_report_links.csv")  # CSV file containing report URLs
 DOWNLOAD_DIR = "reports"
 
