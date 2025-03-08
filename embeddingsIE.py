@@ -172,7 +172,8 @@ def extract_answers():
         for match in best_matches:
             print(f"Matched Section:\n{match['Text'][:500]}...\n")  # Show first 500 chars
 
-        results.append(ask_openai(q, best_matches[0]["Text"])
+        json_response = ask_openai(q, best_matches[0]["Text"])
+        results.append(json_response)
 
     df_results = pd.DataFrame(results)
     df_results.to_csv(OUTPUT_CSV, index=False)
