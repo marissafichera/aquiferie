@@ -1,6 +1,7 @@
 import os
 import requests
 import pdfplumber
+import pymupdf
 import openai
 import numpy as np
 import faiss
@@ -8,14 +9,18 @@ import json
 import pandas as pd
 
 # Configuration
-REPORTS_CSV = "report_links.csv"  # CSV file containing report URLs
+REPORTS_CSV = "aquiferie_report_links.csv"  # CSV file containing report URLs
+QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
-OUTPUT_CSV = "aquifer_extracted_insights.csv"
+OUTPUT_CSV = "aquifer_insights_embeddings.csv"
 EMBEDDING_MODEL = "text-embedding-3-small"
 
 # Ensure download directory exists
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
-client = openai.OpenAI()
+client = openai.OpenAI(api_key='sk-proj-UsTt8Y55T1eFBUvULb-lazHiCRdX'
+                               '-9VUNJa3UAxObyJYREltqifJPK3btItM7bLqm40AfQ1JQfT3BlbkFJNZza_UXf'
+                               '-xYhSg0xrR5WxF1ZsYnDz44irH3Sxyfm9kh9a-vrj3c4PcwymFfw7Ivi1SO26mVZMA')
+
 
 def download_pdf(url, filename):
     """Download PDF from a given URL."""
@@ -29,32 +34,39 @@ def download_pdf(url, filename):
         print(f"Failed to download: {url}")
         return None
 
+
 def extract_text_from_pdf(pdf_path):
-    """Extract text from a PDF file using pdfplumber."""
+    """Extract text from a PDF file using PyMuPDF (better handling for various PDF types)."""
     text = ""
-    with pdfplumber.open(pdf_path) as pdf:
-        for page in pdf.pages:
-            extracted_text = page.extract_text()
-            if extracted_text:
-                text += extracted_text + "\n"
+    try:
+        with pymupdf.open(pdf_path) as pdf:
+            for page in pdf:
+                text += page.get_text("text") + "\n"
+    except Exception as e:
+        print(f"Error extracting text from {pdf_path}: {e}")
+        return "Error extracting text from PDF."
     return text
+
 
 def get_embedding(text):
     """Generate an embedding for a given text."""
     response = client.embeddings.create(model=EMBEDDING_MODEL, input=text)
     return np.array(response.data[0].embedding)
 
+
 def split_text(text, chunk_size=500):
     """Split text into sections of approximately chunk_size words."""
     words = text.split()
-    return [" ".join(words[i:i+chunk_size]) for i in range(0, len(words), chunk_size)]
+    return [" ".join(words[i:i + chunk_size]) for i in range(0, len(words), chunk_size)]
 
-def process_reports():
-    df = pd.read_csv(REPORTS_CSV)
+
+def process_reports(limit=1):
+    df = pd.read_csv(REPORTS_CSV).head(limit)  # Limit to first 3 reports
     reports = []
     for idx, row in df.iterrows():
         url = row["report_url"]
-        pdf_filename = os.path.join(DOWNLOAD_DIR, f"report_{idx}.pdf")
+        region = row['SimpleRegion']
+        pdf_filename = os.path.join(DOWNLOAD_DIR, f"{region}_{idx}.pdf")
         if not os.path.exists(pdf_filename):
             pdf_filename = download_pdf(url, pdf_filename)
         if pdf_filename:
@@ -62,6 +74,7 @@ def process_reports():
             reports.append({"url": url, "text": text})
     print(f"Extracted text from {len(reports)} reports.")
     return reports
+
 
 def generate_embeddings(reports):
     embeddings, metadata = [], []
@@ -81,6 +94,7 @@ def generate_embeddings(reports):
         json.dump(metadata, f, indent=4)
     print("Embeddings generated and stored.")
 
+
 def search_relevant_section(query, top_k=1):
     """Find the most relevant report section based on a query."""
     index = faiss.read_index("report_embeddings.index")
@@ -90,6 +104,7 @@ def search_relevant_section(query, top_k=1):
     distances, indices = index.search(query_embedding, top_k)
     results = [metadata[i] for i in indices[0]]
     return results
+
 
 def ask_openai(query, relevant_text, url):
     """Extract insights using OpenAI from the most relevant section."""
@@ -103,32 +118,40 @@ def ask_openai(query, relevant_text, url):
     Provide a structured JSON response like this:
     {{
       "Query": "{query}",
-      "Report URL": "{url}",
       "Answer": "..."
     }}
     """
-    response = client.chat.completions.create(model="gpt-4-turbo", messages=[{"role": "user", "content": prompt}], temperature=0)
+    response = client.chat.completions.create(model="gpt-4-turbo", messages=[{"role": "user", "content": prompt}],
+                                              temperature=0)
+
+    # Log token usage
+    usage = response.usage
+    print(
+        f"Tokens used - Prompt: {usage.prompt_tokens}, Completion: {usage.completion_tokens}, Total: {usage.total_tokens}")
     try:
-        json_response = json.loads(response.choices[0].message.content)
+        json_response = response.choices[0].message.content
         return json_response
     except json.JSONDecodeError:
         return {"Query": query, "Report URL": url, "Answer": "Invalid response from OpenAI"}
 
+
+def load_questions():
+    """Load questions from a text file."""
+    with open(QUESTIONS_FILE, "r", encoding="utf-8") as file:
+        return [line.strip() for line in file.readlines() if line.strip()]
+
+
 def extract_answers():
-    questions = [
-        "What is the aquifer's depth?",
-        "What is the water quality?",
-        "What are the recharge rates?",
-        "Are there contamination risks?",
-        # Add remaining 22 questions...
-    ]
+    questions = load_questions()
     results = []
     for q in questions:
         best_match = search_relevant_section(q)[0]
-        results.append(ask_openai(q, best_match["Text"], best_match["URL"]))
+        json_response = ask_openai(q, best_match["Text"])
+
     df_results = pd.DataFrame(results)
-    df_results.to_csv(OUTPUT_CSV, index=False)
+    df_results.T.to_csv(OUTPUT_CSV, index=False)
     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
+
 
 if __name__ == "__main__":
     reports = process_reports()
