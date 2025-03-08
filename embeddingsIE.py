@@ -13,7 +13,7 @@ REPORTS_CSV = "aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
 OUTPUT_CSV = "aquifer_insights_embeddings.csv"
-EMBEDDING_MODEL = "text-embedding-3-small"
+EMBEDDING_MODEL = "text-embedding-3-large"
 
 # Ensure download directory exists
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
@@ -54,10 +54,13 @@ def get_embedding(text):
     return np.array(response.data[0].embedding)
 
 
-def split_text(text, chunk_size=500):
-    """Split text into sections of approximately chunk_size words."""
+def split_text(text, chunk_size=800, overlap=100):
+    """Split text into overlapping sections to improve retrieval."""
     words = text.split()
-    return [" ".join(words[i:i + chunk_size]) for i in range(0, len(words), chunk_size)]
+    chunks = []
+    for i in range(0, len(words), chunk_size - overlap):
+        chunks.append(" ".join(words[i:i+chunk_size]))
+    return chunks
 
 
 def process_reports(limit=1):
@@ -95,18 +98,22 @@ def generate_embeddings(reports):
     print("Embeddings generated and stored.")
 
 
-def search_relevant_section(query, top_k=1):
-    """Find the most relevant report section based on a query."""
+def search_relevant_section(query, top_k=3):
+    """Find the most relevant report sections for a query."""
     index = faiss.read_index("report_embeddings.index")
+
     with open("metadata.json", "r", encoding="utf-8") as f:
         metadata = json.load(f)
+
     query_embedding = get_embedding(query).astype('float32').reshape(1, -1)
+
     distances, indices = index.search(query_embedding, top_k)
+
     results = [metadata[i] for i in indices[0]]
-    return results
+    return results  # Return top_k sections instead of just one
 
 
-def ask_openai(query, relevant_text, url):
+def ask_openai(query, relevant_text):
     """Extract insights using OpenAI from the most relevant section."""
     prompt = f"""
     You are analyzing the following aquifer report section:
@@ -128,11 +135,11 @@ def ask_openai(query, relevant_text, url):
     usage = response.usage
     print(
         f"Tokens used - Prompt: {usage.prompt_tokens}, Completion: {usage.completion_tokens}, Total: {usage.total_tokens}")
-    try:
-        json_response = response.choices[0].message.content
-        return json_response
-    except json.JSONDecodeError:
-        return {"Query": query, "Report URL": url, "Answer": "Invalid response from OpenAI"}
+
+    json_response = response.choices[0].message.content
+    return json_response
+    # except json.JSONDecodeError:
+    #     return {"Query": query, "Answer": "Invalid response from OpenAI"}
 
 
 def load_questions():
@@ -147,9 +154,28 @@ def extract_answers():
     for q in questions:
         best_match = search_relevant_section(q)[0]
         json_response = ask_openai(q, best_match["Text"])
+        results.append(json_response)
 
     df_results = pd.DataFrame(results)
     df_results.T.to_csv(OUTPUT_CSV, index=False)
+    print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
+
+
+def extract_answers():
+    questions = load_questions()
+    results = []
+    for q in questions:
+        best_matches = search_relevant_section(q)
+
+        # Print retrieved sections for debugging
+        print(f"\nQuery: {q}")
+        for match in best_matches:
+            print(f"Matched Section:\n{match['Text'][:500]}...\n")  # Show first 500 chars
+
+        results.append(ask_openai(q, best_matches[0]["Text"])
+
+    df_results = pd.DataFrame(results)
+    df_results.to_csv(OUTPUT_CSV, index=False)
     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
 
 
