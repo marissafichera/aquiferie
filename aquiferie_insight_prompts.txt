@@ -1,25 +1,18 @@
-What is the web hyperlink to the study?
+What is the title of the study?
 What is the name of the aquifer(s) focused on in the study?
-Did the study define the aquifer’s boundaries in 2D, 3D, or neither?
-What data was used to define the aquifer’s boundaries?
-Did the study publish a digital product that defined the aquifer’s boundaries?Did the study define the hydrostratigraphy of the subsurface?
-What data was used to define the hydrostratigraphy?
-What were the hydrostratigraphy data sources?
-Did the study define subsurface structural controls on groundwater flow?
-What data was used to define the structural controls?
-What were the associated data sources?
-Did the study define recharge and discharge zones?
-What data was used to define recharge and discharge zones?
-Did the study quantify recharge and discharge rates or amounts?
-What data was used to quantify recharge and discharge rates or amounts?
+Did the study define the aquifer extent in 2D?
+Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?
+Did the study publish a digital product that defined the aquifer extent?
+Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?
+Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?
+Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?
+Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?
 Did the study produce a water table elevation map or a depth to water map?
 What data was used to create the water table elevation map or depth to water map?
-Was the data collected for the study or compiled from other sources?
-What were the data sources used to create the water table elevation map or depth to water map?
+Were water levels collected for the study, compiled from other sources, or both?
 Does the study include water quality data?
 Was the data collected for the study or compiled from other sources?
-What were the water quality data sources?
-Does the study report hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?
-Were properties determined for the study or compiled from other sources?
-What were the hydrogeologic properties data sources?
-What are the future work recommendations for this study?
+What are the water quality data sources?
+Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?
+If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer "N/A".
+What are the future work recommendations for this study? Please be detailed.

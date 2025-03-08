@@ -1,4 +1,213 @@
-0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
-What is the web hyperlink to the study?,What is the name of the aquifer(s) focused on in the study?,"Did the study define the aquifer’s boundaries in 2D, 3D, or neither?",What data was used to define the aquifer’s boundaries?,Did the study publish a digital product that defined the aquifer’s boundaries?Did the study define the hydrostratigraphy of the subsurface?,What data was used to define the hydrostratigraphy?,What were the hydrostratigraphy data sources?,Did the study define subsurface structural controls on groundwater flow?,What data was used to define the structural controls?,What were the associated data sources?,Did the study define recharge and discharge zones?,What data was used to define recharge and discharge zones?,Did the study quantify recharge and discharge rates or amounts?,What data was used to quantify recharge and discharge rates or amounts?,Did the study produce a water table elevation map or a depth to water map?,What data was used to create the water table elevation map or depth to water map?,Was the data collected for the study or compiled from other sources?,What were the data sources used to create the water table elevation map or depth to water map?,Does the study include water quality data?,Was the data collected for the study or compiled from other sources?,What were the water quality data sources?,"Does the study report hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?",Were properties determined for the study or compiled from other sources?,What were the hydrogeologic properties data sources?,What are the future work recommendations for this study?
-https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf,https://geoinfo.nmt.edu/publications/openfile/downloads/400-499/492/ofr-492.pdf
-Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI,Invalid response from OpenAI
+0
+"```json
+{
+  ""Query"": ""What is the web hyperlink to the study?"",
+  ""Answer"": ""The provided text does not contain a web hyperlink to the study.""
+}
+```"
+"```json
+{
+  ""Query"": ""What is the name of the aquifer(s) focused on in the study?"",
+  ""Answer"": ""The aquifers focused on in the study are the Roswell Artesian Basin, specifically the carbonate aquifer and the alluvial aquifer.""
+}
+```"
+"```json
+{
+  ""Query"": ""Did the study define the aquifer’s boundaries in 2D, 3D, or neither?"",
+  ""Answer"": ""neither""
+}
+```"
+"```json
+{
+  ""Query"": ""What data was used to define the aquifer’s boundaries?"",
+  ""Answer"": ""The text does not explicitly mention the specific data used to define the aquifer's boundaries. However, it discusses geological formations, hydrostratigraphic cross-sections, and the presence of certain rock types and structures such as the San Andres Formation, Artesia Group, and evaporitic rocks, which likely contribute to understanding the aquifer's boundaries.""
+}
+```"
+"```json
+{
+  ""Query"": ""Did the study publish a digital product that defined the aquifer’s boundaries? Did the study define the hydrostratigraphy of the subsurface?"",
+  ""Answer"": ""The provided text does not mention the publication of a digital product that defined the aquifer's boundaries. However, the study does describe the hydrostratigraphy of the subsurface, detailing the two-aquifer system, the characteristics of the carbonate and alluvial aquifers, and the nature of the confining units.""
+}
+```"
+"```json
+{
+  ""Query"": ""What data was used to define the hydrostratigraphy?"",
+  ""Answer"": ""The data used to define the hydrostratigraphy included water samples analyzed for tritium, 14C, sulfur hexafluoride (SF6), chlorofluorocarbons (CFCs), dissolved gases, stable isotopes of deuterium and 18O, general chemistry, and trace metals. Additionally, stable isotope composition (2H and 18O) was measured in precipitation samples.""
+}
+```"
+"```json
+{
+  ""Query"": ""What were the hydrostratigraphy data sources?"",
+  ""Answer"": [
+    {
+      ""source"": ""Motts, W. S., and Cushman, R. L. (1964) An appraisal of the possibilities of artificial recharge to ground-water supplies in part of the Roswell Basin."",
+      ""details"": ""U.S. Geological Survey Water-Supply Paper 1785.""
+    },
+    {
+      ""source"": ""Plummer, L. N., Busby, J. F., Lee, R. W., and Hanshaw, B. B. (1990) Geochemical modeling of the Madison aquifer in parts of Montana, Wyoming, and South Dakota."",
+      ""details"": ""Water Resources Research 26: 1981-2014""
+    },
+    {
+      ""source"": ""Welder, G. (1983) Geohydrologic Framework of the Roswell Ground-Water Basin, Chaves and Eddy Counties, New Mexico."",
+      ""details"": ""New Mexico State Engineer Technical Report 42.""
+    },
+    {
+      ""source"": ""Rawling, G. C., Timmons, S., Johnson, P., Walsh, P., Land., L., Timmons, M., and Felix, B. (2007) Sacramento Mountains Hydrogeology Study: Progress Report, July, 2007."",
+      ""details"": ""New Mexico Bureau of Geology and Mineral Resources, Socorro""
+    },
+    {
+      ""source"": ""Rawling, G. C., Timmons, S., Newton, T., Walsh, P., Land, L., Kludt, T., Timmons, M., Johnson, P., & Felix, B. (2008) Sacramento Mountains Hydrogeology Study."",
+      ""details"": ""New Mexico Bureau of Geology & Mineral Resources Open File Report 512.""
+    }
+  ]
+}
+```"
+"```json
+{
+  ""Query"": ""Did the study define subsurface structural controls on groundwater flow?"",
+  ""Answer"": ""Yes, the study defined subsurface structural controls on groundwater flow. It mentioned enhanced recharge through sinkholes and solution-enlarged fractures associated with the Pecos Buckles, which are wrench fault zones extending southwest-northeast across the Pecos Slope. These structural features significantly influence the flow and recharge of groundwater in the area.""
+}
+```"
+"```json
+{
+  ""Query"": ""What data was used to define the structural controls?"",
+  ""Answer"": ""The provided text does not specify the exact data used to define the structural controls directly. It lists various studies and reports related to groundwater, geochemistry, and hydrogeology, but does not detail specific data regarding structural controls.""
+}
+```"
+"```json
+{
+  ""Query"": ""What were the associated data sources?"",
+  ""Answer"": ""The associated data sources for the aquifer report are measurements from various locations including Lake St. Francis, Sinkhole 59, Sago Spring, Lost River Spring, Bitter Creek, Snail Unit Spring, Hunter Marsh Spring, BL Artesian Well, Lea Lake Spring, Greene Well, Rogers Well, and Thatcher Well.""
+}
+```"
+"```json
+{
+  ""Query"": ""Did the study define recharge and discharge zones?"",
+  ""Answer"": ""Yes, the study defined recharge and discharge zones. The recharge zone is identified as the Principal Intake Area on the Pecos Slope where enhanced recharge occurs through sinkholes and solution-enlarged fractures. The discharge zones include areas where groundwater flows upward through leaky confining beds into the alluvial aquifer and ultimately to the Pecos River, as well as direct discharges into the river and adjacent wetlands through solution channels and sinkholes in the overlying gypsum confining beds.""
+}
+```"
+"```json
+{
+  ""Query"": ""What data was used to define recharge and discharge zones?"",
+  ""Answer"": ""The data used to define recharge and discharge zones included geological features such as sinkholes and solution-enlarged fractures, wrench fault zones, and karst features in the San Andres limestone. Additionally, tracer studies using environmental tracers like tritium, chlorofluorocarbons (CFCs), and 14C were utilized to determine groundwater residence times and flow paths. Isotope investigations and measurements of tritium content in water samples from wells also contributed to defining these zones.""
+}
+```"
+"```json
+{
+  ""Query"": ""Did the study quantify recharge and discharge rates or amounts?"",
+  ""Answer"": ""No, the study did not quantify recharge and discharge rates or amounts. It primarily focused on describing the flow characteristics, groundwater ages, and the impact of conduit versus matrix flow in the aquifer system.""
+}
+```"
+"```json
+{
+  ""Query"": ""What data was used to quantify recharge and discharge rates or amounts?"",
+  ""Answer"": ""The data used to quantify recharge and discharge rates or amounts included tritium content measurements from water samples collected from wells in the artesian aquifer. These measurements were correlated with tritium peaks in meteoric water to determine groundwater residence times and infer recharge rates.""
+}
+```"
+"```json
+{
+  ""Query"": ""Did the study produce a water table elevation map or a depth to water map?"",
+  ""Answer"": ""The provided text does not mention the production of a water table elevation map or a depth to water map.""
+}
+```"
+"```json
+{
+  ""Query"": ""What data was used to create the water table elevation map or depth to water map?"",
+  ""Answer"": ""The provided text does not specify the exact data used to create the water table elevation map or depth to water map.""
+}
+```"
+"```json
+{
+  ""Query"": ""Was the data collected for the study or compiled from other sources?"",
+  ""Answer"": ""The data was collected for the study. Water samples were actively gathered from various locations including springs, sinkhole lakes, a playa lake, an artesian well on the Refuge, and irrigation wells in the city of Roswell. These samples were then analyzed for various chemical and isotopic components.""
+}
+```"
+"```json
+{
+  ""Query"": ""What were the data sources used to create the water table elevation map or depth to water map?"",
+  ""Answer"": ""The provided text does not specify the data sources used to create the water table elevation map or depth to water map directly. It lists various studies and reports related to groundwater, geochemistry, and hydrogeology, but does not mention specific data sources for creating such maps.""
+}
+```"
+"```json
+{
+  ""Query"": ""Does the study include water quality data?"",
+  ""Answer"": ""Yes, the study includes water quality data. This is indicated in the list of tables, specifically Table 1, which details the water quality and chemical composition of samples collected from various locations.""
+}
+```"
+"```json
+{
+  ""Query"": ""Was the data collected for the study or compiled from other sources?"",
+  ""Answer"": ""The data was collected for the study. Water samples were actively gathered from various locations including springs, sinkhole lakes, a playa lake, an artesian well on the Refuge, and irrigation wells in the city of Roswell. These samples were then analyzed for various chemical and isotopic components.""
+}
+```"
+"```json
+{
+  ""Query"": ""What were the water quality data sources?"",
+  ""Answer"": ""Water quality and chemical composition data were collected from sinkholes, springs, and an artesian well at Bitter Lake National Wildlife Refuge; artesian wells west of the Refuge within or near the city of Roswell (RAB-1, 2, and 3); and from a submerged spring in Lea Lake at Bottomless Lakes State Park.""
+}
+```"
+"```json
+{
+  ""Query"": ""Does the study report hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?"",
+  ""Answer"": ""Yes, the study reports on hydraulic conductivity, mentioning values that exceed 400 m/day (4.6x10-3 m/s, or ~4,800 darcies permeability). However, there is no specific mention of porosity, storage coefficients, specific storage, specific yield, or transmissivity in the provided text.""
+}
+```"
+"```json
+{
+  ""Query"": ""Were properties determined for the study or compiled from other sources?"",
+  ""Answer"": ""The properties such as water quality and chemical composition of samples were determined for the study, as indicated by the specific listing of sample locations and the detailed measurements provided in Table 1.""
+}
+```"
+"```json
+{
+  ""Query"": ""What were the hydrogeologic properties data sources?"",
+  ""Answer"": [
+    {
+      ""Author"": ""Motts, W. S., and Cushman, R. L."",
+      ""Year"": ""1964"",
+      ""Title"": ""An appraisal of the possibilities of artificial recharge to ground-water supplies in part of the Roswell Basin"",
+      ""Source"": ""U.S. Geological Survey Water-Supply Paper 1785""
+    },
+    {
+      ""Author"": ""Plummer, L. N., Busby, J. F., Lee, R. W., and Hanshaw, B. B."",
+      ""Year"": ""1990"",
+      ""Title"": ""Geochemical modeling of the Madison aquifer in parts of Montana, Wyoming, and South Dakota"",
+      ""Source"": ""Water Resources Research""
+    },
+    {
+      ""Author"": ""Plummer, L. N., Prestemon, E. C., and Parkhurst, D. L."",
+      ""Year"": ""1994"",
+      ""Title"": ""An interactive code (NETPATH) for modeling net geochemical reactions along a flow path, version 2.0"",
+      ""Source"": ""U.S. Geological Survey Water-Resources Investigations Report 94-4169""
+    },
+    {
+      ""Author"": ""Rawling, G. C., Timmons, S., Johnson, P., Walsh, P., Land., L., Timmons, M., and Felix, B."",
+      ""Year"": ""2007"",
+      ""Title"": ""Sacramento Mountains Hydrogeology Study: Progress Report, July, 2007"",
+      ""Source"": ""New Mexico Bureau of Geology and Mineral Resources""
+    },
+    {
+      ""Author"": ""Rawling, G. C., Timmons, S., Newton, T., Walsh, P., Land, L., Kludt, T., Timmons, M., Johnson, P., & Felix, B."",
+      ""Year"": ""2008"",
+      ""Title"": ""Sacramento Mountains Hydrogeology Study"",
+      ""Source"": ""New Mexico Bureau of Geology & Mineral Resources Open File Report 512""
+    },
+    {
+      ""Author"": ""Reiter, M. and Jordan, D. L."",
+      ""Year"": ""1996"",
+      ""Title"": ""Hydrogeothermal studies across the Pecos River Valley, southeastern New Mexico"",
+      ""Source"": ""Geological Society of America Bulletin""
+    },
+    {
+      ""Author"": ""Welder, G."",
+      ""Year"": ""1983"",
+      ""Title"": ""Geohydrologic Framework of the Roswell Ground-Water Basin, Chaves and Eddy Counties, New Mexico"",
+      ""Source"": ""New Mexico State Engineer Technical Report 42""
+    }
+  ]
+}
+```"
+"{
+  ""Query"": ""What are the future work recommendations for this study?"",
+  ""Answer"": ""The provided text does not specify future work recommendations for the study.""
+}"
