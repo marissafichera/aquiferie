@@ -1,0 +1,66 @@
+Report Name,reports\report_0.pdf
+Aquifer(s) name,"The study focuses on the aquifers within the Santa Fe Group sediments in the Arroyo Seco area. These aquifers consist of unconsolidated to poorly consolidated Quaternary and late Tertiary sediments, which are part of the Santa Fe Group, a term used for the sediments and sedimentary rocks filling the deep basins of the Rio Grande rift. The report refers to these as Santa Fe Group sediments, which include various deposits such as alluvial fan and stream terrace deposits."
+Aquifer boundary definition,"The study provided a detailed 2D representation of the aquifer boundaries through maps and cross-sections. These include a geologic map of the southwestern portion of the Arroyo Seco quadrangle, a subsurface bedrock map, geologic cross-sections, and a water table elevation map. These maps and diagrams help define the lateral extents of the aquifers and the geologic structures influencing groundwater flow. However, the study does not explicitly provide a full 3D model of the aquifer boundaries, as it relies on 2D interpretations and cross-sections to infer the 3D characteristics of the aquifers."
+Data used to define aquifer boundary,"The aquifer boundaries in the Arroyo Seco Area study were defined using a combination of geological, hydrological, and geophysical data. Key elements and methods used to define these boundaries included:
+
+1. **Geologic Mapping**: Existing maps and new geological fieldwork were utilized to identify the geology of the region, which included the Sangre de Cristo fault and the distribution of various rock types and sediments such as the Santa Fe Group sediments. These geological features influence the structure and boundaries of the aquifer.
+
+2. **Well Data**: Water levels were measured in 43 domestic wells, and additional data were collected from Glorieta Geoscience, Inc., and the Taos Soil and Water Conservation District. These measurements helped establish the water table elevation map and identify areas of high transmissivity and variations in hydraulic gradients.
+
+3. **Subsurface Interpretations**: Data from well logs and geophysical surveys (such as aeromagnetic data) were used to infer the presence of buried bedrock and basalt, which impact the location and characteristics of aquifer boundaries. The study involved constructing subsurface bedrock and basalt elevation maps to delineate the aquifer's extent.
+
+4. **Hydraulic Properties**: Estimates of transmissivity and hydraulic conductivity from aquifer tests provided insights into the permeability and thickness of the aquifers, helping to define areas with high or low transmissivity that affect the aquifer boundaries.
+
+5. **Groundwater Flow Patterns**: Analysis of groundwater flow directions and gradients, based on water level measurements and gaining or losing reaches of streams, helped delineate the boundaries where groundwater flow is influenced by geological features such as faults.
+
+6. **Conceptual Hydrogeologic Model**: Using the gathered data, a conceptual model of the hydrogeology was developed to understand how the aquifer system interacts with geological structures, recharge areas, and surface water features.
+
+Overall, the combination of these data sources and analyses provided a comprehensive understanding of the aquifer boundaries in the Arroyo Seco Area."
+Digital product of aquifer boundary,"The report does not explicitly mention the publication of a digital product specifically defining the aquifer boundaries. However, it does mention the creation of a geologic map, a subsurface bedrock map, geologic cross-sections, fence diagrams, and a water table elevation map as part of the study. These maps and diagrams would help in understanding the geology and hydrogeology of the Arroyo Seco area, potentially outlining the aquifer boundaries indirectly. No specific digital product is noted in the provided text."
+Hydrostratigraphy,"The study did not explicitly define the hydrostratigraphy of the subsurface in terms of distinct hydrostratigraphic units. Instead, it focused on understanding the distribution, flow patterns, and geologic controls of groundwater in the Arroyo Seco area. The report provided detailed descriptions of basin-fill sediments, including their composition and depositional environments, which are important for hydrostratigraphic characterization. However, due to poor and noncontinuous outcrops, the study was unable to subdivide the basin-fill sediments into mappable hydrostratigraphic units.
+
+The report highlights the complexity of the subsurface, indicating variations in clast composition, grain size, and sedimentary structures, which influence the hydraulic properties of the aquifers. It also describes the presence of fractured bedrock near the mountain front and the influence of faults and buried bedrock benches on groundwater flow patterns. While these insights contribute to a conceptual understanding of the subsurface hydrogeology, the lack of continuous stratigraphic horizons and the reliance on drillers' logs precluded a detailed hydrostratigraphic classification."
+Data used to define hydrostratigraphy,"The hydrostratigraphy of the Arroyo Seco area was defined using a combination of data sources and methods, including:
+
+1. **Well Data**: The study involved measuring water levels in 43 domestic wells and utilizing data from additional wells provided by Glorieta Geoscience, Inc. (GGI) and the Taos Soil and Water Conservation District. These wells were used to map groundwater elevations and understand groundwater flow patterns.
+
+2. **Driller’s Logs**: Information from driller’s logs was used to gain insights into the stratigraphy encountered during drilling, including the depths and types of sediments or rocks encountered, as well as water-bearing zones.
+
+3. **Aquifer Tests**: Aquifer tests conducted by GGI on specific wells, such as the Cielo Azul and New Mariposa Ranch wells, provided estimates of hydraulic properties like transmissivity and hydraulic conductivity, which are critical for understanding the hydrostratigraphy and flow characteristics of the aquifers.
+
+4. **Geophysical Data**: Aeromagnetic data, as referenced in the study, were used to delineate subsurface features such as buried bedrock benches and faults, which have significant implications for groundwater flow and hydrostratigraphy.
+
+5. **Geologic Mapping**: The integration of geologic maps, geologic cross sections, and fence diagrams helped visualize the spatial distribution of different geologic units and their influence on hydrostratigraphy.
+
+6. **Outcrop Descriptions**: Detailed descriptions of outcrops in the basin-fill sediments provided information on sedimentary facies, clast composition, and depositional environments, which were essential for characterizing the aquifer materials and their variability.
+
+7. **Hydrogeological Conceptual Model**: The synthesis of all the above data led to the development of a conceptual hydrogeologic model that describes the distribution of aquifers and aquitards, groundwater flow directions, and potential influences of geologic structures like faults.
+
+These diverse data sources and methods were integrated to develop a comprehensive understanding of the hydrostratigraphy in the Arroyo Seco area."
+Data sources - hydrostratigraphy,"The hydrostratigraphy data in the report were sourced from a combination of existing geologic, hydrologic, and geophysical data, as well as new data collected during the study. Specifically, the sources included:
+
+1. **Existing Data Compilation**: The study compiled existing geologic, hydrologic, and geophysical data from previous research and mapping efforts, including work by Lipman and Reed (1989), Kelson (1986), and Proterozoic rocks mapping by J. Grambling.
+
+2. **New Geologic Mapping and Fieldwork**: New geologic mapping was conducted, and field checking of existing maps was performed. This included refining geologic contacts and collecting additional orientation data, particularly on joints in the crystalline rocks.
+
+3. **Water Level Measurements**: Water levels were measured in 43 domestic wells in the Arroyo Seco area between mid-April and mid-May 2005. These measurements were obtained using a steel tape and GPS units for accurate well location.
+
+4. **Data from Glorieta Geoscience, Inc. (GGI)**: GGI provided locations, water level data, and selected chemistry and aquifer test data for seven wells from their consulting work, which included well logs and aquifer test analyses.
+
+5. **Taos Soil and Water Conservation District Inventory**: Additional water level data came from the Taos Soil and Water Conservation District well inventory, assembled by Tony Benson and UNM-Taos students. These records included driller's well records, which varied in accuracy.
+
+6. **Driller's Logs**: Driller's logs were used to understand the subsurface conditions, though the study noted variability in accuracy between measured water levels and those recorded on driller's logs.
+
+These sources together allowed the study to develop a comprehensive understanding of the hydrostratigraphy and groundwater flow patterns in the Arroyo Seco area."
+Future work recommendations,"The future work recommendations for this study are as follows:
+
+1. **Additional Water Level Measurements**: More water level measurements would be useful in several areas to better delineate groundwater contours and establish geologic controls on groundwater flow. Specifically, these areas include:
+   - The high-transmissivity area around the Gates of Valdez.
+   - North of the Rio Hondo, where there are only four new measurements.
+   - Along the mountain front north of the El Salto area, both north and south of the Rio Hondo, to characterize the bedrock-sediment interface and the influence of the Sangre de Cristo fault.
+
+2. **Aquifer Tests in Specific Areas**: Conduct aquifer tests in the El Salto area and north of the Rio Hondo to determine the spatial variability of the aquifers, as current hydraulic properties determined by Glorieta Geoscience, Inc. appear representative of the aquifer sediments in general.
+
+3. **Continued Monitoring of Wells**: Maintain ongoing monitoring of a subset of both shallow and deep wells documented in this study. This continued monitoring would help document changes in water levels over time and allow for the determination of the relative impacts of variations in recharge and increased residential use on groundwater storage and water levels.
+
+4. **Use of New Water Level Measurements**: Incorporate new water level measurements in any future work, given the large variation between water levels recorded on driller’s records and those measured in this study, which calls into question the reliability of relying solely on driller’s records for groundwater studies."

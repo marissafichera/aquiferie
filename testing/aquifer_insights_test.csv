@@ -1,0 +1,37 @@
+,0
+Report Name,reports\report_0.pdf
+Aquifer(s) name,"The study focuses on the basin-fill aquifers in the Arroyo Seco area, which are part of the Santa Fe Group sediments."
+Aquifer boundary definition,"The study defined the aquifer boundaries in 2D using maps and cross-sections. The report includes a geologic map, subsurface bedrock map, and water table elevation map, along with geologic cross-sections and fence diagrams, which collectively provide a two-dimensional representation of the aquifer boundaries and hydrogeologic features."
+Data used to define aquifer boundary,"The aquifer boundaries in the Arroyo Seco area were defined using a combination of geologic, hydrologic, and geophysical data. The study involved compiling existing data, performing new geologic mapping, and measuring water levels in 43 domestic wells. These efforts helped to understand the distribution and flow patterns of groundwater in the area. Additionally, geologic cross sections, fence diagrams, and a water table elevation map were created to assist in defining the aquifer boundaries. The study also considered the influence of faults, variations in aquifer transmissivity, and recharge from and discharge to streams in delineating the aquifer boundaries."
+Digital product of aquifer boundary,"No, the study did not publish a digital product that defined the aquifer boundaries."
+Hydrostratigraphy,"The study did not define continuous, stratigraphic horizons in the Santa Fe Group sediments that could be correlated across the study area. Examination of driller's logs revealed no continuous stratigraphic horizons, indicating that the hydrostratigraphy of the subsurface remains poorly defined. However, the report does provide descriptions of various sedimentary facies and their characteristics, which contribute to the understanding of the subsurface stratigraphy and the types of geologic materials that comprise the aquifers tapped by local wells."
+Data used to define hydrostratigraphy,"The hydrostratigraphy in the Arroyo Seco Area was defined using a combination of geologic, hydrologic, and geophysical data. Specifically, the study involved:
+
+1. **Geologic Mapping**: Existing geologic maps were refined and supplemented with new field observations, particularly focusing on the orientation of joints in crystalline rocks and the classification of sedimentary facies.
+
+2. **Well Data**: Water levels were measured in 43 domestic wells, and additional data were obtained from the Taos Soil and Water Conservation District inventory and Glorieta Geoscience, Inc. This included well depths, screened intervals, and water levels.
+
+3. **Subsurface Interpretations**: Driller’s logs and geophysical data, such as aeromagnetic surveys, were used to interpret the subsurface geology, including the presence of basalt and bedrock contours.
+
+4. **Hydrologic Data**: Aquifer tests provided estimates of transmissivity and hydraulic conductivity, while water level measurements were used to create groundwater elevation contours.
+
+5. **Isotopic Data**: Tritium data were used to determine groundwater recharge timescales.
+
+These data collectively contributed to understanding the distribution and flow patterns of groundwater, the interaction between groundwater and surface water, and the geologic controls on the groundwater system."
+Data sources - hydrostratigraphy,"The hydrostratigraphy data sources in the report include:
+
+1. Existing geologic, hydrologic, and geophysical data compiled by the author.
+2. New geologic mapping and water level measurements performed by the author in 43 domestic wells.
+3. Data provided by Glorieta Geoscience, Inc. (GGI), including locations, water level data, selected chemistry, and aquifer test data for 7 wells.
+4. The Taos Soil and Water Conservation District well inventory, assembled by Tony Benson and students from UNM-Taos, which includes well locations and water elevation data from driller’s records.
+5. Previous studies and reports cited in the report, such as those by Drakos et al. (2004a, 2004b), Bauer et al. (1999), and others."
+Future work recommendations,"The future work recommendations for this study include:
+
+1. Collecting more water level measurements to better delineate poorly constrained groundwater contours and establish geologic controls on groundwater flow, particularly in:
+   - The high-transmissivity area around the Gates of Valdez.
+   - The area north of the Rio Hondo, where there are only four new measurements.
+   - Along the mountain front north of the El Salto area, both north and south of the Rio Hondo, to characterize the bedrock-sediment interface and the influence of the Sangre de Cristo fault.
+
+2. Conducting aquifer tests in the El Salto area and north of the Rio Hondo to determine the spatial variability of the aquifers.
+
+3. Continuing to monitor a subset of wells, both shallow and deep, to document changes in water levels over time, which would help determine the relative impacts of variations in recharge and increased residential use on groundwater storage and water levels."

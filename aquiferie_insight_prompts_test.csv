@@ -1,9 +1,0 @@
-Description,Question
-Aquifer(s) name,What is the name of the aquifer(s) focused on in the study?
-Aquifer boundary definition,"Did the study define the aquifer boundaries in 2D, 3D, or neither?"
-Data used to define aquifer boundary,What data was used to define the aquifer boundaries?
-Digital product of aquifer boundary,Did the study publish a digital product that defined the aquifer boundaries?
-Hydrostratigraphy,Did the study define the hydrostratigraphy of the subsurface?
-Data used to define hydrostratigraphy,What data was used to define the hydrostratigraphy?
-Data sources - hydrostratigraphy,What were the hydrostratigraphy data sources?
-Future work recommendations,What are the future work recommendations for this study?
