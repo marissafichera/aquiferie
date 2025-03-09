@@ -1,0 +1,337 @@
+0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,Report_URL
+What is the title of the study?,What is the name of the aquifer(s) focused on in the study?,Did the study define the aquifer extent in 2D?,"Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?",Did the study publish a digital product that defined the aquifer extent?,"Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?","Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?","Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?","Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?",Did the study produce a water table elevation map or a depth to water map?,What data was used to create the water table elevation map or depth to water map?,"Were water levels collected for the study, compiled from other sources, or both?",Does the study include water quality data?,Was the data collected for the study or compiled from other sources?,What are the water quality data sources?,"Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?","If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer ""N/A"".",What are the future work recommendations for this study? Please be detailed.,https://geoinfo.nmt.edu/publications/openfile/downloads/500-599/582/OFR-582_ETB_brackishLR.pdf
+"- The title of the study is ""Brackish Water Assessment in the Eastern Tularosa Basin, New Mexico.""",- The aquifer focused on in the study is the basin fill aquifer of the Tularosa Basin.,"- Yes, the study defined the aquifer extent in 2D.
+- Evidence includes references to specific geological features and formations that bound the aquifer, such as the Alamogordo and Jarilla fault zones, and the San Andres Fault.
+- Figures such as the generalized geologic map (Figure 2) and the geologic cross-section (Figure 3) visually represent the aquifer's extent and geological context in two dimensions.","- The provided sections of the aquifer report do not explicitly mention the definition or data used to define the base of the aquifer.
+- The report focuses more on the groundwater salinity, water quality, and the geological context of the Tularosa Basin rather than specific details about the aquifer's base.","- The provided text does not explicitly mention the publication of a digital product that defined the aquifer extent in the Eastern Tularosa Basin.
+- The report focuses on assessing the spatial distribution of groundwater salinity and includes various types of data such as water chemistry and well locations, but there is no specific mention of a digital product defining the aquifer extent.","- The study did not explicitly define the hydrostratigraphy of the aquifer in the provided sections.
+- However, it mentioned the composition of the basin fill aquifer, which is composed of gravel, sand, silt, and clay. This information contributes to understanding the hydrostratigraphy.
+- The study also referenced previous studies and geological descriptions that affect groundwater chemistry, which indirectly informs about hydrostratigraphic conditions.","Yes, the study defined subsurface structural controls on groundwater flow. The data used to define these structural controls included:
+
+- Geologic Cross Sections and Maps: Figures 2 and 3 in the report, which include a generalized geologic map and a geologic cross-section of the Tularosa Basin, respectively, helped in understanding the subsurface structures.
+- Well Logs: Information from a test well log described in the report provided detailed insights into the vertical distribution of sediments, which is crucial for understanding groundwater flow. The well log indicated varying sediment types at different depths, influencing the permeability and flow paths of groundwater.
+- Faults and Geological Formations: The report mentions specific faults (e.g., Alamogordo fault zone, Jarilla fault zone, San Andres Fault) and geological formations (e.g., volcanic rocks, sedimentary rocks) that define the structural boundaries and characteristics of the basin, affecting groundwater movement.
+- Personal Communication: Additional insights from experts like Dan Koning (2016) were used to correlate and characterize sediment distributions in the basin, further defining the structural controls on groundwater flow.","Yes, the study defined recharge zones in the Tularosa Basin. The data used to define these zones includes:
+
+- Geographic and Hydrological Data: The study identifies major stream systems such as Nogal Creek, Three Rivers, Rio Tularosa, and La Luz Creek, which drain the western slopes of the Sacramento Mountains. These streams are crucial for groundwater recharge to the basin fill aquifer.
+  
+- Seasonal Variations: The streams are described as perennial or ephemeral, with flow primarily during the monsoon season (July through September), indicating seasonal recharge patterns.
+
+- Spring Data: Springs are mentioned as the primary source for many streams that drain into the Tularosa Basin, with discharge rates generally low, less than 6 gallons per minute. This suggests localized recharge areas where these springs are active.
+
+The study does not explicitly define discharge zones but implies that springs and minor streams act as discharge points, particularly where they contribute to the streams draining into the basin.","- The study did not explicitly quantify recharge and discharge rates or amounts in terms of specific values or measurements.
+- It mentions that most groundwater recharge to the basin fill aquifer occurs along the major stream systems (Nogal Creek, Three Rivers, Rio Tularosa, and La Luz Creek) and that springs are the primary source for many streams, with discharge rates generally low, less than 6 gallons per minute.
+- The specific data used to quantify these rates or amounts is not detailed in the provided text.","- The study produced a water table map of the Tularosa Basin, as indicated in the report section listing Figure 5: ""Water table map of the Tularosa Basin.""","- Data Sources for Water Table Elevation Map or Depth to Water Map:
+  - Groundwater level measurements: Data from various wells in the study area, likely including municipal, irrigation, stock, and domestic wells.
+  - Water chemistry data: Extracted and compiled from databases of NMBGMR, USGS, and NMED, which includes historical and recent water chemistry data.
+  - Geophysical surveys: Specifically, electrical resistivity surveys conducted by Orr and Myers (1986) which helped assess the distribution of groundwater salinity and infer water table depths.
+  - Spatial analyses: Conducted using ArcGIS, which would utilize the above datasets to visualize and analyze the spatial distribution of groundwater levels.
+  - Historical research data: From studies and reports by various researchers and agencies over the last 100 years, providing a historical perspective on groundwater levels and quality.
+
+These datasets were likely integrated and analyzed to create a comprehensive water table elevation or depth to water map for the Tularosa Basin area.","- Both: Water levels were compiled from other sources and collected for the study.
+  - Existing water chemistry data, including historical reports from NMBGMR, USGS, and NMED, were compiled to identify spatial trends and data gaps.
+  - As part of the study, additional water samples were collected from twenty-one domestic wells to address spatial and temporal data gaps. These samples were analyzed for major cations and anions, trace metals, and stable isotopes of oxygen and hydrogen.","Yes, the study includes water quality data:
+- Researchers have studied water quality in the Tularosa Basin extensively, as mentioned with references to various studies (e.g., Meinzer and Hare, 1915; McLean, 1970; Garza and McLean, 1977; Orr and Myers, 1986; Basabilvazo et al., 1994; Mamer et al., 2014, Newton and Allen, 2014).
+- Data from multiple sources including the NMBGMR, USGS, and NMED have been compiled, focusing on water chemistry collected over the last 100 years.
+- Specific analyses were performed on samples collected in February 2016 by NMBGMR personnel, which included major cations and anions, trace metals, and stable isotopes of oxygen and hydrogen.
+- The study area's water quality data was used to identify spatial trends and data gaps, primarily analyzed using GIS and statistical methods.","- The data was primarily compiled from other sources. 
+- Existing water chemistry data were extracted and compiled from various agencies including the New Mexico Bureau of Geology and Mineral Resources (NMBGMR), the U.S. Geological Survey (USGS), and the New Mexico Environment Department (NMED).
+- These agencies have collected water chemistry data over the last 100 years from different research projects and monitoring programs.
+- Additionally, specific datasets mentioned include those from Mamer et al. (2014), Newton et al. (2012), McLean (1970), and others, indicating a reliance on previously gathered data.
+- There is also mention of data issues such as uncertainties of locations and different naming conventions, which further supports that the data was compiled from existing sources rather than collected anew for the study.","The water quality data sources from the provided aquifer report sections include:
+
+- Huff, G.F, 1996: Analysis of Ground-water data for selected wells near Holloman AFB, NM, 1950-1995.
+- McLean, J. S., 1970: Saline Ground-water resources of the Tularosa Basin, New Mexico.
+- Timmons, S.S., 2016: Digitizing and Compiling Legacy Groundwater Quality Data.
+- Timmons, S.S., Land, L.B., Newton, B.T., and Frey, B., 2013: Aquifer mapping program technical document: Water sampling procedures, analysis and systematics.
+- Newton, B.T. and Allen, B., 2014: Hydrologic Investigation at White Sands National Monument.
+- Newton, B. T., Rawling, C.G., Timmons, S.S., Land, L., Johnson, P.S., Kludt, T.J., and Timmons, J.M., 2012: Sacramento Mountains Hydrogeologic study. Final Technical Report.
+
+These sources provide various data and analyses related to groundwater quality in the Tularosa Basin and surrounding areas.","- The study report does not explicitly mention specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, or transmissivity.
+- It does discuss sediment types and their permeability indirectly by mentioning that water moves through different sediments at different rates, and that sediments like sands and gravels (higher permeability) allow water to flow more easily compared to finer sediments like silts and clays.
+- The report focuses more on the general hydrogeology, sediment characterization, and the spatial distribution of groundwater salinity rather than specific hydrogeologic coefficients or properties.","- N/A: The provided text does not explicitly mention specific methods used to determine hydrogeologic properties. It discusses general geological and hydrogeological characteristics of the Tularosa Basin, such as sediment types and water movement through these sediments, but does not detail specific methodologies for determining these properties.","The future work recommendations for the study on groundwater salinity in the Tularosa Basin include:
+
+- Installation of Monitoring Wells:
+  - To better characterize the three-dimensional distribution of groundwater salinity across different depths and locations within the basin.
+
+- Use of Geophysical Techniques:
+  - Employ measurements of the electrical resistivity of the subsurface to gain a more detailed understanding of the spatial variations in groundwater salinity.
+
+- Continued and Expanded Sampling:
+  - Collect more water quality samples to address both spatial and temporal data gaps, enhancing the understanding of how groundwater salinity changes over time and across different areas.
+
+- Research on Groundwater Recharge Processes:
+  - Investigate the localized nature of groundwater recharge processes to understand their impact on salinity distribution, particularly focusing on areas like La Luz Creek where unique trends may be observed.
+
+- Assessment of Pumping Impacts:
+  - Study the potential effects of prolonged and increased pumping of brackish water on local and regional water quality, including the risk of saline water encroachment into fresher aquifers.
+
+- Longitudinal Studies:
+  - Conduct long-term monitoring to observe changes in groundwater quality and salinity levels over several years to better understand the dynamics of the aquifer system under various stressors.
+
+These recommendations aim to enhance the understanding and management of groundwater resources in the Tularosa Basin, addressing both current knowledge gaps and potential future challenges.",https://geoinfo.nmt.edu/publications/openfile/downloads/500-599/582/OFR-582_ETB_brackishLR.pdf
+What is the title of the study?,What is the name of the aquifer(s) focused on in the study?,Did the study define the aquifer extent in 2D?,"Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?",Did the study publish a digital product that defined the aquifer extent?,"Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?","Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?","Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?","Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?",Did the study produce a water table elevation map or a depth to water map?,What data was used to create the water table elevation map or depth to water map?,"Were water levels collected for the study, compiled from other sources, or both?",Does the study include water quality data?,Was the data collected for the study or compiled from other sources?,What are the water quality data sources?,"Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?","If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer ""N/A"".",What are the future work recommendations for this study? Please be detailed.,https://geoinfo.nmt.edu/publications/openfile/downloads/500-599/559/OFR559_White_Sands.pdf
+"- The title of the study is ""Hydrologic Investigation at White Sands National Monument.""","- The primary aquifer focused on in the study is the gypsum sand aquifer beneath the dune field at White Sands National Park (WHSA).
+- Additionally, the study also considers the broader regional groundwater system within the Tularosa Basin, which includes various aquifer materials such as basin-fill of Tertiary to Holocene age and potentially more permeable sand units beneath lacustrine deposits.","- The study did not explicitly define the aquifer extent in two dimensions (2D) within the provided text.
+- The report includes a regional water table map (Figure 11) showing groundwater flow and closed contours suggesting areas of groundwater discharge, which indirectly provides some information on the aquifer's spatial characteristics.
+- The primary focus of the study appears to be on groundwater flow, salinity variations, and the interaction between groundwater and dune morphology rather than explicitly mapping the aquifer's 2D extent.","- The study did not explicitly define the base of the aquifer in the provided text.
+- However, it mentions that more permeable sand units may exist beneath the lacustrine deposits, which are as thick as 3,440 feet and are saturated with saline water. This suggests that the base of the aquifer could be inferred to be below these lacustrine deposits, but specific data or a clear definition is not provided in the text.","- The provided text does not explicitly mention the publication of a digital product that defined the aquifer extent.
+- The report does reference a regional water table map constructed by Embid and Finch (2011) and shown in Figure 11, but it does not specify if this map or any part of the study results were published as a digital product specifically defining the aquifer extent.","Yes, the study defined the hydrostratigraphy of the aquifer. The data used to define the hydrostratigraphy includes:
+
+- Historical USGS reports and maps: Specifically, the work by Meinzer and Hare (1915) which included a regional water table map showing groundwater occurrence and flow.
+- Recent studies and maps: Such as the regional water table map by Embid and Finch (2011), which shows groundwater flow directions and trends similar to earlier findings.
+- Groundwater investigations on military and testing ranges: These include studies conducted at Holloman Air Force Base, White Sands Missile Range, and WHSA, focusing on water availability and potential contamination.
+- Depth measurements: Data on the depth to groundwater in supply wells south of Alamogordo, which ranges from 70 to 300 feet below the ground surface.
+- Salinity and TDS measurements: Studies by McLean (1970) and Orr and Meyers (1986) provided data on the salinity levels of groundwater across the basin, indicating areas of saline and fresh water.
+- Geological studies: Information on the thickness of lacustrine deposits and the presence of more permeable sand units beneath these deposits.
+- Isotopic analysis: Sulfur isotopic compositions of gypsiferous sediments near Lake Lucero helped trace the origin of gypsum and infer groundwater flow paths.
+
+These diverse data sources helped delineate the layers and characteristics of the aquifer system within the Tularosa Basin.","- Yes, the study did define subsurface structural controls on groundwater flow.
+- Data used:
+  - Sulfur isotopic compositions of gypsiferous sediments near Lake Lucero were analyzed to infer the origin of gypsum as the dissolution of lower and middle Permian rocks beneath the basin-fill sediments.
+  - This information suggests that groundwater may travel along deep regional flow paths and up along faults at the western margin of the basin, as indicated by Szynkiewicz et al. (2009).","Yes, the study defined recharge and discharge zones. The data used to define these zones included:
+
+- Hydrogeologic studies and historical data: References to past studies such as Meinzer and Hare (1915), McLean (1970), and others provided historical and regional insights into groundwater flow and characteristics.
+- Regional water table maps: Maps, such as those updated by Embid and Finch (2011), illustrated groundwater flow directions and areas of groundwater discharge and recharge.
+- Groundwater salinity and quality data: Studies by Orr and Meyers (1986) and others provided information on the distribution of saline and fresh water, which helped in identifying potential recharge areas (less saline, typically on basin margins) and discharge areas (more saline, typically in the center of the basin).
+- Physical and chemical responses to precipitation: Observations of changes in groundwater levels and electrical conductance after precipitation events helped identify areas where local recharge occurs.
+- Spatial distribution of groundwater levels: Data showing variations in groundwater levels, such as those provided by Allmendinger and Titus (1973), helped identify depressions and elevations in the water table indicative of discharge and recharge zones.
+
+These data sources collectively helped delineate areas where groundwater is likely recharged (primarily from streams flowing from the Sacramento Mountains and in alluvial fan deposits) and areas where it discharges (such as through evaporation in Alkali Flat and near Lake Lucero).","- The study did not explicitly quantify recharge and discharge rates or amounts.
+- The focus of the study was primarily on estimating hydrologic parameters such as transmissivity and storage coefficients through an aquifer test, and analyzing groundwater ages using geochemical data and isotopic ratios.
+- The aquifer test involved measuring water-level responses to pumping from a well to infer properties of the aquifer system, but specific recharge or discharge rates or amounts were not mentioned as being quantified.","- The study produced a regional water table map. This is indicated by the reference to Figure 11, which shows the most recent regional water table map constructed by Embid and Finch (2011). The map displays groundwater flow directions and features such as closed contours on the western edge of the basin, suggesting areas of groundwater discharge by evaporation.","- Published and unpublished sources: Historical depth-to-water and water quality data.
+- New data collected by NMBGMR and NPS staff (2009-2012):
+  - One-time and repeated depth-to-water measurements in wells.
+  - Continuous water-level measurements in wells, recorded during aquifer tests and beyond.
+- Monitoring equipment and methods:
+  - Solinst™ electronic sounder used by WHSA staff for depth to water measurements.
+  - Continuous water-level recorders set to log water level and temperature at hourly intervals.
+- GPS technology: Used for precise location mapping of wells and other measurement sites.
+- Well specifics:
+  - Monitoring wells identified as WS-###, with various depths and screening details provided for accurate measurement points.
+- Data from tensiometers: Although primarily for vadose zone investigation, could indirectly inform about water table characteristics through matric potential measurements.","- Both: Water levels were collected for the study and also compiled from other sources. New data collected included repeated depth-to-water measurements in wells, and historical depth-to-water and water quality data were used from published and unpublished sources.","Yes, the study includes water quality data:
+- Water samples were collected from eleven wells and one surface water location.
+- Analyzed for general chemistry, trace metals, stable isotopes of hydrogen and oxygen, tritium, tritium-helium, Carbon-14, and CFCs.
+- Specific field parameters measured include pH, specific conductance (SC), temperature, and dissolved oxygen (DO).","- The data for the study was both collected and compiled from other sources.
+- The report mentions several past studies and data from various researchers such as Meinzer and Hare (1915), McLean (1970), Orr and Meyers (1986), and others, indicating that historical data was compiled.
+- Additionally, the report discusses specific investigations conducted on Holloman Air Force Base, White Sands Missile Range, and WHSA, which suggests that new data was also collected for the study.
+- The comprehensive summary of data collection and interpretation mentioned in the report implies that both new data collection and compilation of existing data were integral to the study.","The water quality data sources mentioned in the aquifer report are:
+
+- Groundwater samples from eleven wells and one surface water location along Lost River within the monument.
+- Field parameters measured during sampling, including pH, specific conductance (SC), temperature (T), and dissolved oxygen (DO).
+- Geochemical analyses of the samples for general chemistry, trace metals, stable isotopes of hydrogen and oxygen, tritium, tritium-helium, Carbon-14, and CFCs.","- Hydraulic Conductivity: The report mentions that hydraulic conductivity values were calculated based on the aquifer thickness, which was assumed to be equal to the screened interval (50 feet).
+
+- Transmissivity: The report provides estimated transmissivity values for both the pumping well (WS-018) and the observation well (WS-017).
+
+- Storage Coefficient: The report includes estimated storage coefficient values for both the pumping and observation wells.
+
+- Specific Storage, Specific Yield, Porosity, Permeability: These specific hydrogeologic properties are not explicitly mentioned in the provided text.","- Hydrogeologic properties determined: Transmissivity (T) and storage coefficient (S) were the specific hydrogeologic properties reported.
+- Method of determination: These properties were estimated using an aquifer test conducted on wells WS-018 and WS-017. The test involved pumping water from WS-018 and observing the water-level responses in both WS-018 and WS-017.
+- Mathematical model used: The Papadopulos-Cooper model, which is suitable for fully penetrating wells in a confined aquifer and accounts for wellbore storage, was used to fit the drawdown data observed during the test.
+- Analysis software: AQTESOLV for Windows was used to analyze the drawdown and recovery data.
+- Additional calculations: Hydraulic conductivity values were calculated based on the estimated transmissivity and the assumption that the aquifer thickness was equal to the screened interval of 50 feet.","The provided text does not explicitly list future work recommendations for the study on the shallow groundwater system in the Tularosa Basin. However, based on the information and context given in the report, the following future work recommendations can be inferred:
+
+- Further Investigation of Groundwater Flow Paths:
+  - Explore deep regional flow paths and fault interactions at the western margin of the basin to better understand groundwater movement and discharge mechanisms.
+
+- Monitoring Seasonal Variability:
+  - Implement continuous monitoring of groundwater levels and quality to assess the impact of seasonal changes, particularly focusing on the differences in water levels and salinity during monsoon and winter seasons.
+
+- Study of Evaporation Effects:
+  - Conduct detailed studies on the role of evaporation in local and regional groundwater discharge, especially in areas like Alkali Flat and near Lake Lucero where evaporation significantly influences water table levels.
+
+- Examine Dune Dynamics and Groundwater Interactions:
+  - Further research on how groundwater salinity and availability affect dune morphology and stability, particularly the transition from barchan to parabolic dunes.
+
+- Assess Impact of Precipitation on Groundwater Quality:
+  - Investigate the chemical and physical responses of groundwater to precipitation events to understand local recharge processes and their impact on groundwater quality.
+
+- Expand Regional Water Table Mapping:
+  - Update and refine regional water table maps to include recent data and advanced modeling techniques to provide a clearer picture of groundwater dynamics across the basin.
+
+- Groundwater Contamination Studies:
+  - Continue investigations on potential groundwater contamination sources and their impacts, especially around areas with significant human activity such as Holloman Air Force Base and White Sands Missile Range.
+
+These recommendations aim to enhance understanding of the hydrological processes in the Tularosa Basin and support effective management of its groundwater resources.",https://geoinfo.nmt.edu/publications/openfile/downloads/500-599/559/OFR559_White_Sands.pdf
+What is the title of the study?,What is the name of the aquifer(s) focused on in the study?,Did the study define the aquifer extent in 2D?,"Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?",Did the study publish a digital product that defined the aquifer extent?,"Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?","Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?","Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?","Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?",Did the study produce a water table elevation map or a depth to water map?,What data was used to create the water table elevation map or depth to water map?,"Were water levels collected for the study, compiled from other sources, or both?",Does the study include water quality data?,Was the data collected for the study or compiled from other sources?,What are the water quality data sources?,"Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?","If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer ""N/A"".",What are the future work recommendations for this study? Please be detailed.,https://geoinfo.nmt.edu/publications/openfile/downloads/500-599/561/OFR_561_LR.pdf
+"The title of the study is ""Regional Water Table Map of the Northeastern Tularosa Basin region, Otero and Lincoln Counties, New Mexico.""","The aquifers focused on in the study include:
+- Fractured carbonates, mudstones, and siltstones of the Permian age San Andres, Yeso, and Abo Formations
+- Late Cretaceous to early Eocene fluvial channel-fill sandstones, floodplain deposits, and marine nearshore sands of the Sanders Canyon, Cub Mountain, Crevasse Canyon, and Gallup Formations
+- Sierra Blanca volcanic flows and volcaniclastic sediments from the late Eocene and early Oligocene epochs
+- Late Eocene through Quaternary sands and gravels of the Tularosa Basin fill","- Yes, the study defined the aquifer extent in 2D.
+- The report mentions the use of contours on maps to indicate hydraulic continuity and the boundaries of different geological formations.
+- Contours are also used to illustrate areas of uncertainty regarding the hydraulic connections between different rock types and aquifer units.
+- The use of a regional water table map further supports the 2D spatial representation of groundwater levels and aquifer extents.","- The provided text does not explicitly mention the definition of the base of the aquifer.
+- The text focuses on describing the hydraulic connectivity and lithologies of various formations, but does not detail the data or methods used to define the base of the aquifer.
+- Therefore, based on the available information, it cannot be confirmed whether the study defined the base of the aquifer or what data was used for such definition.","- Yes, the study published a digital product that defined the aquifer extent. This is indicated by the reference to the use of a ""10-m digital elevation model (DEM)"" to calculate ground water elevation values, which are typically used in mapping and defining aquifer extents. Additionally, the mention of ""Regional Water Table Map"" suggests that digital mapping was a component of the study's outputs.","Yes, the study defined the hydrostratigraphy of the aquifer. The data used to define the hydrostratigraphy includes:
+
+- Geological Formations: Identification of principal aquifers such as fractured carbonates, mudstones, siltstones, fluvial channel-fill sandstones, floodplain deposits, marine nearshore sands, volcanic flows, and volcaniclastic sediments from various geological epochs (Permian, Cretaceous, Eocene, Oligocene, Quaternary).
+- Drillers' Records: Used to distinguish between similar geological units, which are difficult to differentiate but are grouped together based on permeability for mapping purposes.
+- Hydraulic Gradients: Measurements of hydraulic gradients across different regions, reflecting variations in topography and permeability of the lithologies.
+- Well Screen Data: Information from wells screened in specific formations, providing insights into the water-producing capabilities of different strata.
+- Hydrologic Connectivity: Discussion on the hydraulic connection between different sandstone formations, indicating a degree of communication within grouped aquifer units.
+
+These data points collectively helped in defining the hydrostratigraphy of the aquifer by outlining the distribution, connectivity, and water-bearing properties of different geological formations across the study area.","Yes, the study defined subsurface structural controls on groundwater flow. The data used to define the structural controls included:
+
+- Hydraulic continuity assessments: The report discusses the unclear hydraulic continuity between different geological formations due to dramatic changes in bedrock lithologies.
+- Lithological groupings: Similar sandstone lithologies were grouped together (e.g., Cretaceous-Eocene sandstone aquifers), and their varying degrees of hydraulic connectivity were considered.
+- Permeability variations: Differences in cementation and permeability within formations like the lower Crevasse Canyon and Gallup Formations were noted, affecting hydrologic properties.
+- Contour mapping: Contours on maps were dashed in certain areas (e.g., northeast corner across Carrizo Mountain and up the flanks of Sierra Blanca and Nogal Peaks) to indicate uncertainty about the degree of hydraulic continuity due to fractured igneous intrusive rocks.
+- Field observations: Specific observations, such as the anomalously high elevation of Carrizozo spring, suggested discharge from a Cretaceous bedrock high, indicating structural influences on groundwater flow.
+- Regional water table mapping: Groundwater elevation data primarily from depth-to-water measurements and spring elevations helped illustrate regional groundwater flow, influenced by subsurface structures.
+
+These elements collectively helped define the structural controls on groundwater flow within the study area.","- The study does not explicitly define recharge and discharge zones in the provided text.
+- However, it mentions the use of groundwater elevation data primarily calculated from depth-to-water measurements and elevations of springs, which can be indicative of groundwater flow patterns potentially related to recharge and discharge areas.
+- The mention of high elevation springs discharging from perched aquifers and the anomalous high elevation discharge at Carrizozo spring suggest localized discharge zones, but specific recharge zones are not clearly defined in the text.","- The provided sections of the aquifer report do not explicitly mention the quantification of recharge and discharge rates or amounts.
+- The report primarily discusses the hydraulic continuity, lithologies, and regional groundwater flow characteristics.
+- Data mentioned includes depth-to-water measurements, elevations of springs, and static water levels from selected well records, but these are used to calculate groundwater elevation values rather than directly quantifying recharge and discharge rates.
+- Therefore, based on the available information, it appears that the study did not specifically quantify recharge and discharge rates or amounts.","The study produced a water table elevation map. This is indicated by the following points from the text:
+
+- The purpose of the map is to illustrate important aspects of regional groundwater flow.
+- Groundwater elevation data depicted were calculated primarily from depth-to-water measurements taken between 2009 and 2011.
+- Water table contours from previous studies are shown along the eastern margin of the map.
+- Groundwater levels in the vicinity of pumping wells are mentioned to fluctuate significantly over time.","The data used to create the water table elevation map or depth to water map includes:
+
+- Depth-to-water measurements taken between 2009 and 2011 by the New Mexico Bureau of Geology and Mineral Resources (NMBGMR) at New Mexico Tech.
+- Elevations of springs in the area.
+- Static water levels from selected, recent well records by the New Mexico Office of the State Engineer (NM OSE).
+- Water table contours from Sloan and Garber’s 1971 water table map of the Mescalero Apache Reservation, specifically along the eastern margin of the map.
+- Land surface elevations derived from the 10-meter digital elevation model (DEM).
+- Interpretations by the authors based on the water level data to draw groundwater elevation contours and to interpret or generate groundwater flow direction and boundaries of groundwater flow units.","- Both collected for the study and compiled from other sources.
+  - Water level data were primarily calculated from depth-to-water measurements taken between 2009 and 2011 by the New Mexico Bureau of Geology and Mineral Resources (NMBGMR) at New Mexico Tech.
+  - Additionally, water table contours from Sloan and Garber’s (1971) water table map of the Mescalero Apache Reservation were shown along the eastern margin of the map, indicating the use of compiled historical data.
+  - Locations where depth-to-water data were not available used static water levels from selected, recent New Mexico Office of the State Engineer’s (NM OSE) well records, further indicating the use of compiled data.","- The provided text does not explicitly mention water quality data.
+- The focus is primarily on hydraulic continuity, aquifer connectivity, and groundwater flow based on geological formations and water table mapping.
+- Therefore, it can be inferred that the study does not include water quality data, or at least it is not discussed in the provided sections.","- The data for the study was primarily compiled from other sources.
+- Groundwater elevation data depicted in the report were calculated from depth-to-water measurements taken between 2009 and 2011 by the New Mexico Bureau of Geology and Mineral Resources (NMBGMR) at New Mexico Tech.
+- Additional data were used from the elevations of springs and static water levels from selected, recent New Mexico Office of the State Engineer’s (NMOSE) well records.
+- Water table contours from Sloan and Garber’s (1971) water table map of the Mescalero Apache Reservation are also shown, indicating the use of historical data.
+- Land surface elevations were derived from the 10-m digital elevation model (DEM).","The water quality data sources mentioned in the provided aquifer report sections are:
+
+- Depth-to-water measurements taken between 2009 and 2011 by the New Mexico Bureau of Geology and Mineral Resources (NMBGMR) at New Mexico Tech.
+- Elevations of springs.
+- Static water levels from selected, recent New Mexico Office of the State Engineer’s (NMOSE) well records.","- The study report does not explicitly mention specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity.
+- It discusses hydraulic continuity, changes in bedrock lithologies, and groups of aquifers with varying degrees of hydraulic connection, but does not provide quantitative measures of the mentioned hydrogeologic properties.",N/A,"The aquifer report sections provided do not explicitly list future work recommendations. However, based on the issues and uncertainties highlighted in the text, the following future work recommendations can be inferred:
+
+- Hydraulic Continuity Assessment:
+  - Conduct detailed hydrogeological studies to clarify the hydraulic continuity between the northern and southern halves of the study area, especially where bedrock lithologies change dramatically.
+  - Investigate the degree of hydraulic communication between the Cretaceous-Eocene sandstone aquifers and the late Eocene-early Oligocene volcanic rocks.
+
+- Permeability and Cementation Studies:
+  - Further analyze the lower Crevasse Canyon and Gallup Formations to understand the variability in cementation and its impact on permeability and aquifer properties.
+
+- High Elevation Springs:
+  - Study the high elevation springs along the flanks of Sierra Blanca and Nogal Peaks to determine if they are hydraulically connected to other aquifers or if they are isolated perched aquifers.
+
+- Carrizozo Spring Analysis:
+  - Perform additional field observations and possibly geophysical surveys around Carrizozo Spring to confirm if the water discharge is from a Cretaceous bedrock high and to better understand its anomalously high topographic position.
+
+- Regional Water Table Mapping:
+  - Update and refine the regional water table map with new data, focusing on areas where data were previously unavailable or where significant fluctuations in groundwater levels have been observed.
+
+- Integration of New Data:
+  - Integrate recent well records and depth-to-water measurements into the existing models to improve the accuracy of groundwater flow models.
+
+- Long-term Monitoring:
+  - Establish long-term monitoring programs to observe changes in groundwater levels and quality, particularly in areas affected by pumping and natural variations.
+
+These recommendations aim to address the uncertainties and data gaps identified in the report, thereby improving the understanding of the regional hydrogeology and supporting more effective water resource management.",https://geoinfo.nmt.edu/publications/openfile/downloads/500-599/561/OFR_561_LR.pdf
+What is the title of the study?,What is the name of the aquifer(s) focused on in the study?,Did the study define the aquifer extent in 2D?,"Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?",Did the study publish a digital product that defined the aquifer extent?,"Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?","Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?","Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?","Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?",Did the study produce a water table elevation map or a depth to water map?,What data was used to create the water table elevation map or depth to water map?,"Were water levels collected for the study, compiled from other sources, or both?",Does the study include water quality data?,Was the data collected for the study or compiled from other sources?,What are the water quality data sources?,"Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?","If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer ""N/A"".",What are the future work recommendations for this study? Please be detailed.,https://geoinfo.nmt.edu/publications/openfile/downloads/500-599/562/OFR-562.pdf
+"The title of the study is not explicitly mentioned in the provided text. However, based on the context and content, a suitable inferred title could be:
+
+- ""Hydrogeologic Investigation of the Western Sacramento Mountains and Northeastern Tularosa Basin""","- Cenozoic basin-fill (QTBF)
+- Valley fill (QUAL)","- Yes, the study defined the aquifer extent in 2D.
+- Evidence for this includes references to geologic maps and cross sections, water level elevation contour maps, and hydrostratigraphic units relevant to groundwater flow, which are all tools used to delineate aquifer boundaries in two dimensions.","- The study does not explicitly mention defining the base of the aquifer.
+- However, it does mention the use of subsurface geologic data from well records and lithologic logs, which typically include information that could help infer the base of an aquifer.
+- The detailed mapping and characterization of geologic units and the identification of these units in well logs suggest that these data sources could have been used to define or estimate the base of the aquifer indirectly.","- The provided text does not explicitly mention the publication of a digital product that defined the aquifer extent.
+- However, the report includes various maps and geologic data (e.g., Figure 6–Geologic map of the study area, Figure 22–Water level elevation contour maps), which suggest that digital or mapped products were likely created as part of the study's outputs.
+- These maps and data could implicitly contribute to defining the aquifer extent, although a specific digital product solely for this purpose is not directly referenced.","- The provided text does not explicitly mention the definition of the hydrostratigraphy of the aquifer.
+- However, the text discusses geological and hydrological data collection and interpretations, which typically involve studying the stratigraphy and structure of aquifers.
+- The text references previous geological and hydrogeological studies, which likely included data relevant to defining hydrostratigraphy, such as:
+  - Geological structure of the Tularosa Basin.
+  - Studies on the Carrizozo lava flow and its impact on underground streams.
+  - Historical hydrogeological work by O.E. Meinzer and others.
+- Specific data types used to define hydrostratigraphy are not detailed in the provided text.","- Yes, the study defined subsurface structural controls on groundwater flow.
+- Data used:
+  - Geologic observations: The study mentions the Alamogordo fault, which is a normal fault causing the down-dropped basin floor and resulting in a steep mountain front. This structural feature influences groundwater flow patterns.
+  - Topographic data: The regional water-level elevation contours were drawn based on water-level measurements, which reflect the influence of topography and underlying geologic structures on groundwater flow.
+  - Hydrologic gradient measurements: These were estimated by measuring the distance between water-level contours, helping to define how structural features like the Alamogordo fault impact groundwater movement.
+  - Field observations of springs and river systems: Observations such as water table mounding near drainage basins and the transition from gaining to losing systems in river sections crossing the fault line indicate structural control on groundwater flow.","Yes, the study defined recharge zones. The data used to define these zones included:
+
+- Geological and hydrological studies: Historical and recent studies provided insights into the geology and hydrology of the Tularosa Basin, which helped in identifying potential recharge areas.
+- Precipitation patterns: The study by Meinzer and Hare (1915) described the spatial and temporal variability of precipitation, noting that most precipitation occurs from June to September and increases with altitude. This information helps in identifying areas where recharge is likely to occur.
+- Permeability of geological formations: The Carrizozo lava flows were noted to be very permeable, suggesting they could be significant recharge areas.
+- Regional water table maps: Both historical (Meinzer and Hare, 1915) and more recent (Embid and Finch, 2011) water table maps were used to infer areas of groundwater infiltration and potential recharge zones.
+
+Discharge zones were not explicitly defined in the provided text, but the general descriptions of groundwater flow and water quality might suggest areas of lower recharge or potential discharge, such as the central parts of the basin where water quality decreases and salinity increases.","- Yes, the study quantified recharge rates.
+- Data used:
+  - Groundwater age data: This includes the analysis of young and old water components in groundwater samples, which helps in understanding the mixing and residence times of water in the aquifer.
+  - CFC and tritium concentrations: These environmental tracers were used to estimate the age of groundwater and infer recharge times, specifically identifying water recharged between 1984 and 1991.
+  - Darcy Flow calculation: This method was employed to estimate volumetric flow, which directly relates to quantifying how much groundwater is recharging the basin.
+  
+These methods and data points collectively helped in assessing the rates of groundwater movement and estimating recharge amounts.","- The study produced a depth to water map. This is indicated by the repeated and one-time depth-to-water measurements mentioned in the report, which were used to understand the occurrence and direction of groundwater flow.","- Published geologic maps: Used for identifying and mapping geological units and features relevant to groundwater studies.
+- Subsurface geologic data from well records and lithologic logs: Provided detailed information on the subsurface geology encountered during well drilling, crucial for understanding aquifer characteristics and water table levels.
+- Hydrologic consultants’ reports: Offered additional expert analyses and data on the hydrology of the area, including groundwater levels.
+- Weather station data: Contributed meteorological information that can influence groundwater recharge and levels.
+- Historical depth-to-water and water quality data: Provided baseline and temporal changes in groundwater levels and quality.
+- New data collected by NMBGMR, contractors, and students (2009-2012):
+  - Geologic mapping at 1:24,000-scale with cross sections: Helped refine the geological understanding of the area.
+  - Subsurface geologic unit identification from well logs: Enhanced the detail of subsurface geological data.
+  - Accurate measurements of field site locations: Ensured precise location data for mapping and analysis.
+  - Characterization of the geologic setting of spring and well sites: Provided context for interpreting hydrological data.
+  - One-time and repeated depth-to-water measurements in wells: Direct measurements of water table levels.
+  - One-time and repeated geochemical, isotopic, and environmental tracer sampling: Offered additional data points for understanding water movement and quality.
+- Digital elevation model (10-meter horizontal resolution): Used to derive elevation data for mapping and analysis purposes.","- Both: Water levels were collected for the study and also compiled from other sources.
+  - New data collected by the NMBGMR included one-time and repeated depth-to-water measurements in wells.
+  - Water-level data from numerous private wells were obtained, and attempts were made to identify the well record associated with each well from the New Mexico Office of the State Engineer, which provided additional historical data.","Yes, the study includes water quality data:
+- The report mentions ""one-time and repeated geochemical, isotopic, and environmental tracer sampling from wells, springs, streams, and precipitation.""
+- Historical water quality data from published and unpublished sources were also used in the study.","- The data used in the study was both collected and compiled from other sources.
+  - Collected Data: New data collected by the NMBGMR, contractors, and students from 2009 to 2012 includes geologic mapping, subsurface geologic unit identification from well logs, accurate measurements of field site locations, characterization of the geologic setting of spring and well sites, and one-time and repeated depth-to-water measurements, as well as geochemical, isotopic, and environmental tracer sampling.
+  - Compiled Data: Existing and previously reported data include published geologic maps, subsurface geologic data from well records and lithologic logs, hydrologic consultants’ reports, weather station data, and historical depth-to-water and water quality data from published and unpublished sources.","The water quality data sources mentioned in the aquifer report include:
+
+- Well records and lithologic logs: These provide subsurface geologic data which can be used to infer water quality based on the types of geological formations encountered.
+- Hydrologic consultants’ reports: These reports likely contain assessments and analyses of water quality based on various studies and tests conducted in the region.
+- Historical depth-to-water and water quality data: This includes both published and unpublished sources that have recorded water quality over time.
+- Geochemical, isotopic, and environmental tracer sampling: These samples were taken from wells, springs, streams, and precipitation between 2009 and 2012, providing direct measurements of water quality parameters.
+- Water-level measurements in wells: While primarily for assessing water levels, these measurements can also provide indirect data on water quality, especially when changes in water levels might correlate with changes in water quality due to factors like contamination or salinity intrusion.","- The provided text does not explicitly mention specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, or transmissivity.
+- The text focuses on describing the geographical, topographical, and vegetative characteristics of the study area, along with the purpose and scope of the study which includes identifying recharge areas and quantifying groundwater recharge, but does not detail specific hydrogeologic measurements or properties.","- Total Dissolved Solids (TDS): Determined from water quality data, as mentioned in the context of saline and fresh water distribution in the basin.
+- Recharge Estimates:
+  - Darcy Flow Approximation: Based on aquifer tests conducted in the basin-fill (Rau, 1986).
+  - Basin-Climatic Characteristic Method: Utilized area of drainage basins and average precipitation data (Waltemeyer, 2001).
+  - Surplus Precipitation Method: Analyzed watershed yield by finding the elevation where precipitation exceeds potential evaporation, plant transpiration, and interception (Livingston and Shomaker, 2006).
+- Geologic Properties:
+  - Mapping and Cross Sections: Conducted using field traverses, aerial photography, and interpretations with tools like the PG-2 plotter and Stereo Analyst extension for ArcGIS for 3-D viewing.
+- Water-Level Measurements: Obtained from various wells using techniques like steel tape and electronic devices to ensure accuracy, repeated measurements to achieve consistency within 0.02 feet.
+
+If specific hydrogeologic properties such as porosity, permeability, or hydraulic conductivity were not explicitly mentioned, they are considered ""N/A"" based on the provided text.","The future work recommendations for this study, based on the analysis and findings presented in the aquifer report, include:
+
+- Continued Monitoring and Data Collection:
+  - Further groundwater-level records to monitor changes over time.
+  - Additional chemical analysis to better understand the variations in water quality across different regions.
+  - Continued age dating of water to refine understanding of groundwater movement and mixing.
+
+- Enhanced Geological and Hydrological Mapping:
+  - Detailed geologic mapping to better delineate the structures influencing groundwater flow.
+  - Construction of detailed cross sections to visualize and understand the subsurface hydrologic connections and barriers.
+
+- Refinement of Flow Path Analysis:
+  - More precise tracing and modeling of mountain-block recharge (MBR) flow paths to understand their contributions and dynamics.
+  - Investigation into the isolation and interconnectivity of individual groundwater flow paths.
+
+- Environmental Tracer Studies:
+  - Expanded use of environmental tracers to provide more detailed insights into the timing, sources, and pathways of recharge.
+  - Analysis of stable isotopes to further differentiate between summer and winter precipitation impacts on recharge.
+
+- Quantitative Analysis Improvements:
+  - Refinement of Darcy Flow calculations to improve estimates of mountain-block recharge versus mountain front recharge (MFR).
+  - Comparison and calibration of flow estimates with newer or more comprehensive studies to validate findings.
+
+- Water Quality and Potability Studies:
+  - Detailed studies on the long-term impacts of prolonged contact of groundwater with aquifer materials, focusing on dissolution processes and their effects on water quality.
+  - Assessment of the potability of water from deep flow paths (MBR) and strategies to potentially improve it.
+
+- Impact of Climate Variability:
+  - Studies to assess the impact of climate change and variability on precipitation patterns, recharge rates, and groundwater levels.
+  - Analysis of drought resilience of MBR versus MFR to better plan for future water resource management under varying climatic conditions.
+
+These recommendations aim to deepen the understanding of the hydrologic system recharging the Tularosa Basin and enhance the management of its water resources.",https://geoinfo.nmt.edu/publications/openfile/downloads/500-599/562/OFR-562.pdf

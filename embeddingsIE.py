@@ -11,10 +11,11 @@ import pandas as pd
 import re
 
 # Configuration
+studyarea = 'TularosaBasin'
 REPORTS_CSV = "TESTaquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
-OUTPUT_CSV = "TESTaquifer_insights_embeddings.csv"
+OUTPUT_CSV = f"{studyarea}_aquifer_insights_embeddings.csv"
 EMBEDDING_MODEL = "text-embedding-3-large"
 
 # Ensure download directory exists
@@ -61,7 +62,7 @@ def get_embedding(text):
     embedding = np.array(response.data[0].embedding)
 
     # Debug: Print a sample embedding for verification
-    print(f"Sample embedding (first 5 values): {embedding[:5]}")
+    # print(f"Sample embedding (first 5 values): {embedding[:5]}")
     return embedding
 
 
@@ -70,12 +71,14 @@ def split_text(text, chunk_size=1200, overlap=300):
     words = text.split()
     chunks = []
     for i in range(0, len(words), chunk_size - overlap):
-        chunks.append(" ".join(words[i:i+chunk_size]))
+        chunks.append(" ".join(words[i:i + chunk_size]))
     return chunks
 
 
 def process_reports(limit=1):
-    df = pd.read_csv(REPORTS_CSV).head(limit)  # Limit to first 3 reports
+    # df = pd.read_csv(REPORTS_CSV).head(limit)  # Limit to first 3 reports
+    df = pd.read_csv(REPORTS_CSV)
+
     reports = []
     for idx, row in df.iterrows():
         url = row["report_url"]
@@ -90,31 +93,40 @@ def process_reports(limit=1):
     return reports
 
 
-def generate_embeddings(reports):
+def generate_embeddings(report):
     embeddings, metadata = [], []
-    for report in reports:
-        url = report["url"]
-        sections = split_text(report["text"])
-        for section in sections:
-            embedding = get_embedding(section)
-            embeddings.append(embedding)
-            metadata.append({"URL": url, "Text": section})
+    # for report in reports:
+    url = report["url"]
+    sections = split_text(report["text"])
+    for section in sections:
+        embedding = get_embedding(section)
+        embeddings.append(embedding)
+        metadata.append({"URL": url, "Text": section})
     embeddings_array = np.array(embeddings).astype('float32')
     dimension = embeddings_array.shape[1]
     index = faiss.IndexFlatL2(dimension)
     index.add(embeddings_array)
-    faiss.write_index(index, "report_embeddings.index")
-    with open("metadata.json", "w", encoding="utf-8") as f:
+    faiss.write_index(index, f"{report['url'].split('/')[-1]}_embeddings.index")
+    with open(f"{report['url'].split('/')[-1]}_metadata.json", "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=4)
+
+    # faiss.write_index(index, "report_embeddings.index")
+    # with open("metadata.json", "w", encoding="utf-8") as f:
+    #     json.dump(metadata, f, indent=4)
     print("Embeddings generated and stored.")
 
 
-def search_relevant_section(query, top_k=5):
-    """Find the most relevant report sections for a query."""
-    index = faiss.read_index("report_embeddings.index")
-
-    with open("metadata.json", "r", encoding="utf-8") as f:
+def search_relevant_section(query, report_url, top_k=5):
+    """Find the most relevant report section based on a query."""
+    index = faiss.read_index(f"{report_url.split('/')[-1]}_embeddings.index")
+    with open(f"{report_url.split('/')[-1]}_metadata.json", "r", encoding="utf-8") as f:
         metadata = json.load(f)
+
+    # """Find the most relevant report sections for a query."""
+    # index = faiss.read_index("report_embeddings.index")
+    #
+    # with open("metadata.json", "r", encoding="utf-8") as f:
+    #     metadata = json.load(f)
 
     query_embedding = get_embedding(query).astype('float32').reshape(1, -1)
 
@@ -136,8 +148,9 @@ def ask_openai(query, relevant_text):
 
     {relevant_text}
 
-    Answer the following query clearly and concisely. Use bullet points if possible. 
-    If the section does not explicitly contain the answer, infer the best possible response from the available data, but please keep the answer concise: {query}
+    Answer the following query clearly and concisely. Use bullet points if possible. If the section does not 
+    explicitly contain the answer, infer the best possible response from the available data, but please keep the 
+    answer concise: {query}
     """
     response = client.chat.completions.create(model="gpt-4-turbo", messages=[{"role": "user", "content": prompt}],
                                               temperature=0)
@@ -150,7 +163,7 @@ def ask_openai(query, relevant_text):
     results = response.choices[0].message.content
     result = re.sub(r"[*_`]", "", results)  # Remove *, _, and ` used in markdown formatting
 
-    return results
+    return result
     # except json.JSONDecodeError:
     #     return {"Query": query, "Answer": "Invalid response from OpenAI"}
 
@@ -174,29 +187,68 @@ def load_questions():
 #     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
 
 
-def extract_answers(reports):
+# def extract_answers(reports):
+#     questions = load_questions()
+#     answers = []
+#     for q in questions:
+#         best_matches = search_relevant_section(q)
+#
+#         # Print retrieved sections for debugging
+#         print(f"\nQuery: {q}")
+#         # for match in best_matches:
+#         #     print(f"Matched Section:\n{match['Text'][:500]}...\n")  # Show first 500 chars
+#
+#         answer = ask_openai(q, best_matches[0]["Text"])
+#         answers.append(answer)
+#
+#     df_results = pd.DataFrame({'Question': questions, 'Answer': answers}, index=None)
+#     df_r = df_results.T
+#     df_r['Report_URL'] = reports[0]["url"]
+#     df_r.to_csv(OUTPUT_CSV)
+#     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
+
+def extract_answers(report):
     questions = load_questions()
-    answers = []
+    results = []
+    # for report in reports:
+    report_url = report['url']
     for q in questions:
-        best_matches = search_relevant_section(q)
-
-        # Print retrieved sections for debugging
-        print(f"\nQuery: {q}")
-        # for match in best_matches:
-        #     print(f"Matched Section:\n{match['Text'][:500]}...\n")  # Show first 500 chars
-
-        answer = ask_openai(q, best_matches[0]["Text"])
-        answers.append(answer)
-
-
-    df_results = pd.DataFrame({'Question': questions, 'Answer': answers}, index=None)
+        best_match = search_relevant_section(q, report_url)[0]
+        results.append(ask_openai(q, best_match["Text"]))
+    df_results = pd.DataFrame({'Question': questions, 'Answer': results}, index=None)
     df_r = df_results.T
-    df_r['Report_URL'] = reports[0]["url"]
-    df_r.to_csv(OUTPUT_CSV)
+    df_r['Report_URL'] = report_url
+    df_r.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
+    # df_results.T.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
+
+
+# def extract_answers(reports):
+#     """Extract answers for all reports and save in a CSV file."""
+#     questions = load_questions()
+#     all_results = []
+#
+#     for report in reports:
+#         report_url = report["url"]
+#         report_answers = {"Report_URL": report_url}
+#
+#         for q in questions:
+#             best_matches = search_relevant_section(q)
+#             answer = ask_openai(q, best_matches[0]["Text"])
+#             report_answers[q] = answer  # Store answers per question
+#
+#         all_results.append(report_answers)
+#
+#     # Convert results to DataFrame
+#     df_results = pd.DataFrame(all_results)
+#
+#     # Save results to CSV
+#     df_results.to_csv(OUTPUT_CSV, index=False)
+#     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
 
 
 if __name__ == "__main__":
     reports = process_reports()
-    generate_embeddings(reports)
-    extract_answers(reports)
+    for report in reports:
+        generate_embeddings(report)
+        extract_answers(report)
