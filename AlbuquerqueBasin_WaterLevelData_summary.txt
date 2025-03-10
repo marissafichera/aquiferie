@@ -1,0 +1,5 @@
+The text repeatedly addresses whether water levels used in the study were gathered by the researchers themselves or taken from existing sources. Ultimately, it conveys that:  
+• Water-level data were both collected specifically for the study and taken from existing sources, notably the 2012 USGS dataset and records from the New Mexico Office of the State Engineer-Water Rights Reporting System (2010–2016).  
+• Non-pumping well measurements from 2011–2013 were also included to align with the 2012 USGS data.  
+• Confusion arises because some segments say they cannot definitively determine whether data were newly collected or compiled from existing sources (due to limited access to the full report or an “Error extracting text from PDF”).  
+• Nonetheless, there is a clear overall conclusion that the study’s water-level data came from both newly collected measurements and previously published datasets.

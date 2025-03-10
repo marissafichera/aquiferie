@@ -1,0 +1,7 @@
+The text repeatedly notes that the study report does not provide specific numerical values or detailed discussions regarding most hydrogeologic properties (e.g., porosity, permeability beyond hydraulic conductivity, storage coefficients, specific storage, specific yield, transmissivity). Although hydraulic conductivity is sometimes mentioned for various hydrostratigraphic units, the emphasis of the report appears to be on:  
+• Groundwater levels, drawdown, and water management strategies in the Santa Fe Group aquifer system.  
+• A 3D geophysical model of rift-fill thickness employing gravity inversion techniques.  
+• Geological and petrographic characteristics of the formations within the aquifer system.  
+• Fault zone impacts on fluid flow and permeability (without providing specific numerical values).  
+
+Furthermore, the text highlights that certain material could not be confirmed or detailed due to errors extracting data from the PDF, and it requests the relevant sections of the report for a more thorough analysis.

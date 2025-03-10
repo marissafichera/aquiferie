@@ -11,8 +11,8 @@ import pandas as pd
 import re
 
 # Configuration
-studyarea = 'TularosaBasin'
-REPORTS_CSV = "TESTaquiferie_report_links.csv"  # CSV file containing report URLs
+studyarea = 'AlbuquerqueBasin'
+REPORTS_CSV = f"{studyarea}aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
 OUTPUT_CSV = f"{studyarea}_aquifer_insights_embeddings.csv"
@@ -148,8 +148,8 @@ def ask_openai(query, relevant_text):
 
     {relevant_text}
 
-    Answer the following query clearly and concisely. Use bullet points if possible. If the section does not 
-    explicitly contain the answer, infer the best possible response from the available data, but please keep the 
+    Answer the following query clearly and concisely. If the section does not 
+    explicitly contain the answer, infer the best possible response from the available data, but keep the 
     answer concise: {query}
     """
     response = client.chat.completions.create(model="gpt-4-turbo", messages=[{"role": "user", "content": prompt}],
@@ -218,8 +218,22 @@ def extract_answers(report):
     df_results = pd.DataFrame({'Question': questions, 'Answer': results}, index=None)
     df_r = df_results.T
     df_r['Report_URL'] = report_url
-    df_r.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
-    # df_results.T.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
+
+
+    # Check if the file exists
+    file_exists = os.path.exists(OUTPUT_CSV)
+
+    if not file_exists:
+        df_r.to_csv(OUTPUT_CSV, mode='a', index=False)
+    else:
+        df_r.to_csv(OUTPUT_CSV, mode='a', header=False, index=False)
+
+    # # Write the DataFrame to CSV
+    # with open(OUTPUT_CSV, mode='a', newline='') as f:
+    #     df_r.to_csv(f, header=not file_exists, index=False)
+    #
+    df_r.to_csv(f'backup{OUTPUT_CSV}', mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
+    # # df_results.T.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
 
 
