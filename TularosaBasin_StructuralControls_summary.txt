@@ -1,0 +1,8 @@
+The referenced study identifies and characterizes how subsurface structures influence groundwater flow within the Tularosa Basin region. Multiple data sources and methods contribute to this conclusion:
+
+• Geologic and Structural Mapping: Figures and cross sections (combined with insights from faults like the Alamogordo and Jarilla fault zones) reveal the basin’s underlying geologic framework. Well logs provide vertical sediment distribution information, illuminating permeability pathways and barriers.  
+• Isotopic and Lithologic Analyses: Sulfur isotope data from gypsiferous sediments near Lake Lucero suggest deep groundwater flow paths involving Permian rock dissolution, with groundwater potentially migrating upward along major faults.  
+• Hydraulic Continuity and Permeability: Assessments of lithologic groupings (e.g., sandstone aquifers) and changes in cementation show how varied permeability and uncertain connectivity affect water movement between formations.  
+• Mapping and Field Observations: Regional water table elevations, spring locations, and anomalies (such as the high-elevation Carrizozo spring) offer evidence of structural controls on groundwater rise and flow directions. Steep fault-bound mountain fronts, fractured igneous intrusions, and transitions from gaining to losing river systems further underscore structural influence.  
+
+Together, these data sets illustrate that faults, sediment distributions, and bedrock variations control how groundwater travels through and discharges from the basin.

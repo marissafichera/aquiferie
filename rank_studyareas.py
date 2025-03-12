@@ -19,8 +19,8 @@ def load_questions(file):
 
 
 def summarize_text(studyarea):
-    df = pd.read_csv(f'{studyarea}_aquifer_insights_embeddings.csv', header=1)
-    df = df.drop([1, 3, 5, 7, 9, 11, 13, 15, 17])
+    df = pd.read_csv(f'{studyarea}_aquifer_insights_embeddings.csv')
+    # df = df.drop([1, 3, 5, 7, 9, 11, 13, 15, 17])
     print(df)
 
     text_columns = 'What are the future work recommendations for this study? Please be detailed.'
@@ -67,7 +67,7 @@ def main():
     aquifer_reports = pd.read_csv('aquiferie_report_links.csv')
     # print(aquifer_reports['SimpleRegion'].unique())
 
-    summarize_text('AlbuquerqueBasin')
+    summarize_text('TularosaBasin')
 
     # amp_study_areas = gpd.read_file(r'W:\gis_base\amp_coverages\studyareas\AMP_Study_Areas_Winter2025.shp')
     # amp_study_areas = amp_study_areas.reset_index(names='FID')

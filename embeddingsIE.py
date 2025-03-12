@@ -11,11 +11,11 @@ import pandas as pd
 import re
 
 # Configuration
-studyarea = 'AlbuquerqueBasin'
-REPORTS_CSV = f"{studyarea}aquiferie_report_links.csv"  # CSV file containing report URLs
+studyarea = 'RoswellArtesianBasin'
+REPORTS_CSV = f"{studyarea}/{studyarea}_aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
-OUTPUT_CSV = f"{studyarea}_aquifer_insights_embeddings.csv"
+OUTPUT_CSV = f"{studyarea}/{studyarea}_aquifer_insights_embeddings.csv"
 EMBEDDING_MODEL = "text-embedding-3-large"
 
 # Ensure download directory exists
@@ -38,8 +38,9 @@ def download_pdf(url, filename):
         return None
 
 
-def extract_text_from_pdf(pdf_path):
+def extract_text_from_pdf(pdf_file):
     """Extract text from a PDF file using PyMuPDF (better handling for various PDF types)."""
+    pdf_path = os.path.join(studyarea, 'reports', pdf_file)
     text = ""
     try:
         with pymupdf.open(pdf_path) as pdf:
@@ -77,26 +78,29 @@ def split_text(text, chunk_size=1200, overlap=300):
 
 def process_reports(limit=1):
     # df = pd.read_csv(REPORTS_CSV).head(limit)  # Limit to first 3 reports
-    df = pd.read_csv(REPORTS_CSV)
+    # df = pd.read_csv(REPORTS_CSV)
+    folder_path = os.path.join(studyarea, 'reports')
+    pdfs = [file for file in os.listdir(folder_path) if file.lower().endswith(".pdf")]
+    extracts = []
 
-    reports = []
-    for idx, row in df.iterrows():
-        url = row["report_url"]
-        region = row['SimpleRegion']
-        pdf_filename = os.path.join(DOWNLOAD_DIR, f"{region}_{idx}.pdf")
-        if not os.path.exists(pdf_filename):
-            pdf_filename = download_pdf(url, pdf_filename)
-        if pdf_filename:
-            text = extract_text_from_pdf(pdf_filename)
-            reports.append({"url": url, "text": text})
-    print(f"Extracted text from {len(reports)} reports.")
-    return reports
+    # for idx, row in df.iterrows():
+    #     url = row["report_url"]
+    #     region = row['SimpleRegion']
+    #     pdf_filename = os.path.join(DOWNLOAD_DIR, f"{region}_{idx}.pdf")
+    #     if not os.path.exists(pdf_filename):
+    #         pdf_filename = download_pdf(url, pdf_filename)
+    for pdf in pdfs:
+        if pdf:
+            text = extract_text_from_pdf(pdf)
+            extracts.append({"pdf": pdf, "text": text})
+    print(f"Extracted text from {len(extracts)} reports.")
+    return extracts
 
 
 def generate_embeddings(report):
     embeddings, metadata = [], []
     # for report in reports:
-    url = report["url"]
+    url = report["pdf"]
     sections = split_text(report["text"])
     for section in sections:
         embedding = get_embedding(section)
@@ -106,8 +110,8 @@ def generate_embeddings(report):
     dimension = embeddings_array.shape[1]
     index = faiss.IndexFlatL2(dimension)
     index.add(embeddings_array)
-    faiss.write_index(index, f"{report['url'].split('/')[-1]}_embeddings.index")
-    with open(f"{report['url'].split('/')[-1]}_metadata.json", "w", encoding="utf-8") as f:
+    faiss.write_index(index, f"{studyarea}/{report['pdf'].split('/')[-1]}_embeddings.index")
+    with open(f"{studyarea}/{report['pdf'].split('/')[-1]}_metadata.json", "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=4)
 
     # faiss.write_index(index, "report_embeddings.index")
@@ -118,24 +122,14 @@ def generate_embeddings(report):
 
 def search_relevant_section(query, report_url, top_k=5):
     """Find the most relevant report section based on a query."""
-    index = faiss.read_index(f"{report_url.split('/')[-1]}_embeddings.index")
-    with open(f"{report_url.split('/')[-1]}_metadata.json", "r", encoding="utf-8") as f:
+    index = faiss.read_index(f"{studyarea}/{report_url.split('/')[-1]}_embeddings.index")
+    with open(f"{studyarea}/{report_url.split('/')[-1]}_metadata.json", "r", encoding="utf-8") as f:
         metadata = json.load(f)
-
-    # """Find the most relevant report sections for a query."""
-    # index = faiss.read_index("report_embeddings.index")
-    #
-    # with open("metadata.json", "r", encoding="utf-8") as f:
-    #     metadata = json.load(f)
 
     query_embedding = get_embedding(query).astype('float32').reshape(1, -1)
 
     # distances, indices = index.search(query_embedding, top_k)
     distances, indices = index.search(query_embedding, top_k)
-
-    # Debug: Print distances for each retrieved section
-    # for i, dist in enumerate(distances[0]):
-    #     print(f"Match {i + 1}: Distance={dist:.4f} | Text={metadata[indices[0][i]]['Text'][:300]}...")
 
     results = [metadata[i] for i in indices[0]]
     return results  # Return top_k sections instead of just one
@@ -152,8 +146,8 @@ def ask_openai(query, relevant_text):
     explicitly contain the answer, infer the best possible response from the available data, but keep the 
     answer concise: {query}
     """
-    response = client.chat.completions.create(model="gpt-4-turbo", messages=[{"role": "user", "content": prompt}],
-                                              temperature=0)
+    response = client.chat.completions.create(model="o1", messages=[{"role": "user", "content": prompt}],
+                                              )
 
     # Log token usage
     # usage = response.usage
@@ -174,91 +168,35 @@ def load_questions():
         return [line.strip() for line in file.readlines() if line.strip()]
 
 
-# def extract_answers():
-#     questions = load_questions()
-#     results = []
-#     for q in questions:
-#         best_match = search_relevant_section(q)[0]
-#         json_response = ask_openai(q, best_match["Text"])
-#         results.append(json_response)
-#
-#     df_results = pd.DataFrame(results)
-#     df_results.T.to_csv(OUTPUT_CSV, index=False)
-#     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
-
-
-# def extract_answers(reports):
-#     questions = load_questions()
-#     answers = []
-#     for q in questions:
-#         best_matches = search_relevant_section(q)
-#
-#         # Print retrieved sections for debugging
-#         print(f"\nQuery: {q}")
-#         # for match in best_matches:
-#         #     print(f"Matched Section:\n{match['Text'][:500]}...\n")  # Show first 500 chars
-#
-#         answer = ask_openai(q, best_matches[0]["Text"])
-#         answers.append(answer)
-#
-#     df_results = pd.DataFrame({'Question': questions, 'Answer': answers}, index=None)
-#     df_r = df_results.T
-#     df_r['Report_URL'] = reports[0]["url"]
-#     df_r.to_csv(OUTPUT_CSV)
-#     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
-
 def extract_answers(report):
     questions = load_questions()
     results = []
     # for report in reports:
-    report_url = report['url']
+    report_url = report['pdf']
     for q in questions:
         best_match = search_relevant_section(q, report_url)[0]
         results.append(ask_openai(q, best_match["Text"]))
-    df_results = pd.DataFrame({'Question': questions, 'Answer': results}, index=None)
-    df_r = df_results.T
-    df_r['Report_URL'] = report_url
 
+    df_results = pd.DataFrame([results], columns=questions)
+    df_results['Report'] = report_url
 
-    # Check if the file exists
-    file_exists = os.path.exists(OUTPUT_CSV)
+    df_results.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
 
-    if not file_exists:
-        df_r.to_csv(OUTPUT_CSV, mode='a', index=False)
-    else:
-        df_r.to_csv(OUTPUT_CSV, mode='a', header=False, index=False)
-
-    # # Write the DataFrame to CSV
-    # with open(OUTPUT_CSV, mode='a', newline='') as f:
-    #     df_r.to_csv(f, header=not file_exists, index=False)
+    # # Check if the file exists
+    # file_exists = os.path.exists(OUTPUT_CSV)
     #
-    df_r.to_csv(f'backup{OUTPUT_CSV}', mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
-    # # df_results.T.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
+    # if not file_exists:
+    #     df_r.to_csv(OUTPUT_CSV, mode='a', index=False)
+    # else:
+    #     df_r.to_csv(OUTPUT_CSV, mode='a', header=False, index=False)
+    #
+    # # # Write the DataFrame to CSV
+    # # with open(OUTPUT_CSV, mode='a', newline='') as f:
+    # #     df_r.to_csv(f, header=not file_exists, index=False)
+    # #
+    # df_r.to_csv(f'backup{OUTPUT_CSV}', mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
+    # # # df_results.T.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
-
-
-# def extract_answers(reports):
-#     """Extract answers for all reports and save in a CSV file."""
-#     questions = load_questions()
-#     all_results = []
-#
-#     for report in reports:
-#         report_url = report["url"]
-#         report_answers = {"Report_URL": report_url}
-#
-#         for q in questions:
-#             best_matches = search_relevant_section(q)
-#             answer = ask_openai(q, best_matches[0]["Text"])
-#             report_answers[q] = answer  # Store answers per question
-#
-#         all_results.append(report_answers)
-#
-#     # Convert results to DataFrame
-#     df_results = pd.DataFrame(all_results)
-#
-#     # Save results to CSV
-#     df_results.to_csv(OUTPUT_CSV, index=False)
-#     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
 
 
 if __name__ == "__main__":
