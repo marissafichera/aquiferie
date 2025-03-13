@@ -1,0 +1,13 @@
+category,TularosaBasin,RoswellArtesianBasin,AlbuquerqueBasin
+recharge_discharge_zones,partial,yes,yes
+recharge_discharge_rates,partial,partial,no
+hydrogeologic_properties,partial,partial,yes
+extent_2d,yes,yes,yes
+extent_base,no,yes,yes
+geology_3d,no,yes,partial
+watertable,yes,yes,yes
+waterquality_shallow,yes,yes,yes
+waterquality_deep,no,yes,partial
+hydrostratigraphy,partial,yes,yes
+structural controls,partial,yes,yes
+comments,most partial rankings due to extent of basin being much larger than extent of individual study areas,"recharge discharge rates could be refined, reported hydrogeo properties are from old reports (1957, 1977) and could be updated","*should re-run newly refined water quality question for this basin and re-analyze results; should also include more reports that I know have more water chemistry analysis; 3d geology in Rio Rancho and basin geometry is known, no official 3D geologic model for entire basin that I'm aware of"
