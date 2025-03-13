@@ -1,9 +1,0 @@
-Summary:
-
-The text repeatedly cites three primary references related to groundwater and potential water quality data:
-
-1. Thorn and Heywood (2000) – Focuses on a long-term aquifer test near the Rio Grande in Albuquerque, including potential groundwater quality information in its test results.  
-2. Wamsley (2014) – Addresses evidence of groundwater contamination from on-site wastewater systems, offering direct insights into water quality issues.  
-3. Williams et al. (1998) – Concentrates on infiltration rates in the vadose zone, which can indirectly relate to water quality by examining how water moves through soil and rock layers.
-
-Although these publications likely provide water quality information or context, the text emphasizes that successful extraction of the PDF content was not achieved, so specific details are unknown. Generally, aquifer or hydrogeological reports compile water quality data from a variety of sources, such as monitoring wells, environmental agencies, and university research. However, beyond referencing these studies, the provided text does not offer additional explicit details on water quality data sources.

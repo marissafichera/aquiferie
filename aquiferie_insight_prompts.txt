@@ -7,11 +7,11 @@ Did the study define the hydrostratigraphy of the aquifer? If yes, what data was
 Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?
 Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?
 Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?
-Did the study produce a water table elevation map or a depth to water map?
-What data was used to create the water table elevation map or depth to water map?
+Did the study produce water table elevation, depth to water, piezometric surface, or potentiometric surface maps?
+What data was used to create the water table elevation, depth to water, piezometric surface, or potentiometric surface maps?
 Were water levels collected for the study, compiled from other sources, or both?
-Does the study include water quality data?
-Was the data collected for the study or compiled from other sources?
+Does the study include water chemistry data (e.g. major ions, isotopes, pH, salinity, specific conductance)?
+Was the water chemistry data collected for the study or compiled from other sources?
 What are the water quality data sources?
 Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?
 If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer "N/A".

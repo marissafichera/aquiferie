@@ -1,0 +1,3 @@
+What is the title of the study?
+What is the name of the aquifer(s) focused on in the study?
+What are the future work recommendations for this study?

@@ -1,7 +1,6 @@
 import csv
 import os
 import requests
-import pdfplumber
 import pymupdf
 import openai
 import numpy as np
@@ -11,7 +10,7 @@ import pandas as pd
 import re
 
 # Configuration
-studyarea = 'RoswellArtesianBasin'
+studyarea = 'AlbuquerqueBasin'
 REPORTS_CSV = f"{studyarea}/{studyarea}_aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
@@ -51,11 +50,6 @@ def extract_text_from_pdf(pdf_file):
         return "Error extracting text from PDF."
     return text
 
-
-# def get_embedding(text):
-#     """Generate an embedding for a given text."""
-#     response = client.embeddings.create(model=EMBEDDING_MODEL, input=text)
-#     return np.array(response.data[0].embedding)
 
 def get_embedding(text):
     """Generate an embedding for a given text."""
@@ -113,10 +107,6 @@ def generate_embeddings(report):
     faiss.write_index(index, f"{studyarea}/{report['pdf'].split('/')[-1]}_embeddings.index")
     with open(f"{studyarea}/{report['pdf'].split('/')[-1]}_metadata.json", "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=4)
-
-    # faiss.write_index(index, "report_embeddings.index")
-    # with open("metadata.json", "w", encoding="utf-8") as f:
-    #     json.dump(metadata, f, indent=4)
     print("Embeddings generated and stored.")
 
 
@@ -158,8 +148,6 @@ def ask_openai(query, relevant_text):
     result = re.sub(r"[*_`]", "", results)  # Remove *, _, and ` used in markdown formatting
 
     return result
-    # except json.JSONDecodeError:
-    #     return {"Query": query, "Answer": "Invalid response from OpenAI"}
 
 
 def load_questions():
@@ -182,20 +170,6 @@ def extract_answers(report):
 
     df_results.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
 
-    # # Check if the file exists
-    # file_exists = os.path.exists(OUTPUT_CSV)
-    #
-    # if not file_exists:
-    #     df_r.to_csv(OUTPUT_CSV, mode='a', index=False)
-    # else:
-    #     df_r.to_csv(OUTPUT_CSV, mode='a', header=False, index=False)
-    #
-    # # # Write the DataFrame to CSV
-    # # with open(OUTPUT_CSV, mode='a', newline='') as f:
-    # #     df_r.to_csv(f, header=not file_exists, index=False)
-    # #
-    # df_r.to_csv(f'backup{OUTPUT_CSV}', mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
-    # # # df_results.T.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
 
 

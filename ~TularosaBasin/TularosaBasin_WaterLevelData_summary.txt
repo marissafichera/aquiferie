@@ -1,0 +1,11 @@
+This text describes the collection and compilation of water data—both water levels and water chemistry—conducted by the New Mexico Bureau of Geology and Mineral Resources (NMBGMR) and other agencies. Key points include:
+
+• Water Chemistry Data:  
+  – Existing data from NMBGMR, USGS, and NMED were used to identify trends and gaps.  
+  – Additional samples from 21 domestic wells were analyzed for major ions, trace metals, and stable isotopes (oxygen and hydrogen) to fill spatial and temporal gaps.
+
+• Water Level Data:  
+  – Water level measurements were primarily taken between 2009 and 2011 by NMBGMR.  
+  – Historical water table contours from a 1971 map (Sloan and Garber) were incorporated.  
+  – Where direct measurements were unavailable, recent well records from the New Mexico Office of the State Engineer (NM OSE) provided water level information.  
+  – New NMBGMR measurements involved one-time and repeated readings, along with data from private wells; attempts were made to match each private well to NM OSE records.
