@@ -12,7 +12,7 @@ What data was used to create the water table elevation, depth to water, piezomet
 Were water levels collected for the study, compiled from other sources, or both?
 Does the study include water chemistry data (e.g. major ions, isotopes, pH, salinity, specific conductance)?
 Was the water chemistry data collected for the study or compiled from other sources?
-What are the water quality data sources?
+What are the water chemistry data sources?
 Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?
 If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer "N/A".
 What are the future work recommendations for this study? Please be detailed.
