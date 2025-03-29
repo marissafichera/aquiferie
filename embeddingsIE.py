@@ -186,7 +186,8 @@ def extract_answers(report):
         # results.append(answer)
         seval = self_evaluation.run_side_by_side(pdf_filename=report_url, question=q, answer=answer)
         # seval_results.append(seval)
-        results.append('\n\n'.join([answer, seval]))
+        # results.append('\n\n'.join([answer, seval]))
+        results.append(f'{answer}\n\n{seval}')
 
     df_results = pd.DataFrame([results], columns=questions)
     df_results['Report'] = report_url
