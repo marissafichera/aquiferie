@@ -183,11 +183,12 @@ def extract_answers(report):
     for q in questions:
         best_match = search_relevant_section(q, report_url)[0]
         answer = ask_openai(q, best_match["Text"])
-        results.append(answer)
+        # results.append(answer)
         seval = self_evaluation.run_side_by_side(pdf_filename=report_url, question=q, answer=answer)
-        seval_results.append(seval)
+        # seval_results.append(seval)
+        results.append('\n\n'.join([answer, seval]))
 
-    df_results = pd.DataFrame([results, seval_results], columns=questions)
+    df_results = pd.DataFrame([results], columns=questions)
     df_results['Report'] = report_url
 
     df_results.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
