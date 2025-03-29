@@ -8,6 +8,7 @@ import faiss
 import json
 import pandas as pd
 import re
+import self_evaluation
 
 # Configuration
 studyarea = 'AlbuquerqueBasin'
@@ -161,9 +162,14 @@ def extract_answers(report):
     results = []
     # for report in reports:
     report_url = report['pdf']
+    seval_results = []
     for q in questions:
         best_match = search_relevant_section(q, report_url)[0]
-        results.append(ask_openai(q, best_match["Text"]))
+        answer = ask_openai(q, best_match["Text"])
+        results.append(answer)
+        seval = self_evaluation.run_side_by_side(pdf_filename=report_url, question=q, answer=answer)
+        seval_results.append(seval)
+
 
     df_results = pd.DataFrame([results], columns=questions)
     df_results['Report'] = report_url
@@ -178,3 +184,4 @@ if __name__ == "__main__":
     for report in reports:
         generate_embeddings(report)
         extract_answers(report)
+        self_evaluation.run_side_by_side(pdf_filename=report, )
