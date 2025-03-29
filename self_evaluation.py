@@ -18,20 +18,6 @@ client = openai.OpenAI(api_key='sk-proj-UsTt8Y55T1eFBUvULb-lazHiCRdX'
                                '-xYhSg0xrR5WxF1ZsYnDz44irH3Sxyfm9kh9a-vrj3c4PcwymFfw7Ivi1SO26mVZMA')
 
 
-def extract_text_from_pdf(pdf_file):
-    """Extract text from a PDF file using PyMuPDF (same as your main script)."""
-    pdf_path = os.path.join(REPORTS_FOLDER, pdf_file)
-    text = ""
-    try:
-        with pymupdf.open(pdf_path) as pdf:
-            for page in pdf:
-                text += page.get_text("text") + "\n"
-    except Exception as e:
-        print(f"Error extracting text from {pdf_path}: {e}")
-        return "Error extracting text from PDF."
-    return text
-
-
 def build_prompt(report_text, question, answer):
     """Creates a consistent evaluation prompt for both models."""
     return f"""
@@ -45,9 +31,9 @@ Original Answer: {answer}
 
 Evaluate the answer:
 1. Is the answer correct based on the report? (Yes/No)
-2. If yes, reference any specific quotes, content, or sections from the report that support the answer.
-3. If not, what is wrong or missing?
-4. Provide a corrected answer if possible, and reference any specific quotes or content from the report.
+2. If yes, concisely reference any specific quotes, content, or sections from the report that support the answer.
+3. If not, what is wrong or missing? Be concise.
+4. Provide a corrected answer if possible, and reference any specific quotes or content from the report. Be concise.
 
 Respond in this format:
 Correct?: <Yes/No>
@@ -65,32 +51,6 @@ def evaluate_answer(model_name, relevant_text, question, answer):
     return response.choices[0].message.content.strip()
 
 
-def get_embedding(text):
-    """Generate an embedding for a given text."""
-
-    response = client.embeddings.create(model=EMBEDDING_MODEL, input=text)
-    embedding = np.array(response.data[0].embedding)
-
-    # Debug: Print a sample embedding for verification
-    # print(f"Sample embedding (first 5 values): {embedding[:5]}")
-    return embedding
-
-
-# def search_relevant_section(query, report_url, top_k=5):
-#     """Find the most relevant report section based on a query."""
-#     index = faiss.read_index(f"{studyarea}/{report_url.split('/')[-1]}_embeddings.index")
-#     with open(f"{studyarea}/{report_url.split('/')[-1]}_metadata.json", "r", encoding="utf-8") as f:
-#         metadata = json.load(f)
-#
-#     query_embedding = get_embedding(query).astype('float32').reshape(1, -1)
-#
-#     # distances, indices = index.search(query_embedding, top_k)
-#     distances, indices = index.search(query_embedding, top_k)
-#
-#     results = [metadata[i] for i in indices[0]]
-#     return results  # Return top_k sections instead of just one
-
-
 def run_side_by_side(pdf_filename, question, answer):
     print(f"\nEvaluating: {pdf_filename}\nQuestion: {question}\nAnswer: {answer}\n")
 
@@ -104,7 +64,7 @@ def run_side_by_side(pdf_filename, question, answer):
     print("\n================ O3-mini Evaluation =================\n")
     print(o3mini_eval)
 
-    return '\n\n'.join([o1_eval, o3mini_eval])
+    return '\n\n'.join(['o1 Evaluation:', o1_eval, 'o3-mini Evaluation:', o3mini_eval])
 
 
 def main():

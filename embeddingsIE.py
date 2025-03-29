@@ -24,9 +24,21 @@ client = openai.OpenAI(api_key='sk-proj-UsTt8Y55T1eFBUvULb-lazHiCRdX'
                                '-9VUNJa3UAxObyJYREltqifJPK3btItM7bLqm40AfQ1JQfT3BlbkFJNZza_UXf'
                                '-xYhSg0xrR5WxF1ZsYnDz44irH3Sxyfm9kh9a-vrj3c4PcwymFfw7Ivi1SO26mVZMA')
 
-# check if output file exists and warn of overwrite
-if os.path.exists(OUTPUT_CSV):
-    print('WARNING, OUTPUT_CSV EXISTS AND WILL BE OVERWRITTEN - END SCRIPT NOW TO AVOID LOSING $$ OF AI WORK')
+def get_versioned_filename(base_path):
+    """Auto-version the output CSV file to avoid overwriting."""
+    if not os.path.exists(base_path):
+        return base_path
+
+    base, ext = os.path.splitext(base_path)
+    version = 1
+    while True:
+        new_path = f"{base}_v{version}{ext}"
+        if not os.path.exists(new_path):
+            return new_path
+        version += 1
+
+OUTPUT_CSV = get_versioned_filename(OUTPUT_CSV)
+print(f"Saving results to: {OUTPUT_CSV}")
 
 
 def download_pdf(url, filename):
