@@ -104,7 +104,7 @@ def run_side_by_side(pdf_filename, question, answer):
     print("\n================ O3-mini Evaluation =================\n")
     print(o3mini_eval)
 
-    return '/n'.join([o1_eval, o3mini_eval])
+    return '\n\n'.join([o1_eval, o3mini_eval])
 
 
 def main():
