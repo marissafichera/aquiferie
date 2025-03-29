@@ -14,8 +14,8 @@ import self_evaluation
 studyarea = 'AlbuquerqueBasin'
 REPORTS_CSV = f"{studyarea}/{studyarea}_aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
-DOWNLOAD_DIR = "reports"
-OUTPUT_CSV = f"{studyarea}/{studyarea}_aquifer_insights_embeddings.csv"
+DOWNLOAD_DIR = "reports_test"
+OUTPUT_CSV = f"{studyarea}/{studyarea}_aquiferinsights_selfeval_test.csv"
 EMBEDDING_MODEL = "text-embedding-3-large"
 
 # Ensure download directory exists
@@ -23,6 +23,10 @@ os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 client = openai.OpenAI(api_key='sk-proj-UsTt8Y55T1eFBUvULb-lazHiCRdX'
                                '-9VUNJa3UAxObyJYREltqifJPK3btItM7bLqm40AfQ1JQfT3BlbkFJNZza_UXf'
                                '-xYhSg0xrR5WxF1ZsYnDz44irH3Sxyfm9kh9a-vrj3c4PcwymFfw7Ivi1SO26mVZMA')
+
+# check if output file exists and warn of overwrite
+if os.path.exists(OUTPUT_CSV):
+    print('WARNING, OUTPUT_CSV EXISTS AND WILL BE OVERWRITTEN - END SCRIPT NOW TO AVOID LOSING $$ OF AI WORK')
 
 
 def download_pdf(url, filename):
@@ -40,7 +44,7 @@ def download_pdf(url, filename):
 
 def extract_text_from_pdf(pdf_file):
     """Extract text from a PDF file using PyMuPDF (better handling for various PDF types)."""
-    pdf_path = os.path.join(studyarea, 'reports', pdf_file)
+    pdf_path = os.path.join(studyarea, 'reports_test', pdf_file)
     text = ""
     try:
         with pymupdf.open(pdf_path) as pdf:
@@ -72,10 +76,11 @@ def split_text(text, chunk_size=1200, overlap=300):
 
 
 def process_reports(limit=1):
-    # df = pd.read_csv(REPORTS_CSV).head(limit)  # Limit to first 3 reports
+    # df = pd.read_csv(REPORTS_CSV).head(limit)  # Limit to first <limit> reports
     # df = pd.read_csv(REPORTS_CSV)
-    folder_path = os.path.join(studyarea, 'reports')
+    folder_path = os.path.join(studyarea, 'reports_test')
     pdfs = [file for file in os.listdir(folder_path) if file.lower().endswith(".pdf")]
+    pdfs = pdfs[0:limit]
     extracts = []
 
     # for idx, row in df.iterrows():
@@ -171,7 +176,7 @@ def extract_answers(report):
         seval_results.append(seval)
 
 
-    df_results = pd.DataFrame([results], columns=questions)
+    df_results = pd.DataFrame([results, seval_results], columns=questions)
     df_results['Report'] = report_url
 
     df_results.to_csv(OUTPUT_CSV, mode='a', header=not os.path.exists(OUTPUT_CSV), index=False)
@@ -184,4 +189,3 @@ if __name__ == "__main__":
     for report in reports:
         generate_embeddings(report)
         extract_answers(report)
-        self_evaluation.run_side_by_side(pdf_filename=report, )

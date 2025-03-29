@@ -92,11 +92,9 @@ def get_embedding(text):
 
 
 def run_side_by_side(pdf_filename, question, answer):
-    pdf_name = pdf_filename['pdf']
-
     print(f"\nEvaluating: {pdf_filename}\nQuestion: {question}\nAnswer: {answer}\n")
 
-    relevant_text = embeddingsIE.search_relevant_section(question, pdf_name)[0]
+    relevant_text = embeddingsIE.search_relevant_section(question, pdf_filename)[0]
     o1_eval = evaluate_answer("o1", relevant_text, question, answer)
     o3mini_eval = evaluate_answer("o3-mini", relevant_text, question, answer)
 
@@ -105,6 +103,8 @@ def run_side_by_side(pdf_filename, question, answer):
 
     print("\n================ O3-mini Evaluation =================\n")
     print(o3mini_eval)
+
+    return '/n'.join([o1_eval, o3mini_eval])
 
 
 def main():
