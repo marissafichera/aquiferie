@@ -9,14 +9,16 @@ import json
 import pandas as pd
 import re
 import self_evaluation
+import time
 
 # Configuration
-studyarea = 'SanJuanBasin'
+studyarea = 'GilaSanFrancisco'
 # REPORTS_CSV = f"{studyarea}/{studyarea}_aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
 OUTPUT_CSV = f"{studyarea}/{studyarea}_aquiferinsights_selfeval.csv"
 EMBEDDING_MODEL = "text-embedding-3-large"
+
 
 # Ensure download directory exists
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
@@ -229,10 +231,44 @@ def save_script(output_script_folder=studyarea, script_names=None):
         print(f"Script saved as: {output_script_path}")
 
 
-if __name__ == "__main__":
+def main():
+    timing_data = []
+    total_start = time.perf_counter()
+
     reports = process_reports()
-    for report in reports:
+    for i, report in enumerate(reports):
+        print(f'REPORT {i+1} of {len(reports)}')
+
+        start = time.perf_counter()
         generate_embeddings(report)
         extract_answers(report)
+        end = time.perf_counter()
+
+        elapsed = end-start
+
+        print(f"Time for report {i+1}, {report['pdf']}: {elapsed:.2f} seconds\n")
+
+        # Save per-report timing info
+        timing_data.append({
+            "Report Index": i + 1,
+            "Report Name": report['pdf'],
+            "Time (seconds)": round(elapsed, 2)
+        })
+
+    total_end = time.perf_counter()
+    total_time = total_end - total_start
+    average_time = total_time / len(reports) if reports else 0
+    print(f"Total processing time: {total_time:.2f} seconds")
+    print(f"Average time per report: {average_time:.2f} seconds")
+
+
+    # Save per-report times to CSV
+    df = pd.DataFrame(timing_data)
+    df.to_csv(os.path.join(studyarea, "report_times.csv"), index=False)
 
     save_script()
+
+
+if __name__ == "__main__":
+    main()
+

@@ -8,8 +8,8 @@ import numpy as np
 import embeddingsIE
 
 # === Configuration ===
-studyarea = embeddingsIE.studyarea
-REPORTS_FOLDER = os.path.join(studyarea, 'reports')
+# studyarea = embeddingsIE.studyarea
+# REPORTS_FOLDER = os.path.join(studyarea, 'reports')
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 EMBEDDING_MODEL = "text-embedding-3-large"
 
@@ -55,16 +55,17 @@ def run_side_by_side(pdf_filename, question, answer):
     print(f"\nEvaluating: {pdf_filename}\nQuestion: {question}\nAnswer: {answer}\n")
 
     relevant_text = embeddingsIE.search_relevant_section(question, pdf_filename)[0]
-    o1_eval = evaluate_answer("o1", relevant_text, question, answer)
+    # o1_eval = evaluate_answer("o1", relevant_text, question, answer)
     o3mini_eval = evaluate_answer("o3-mini", relevant_text, question, answer)
 
-    print("\n================== O1 Evaluation ==================\n")
-    print(o1_eval)
+    # print("\n================== O1 Evaluation ==================\n")
+    # print(o1_eval)
 
-    print("\n================ O3-mini Evaluation =================\n")
-    print(o3mini_eval)
+    # print("\n================ O3-mini Evaluation =================\n")
+    # print(o3mini_eval)
 
-    return '\n\n'.join(['o1 Evaluation:', o1_eval, 'o3-mini Evaluation:', o3mini_eval])
+    # return '\n\n'.join(['o1 Evaluation:', o1_eval, 'o3-mini Evaluation:', o3mini_eval])
+    return f'o3-mini Evaluation:\n{o3mini_eval}'
 
 
 def main():
