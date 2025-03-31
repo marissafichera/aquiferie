@@ -8,13 +8,14 @@ import faiss
 import json
 import pandas as pd
 import re
+import self_evaluation
 
 # Configuration
 studyarea = 'AlbuquerqueBasin'
 REPORTS_CSV = f"{studyarea}/{studyarea}_aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
-OUTPUT_CSV = f"{studyarea}/{studyarea}_aquifer_insights_embeddings.csv"
+OUTPUT_CSV = f"{studyarea}/{studyarea}_aquiferinsights_selfeval.csv"
 EMBEDDING_MODEL = "text-embedding-3-large"
 
 # Ensure download directory exists
@@ -22,6 +23,24 @@ os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 client = openai.OpenAI(api_key='sk-proj-UsTt8Y55T1eFBUvULb-lazHiCRdX'
                                '-9VUNJa3UAxObyJYREltqifJPK3btItM7bLqm40AfQ1JQfT3BlbkFJNZza_UXf'
                                '-xYhSg0xrR5WxF1ZsYnDz44irH3Sxyfm9kh9a-vrj3c4PcwymFfw7Ivi1SO26mVZMA')
+
+
+def get_versioned_filename(base_path):
+    """Auto-version the output CSV file to avoid overwriting."""
+    if not os.path.exists(base_path):
+        return base_path
+
+    base, ext = os.path.splitext(base_path)
+    version = 1
+    while True:
+        new_path = f"{base}_v{version}{ext}"
+        if not os.path.exists(new_path):
+            return new_path
+        version += 1
+
+
+OUTPUT_CSV = get_versioned_filename(OUTPUT_CSV)
+print(f"Saving results to: {OUTPUT_CSV}")
 
 
 def download_pdf(url, filename):
@@ -71,10 +90,11 @@ def split_text(text, chunk_size=1200, overlap=300):
 
 
 def process_reports(limit=1):
-    # df = pd.read_csv(REPORTS_CSV).head(limit)  # Limit to first 3 reports
+    # df = pd.read_csv(REPORTS_CSV).head(limit)  # Limit to first <limit> reports
     # df = pd.read_csv(REPORTS_CSV)
     folder_path = os.path.join(studyarea, 'reports')
     pdfs = [file for file in os.listdir(folder_path) if file.lower().endswith(".pdf")]
+    # pdfs = pdfs[0:limit]
     extracts = []
 
     # for idx, row in df.iterrows():
@@ -161,9 +181,15 @@ def extract_answers(report):
     results = []
     # for report in reports:
     report_url = report['pdf']
+    seval_results = []
     for q in questions:
         best_match = search_relevant_section(q, report_url)[0]
-        results.append(ask_openai(q, best_match["Text"]))
+        answer = ask_openai(q, best_match["Text"])
+        # results.append(answer)
+        seval = self_evaluation.run_side_by_side(pdf_filename=report_url, question=q, answer=answer)
+        # seval_results.append(seval)
+        # results.append('\n\n'.join([answer, seval]))
+        results.append(f'{answer}\n\n{seval}')
 
     df_results = pd.DataFrame([results], columns=questions)
     df_results['Report'] = report_url
