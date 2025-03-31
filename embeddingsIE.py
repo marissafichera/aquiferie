@@ -14,8 +14,8 @@ import self_evaluation
 studyarea = 'AlbuquerqueBasin'
 REPORTS_CSV = f"{studyarea}/{studyarea}_aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
-DOWNLOAD_DIR = "reports_test"
-OUTPUT_CSV = f"{studyarea}/{studyarea}_aquiferinsights_selfeval_test.csv"
+DOWNLOAD_DIR = "reports"
+OUTPUT_CSV = f"{studyarea}/{studyarea}_aquiferinsights_selfeval.csv"
 EMBEDDING_MODEL = "text-embedding-3-large"
 
 # Ensure download directory exists
@@ -23,6 +23,7 @@ os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 client = openai.OpenAI(api_key='sk-proj-UsTt8Y55T1eFBUvULb-lazHiCRdX'
                                '-9VUNJa3UAxObyJYREltqifJPK3btItM7bLqm40AfQ1JQfT3BlbkFJNZza_UXf'
                                '-xYhSg0xrR5WxF1ZsYnDz44irH3Sxyfm9kh9a-vrj3c4PcwymFfw7Ivi1SO26mVZMA')
+
 
 def get_versioned_filename(base_path):
     """Auto-version the output CSV file to avoid overwriting."""
@@ -36,6 +37,7 @@ def get_versioned_filename(base_path):
         if not os.path.exists(new_path):
             return new_path
         version += 1
+
 
 OUTPUT_CSV = get_versioned_filename(OUTPUT_CSV)
 print(f"Saving results to: {OUTPUT_CSV}")
@@ -56,7 +58,7 @@ def download_pdf(url, filename):
 
 def extract_text_from_pdf(pdf_file):
     """Extract text from a PDF file using PyMuPDF (better handling for various PDF types)."""
-    pdf_path = os.path.join(studyarea, 'reports_test', pdf_file)
+    pdf_path = os.path.join(studyarea, 'reports', pdf_file)
     text = ""
     try:
         with pymupdf.open(pdf_path) as pdf:
@@ -90,9 +92,9 @@ def split_text(text, chunk_size=1200, overlap=300):
 def process_reports(limit=1):
     # df = pd.read_csv(REPORTS_CSV).head(limit)  # Limit to first <limit> reports
     # df = pd.read_csv(REPORTS_CSV)
-    folder_path = os.path.join(studyarea, 'reports_test')
+    folder_path = os.path.join(studyarea, 'reports')
     pdfs = [file for file in os.listdir(folder_path) if file.lower().endswith(".pdf")]
-    pdfs = pdfs[0:limit]
+    # pdfs = pdfs[0:limit]
     extracts = []
 
     # for idx, row in df.iterrows():

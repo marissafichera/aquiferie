@@ -9,7 +9,7 @@ import embeddingsIE
 
 # === Configuration ===
 studyarea = 'AlbuquerqueBasin'
-REPORTS_FOLDER = os.path.join(studyarea, 'reports_test')
+REPORTS_FOLDER = os.path.join(studyarea, 'reports')
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 EMBEDDING_MODEL = "text-embedding-3-large"
 
