@@ -11,8 +11,8 @@ import re
 import self_evaluation
 
 # Configuration
-studyarea = 'AlbuquerqueBasin'
-REPORTS_CSV = f"{studyarea}/{studyarea}_aquiferie_report_links.csv"  # CSV file containing report URLs
+studyarea = 'SanJuanBasin'
+# REPORTS_CSV = f"{studyarea}/{studyarea}_aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
 OUTPUT_CSV = f"{studyarea}/{studyarea}_aquiferinsights_selfeval.csv"
@@ -199,8 +199,40 @@ def extract_answers(report):
     print(f"Extraction complete. Data saved to {OUTPUT_CSV}.")
 
 
+def save_script(output_script_folder=studyarea, script_names=None):
+    if script_names is None:
+        script_names = ['embeddingsIE.txt', 'self_evaluation.txt']
+
+    for script_name in script_names:
+        base_name, ext = os.path.splitext(script_name)
+        output_script_path = os.path.join(output_script_folder, script_name)
+
+        # If the file exists, append an incrementing number to avoid overwrite
+        counter = 1
+        while os.path.exists(output_script_path):
+            new_name = f"{base_name}_{counter}{ext}"
+            output_script_path = os.path.join(output_script_folder, new_name)
+            counter += 1
+
+        # Get the path of the currently running script
+        # current_script = os.path.abspath(__file__)
+        current_script = f'{base_name}.py'
+
+        # Read the current script's contents
+        with open(current_script, 'r', encoding='utf-8') as f:
+            script_content = f.read()
+
+        # Write the content to the new file
+        with open(output_script_path, 'w') as out_f:
+            out_f.write(script_content)
+
+        print(f"Script saved as: {output_script_path}")
+
+
 if __name__ == "__main__":
     reports = process_reports()
     for report in reports:
         generate_embeddings(report)
         extract_answers(report)
+
+    save_script()

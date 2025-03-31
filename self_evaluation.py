@@ -8,7 +8,7 @@ import numpy as np
 import embeddingsIE
 
 # === Configuration ===
-studyarea = 'AlbuquerqueBasin'
+studyarea = embeddingsIE.studyarea
 REPORTS_FOLDER = os.path.join(studyarea, 'reports')
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 EMBEDDING_MODEL = "text-embedding-3-large"
@@ -69,7 +69,7 @@ def run_side_by_side(pdf_filename, question, answer):
 
 def main():
     # Replace this with a real test case from your data
-    pdf_filename = "58_p0195_p0208.pdf"  # Must exist in AlbuquerqueBasin/reports_test
+    pdf_filename = "58_p0195_p0208.pdf"
     question = "What is the name of the aquifer(s) focused on in the study?"
     original_answer = "From the formations described (Arroyo Ojito, Cerro Conejo, Zia, etc.), all of which are " \
                       "subdivisions of the Santa Fe Group in this area, it appears the study primarily focuses on the " \
