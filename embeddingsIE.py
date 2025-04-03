@@ -12,7 +12,7 @@ import self_evaluation
 import time
 
 # Configuration
-studyarea = 'GilaSanFrancisco'
+studyarea = 'EspanolaBasin'
 # REPORTS_CSV = f"{studyarea}/{studyarea}_aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
@@ -114,6 +114,11 @@ def process_reports(limit=1):
 
 
 def generate_embeddings(report):
+    embedding_exist = f"{studyarea}/{report['pdf'].split('/')[-1]}_embeddings.index"
+    if os.path.exists(embedding_exist):
+        print(f'Embeddings for report {studyarea}/{report['pdf']} already exists.\nSkipping generating embeddings for {report['pdf']}.')
+        return
+
     embeddings, metadata = [], []
     # for report in reports:
     url = report["pdf"]

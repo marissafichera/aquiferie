@@ -15,4 +15,5 @@ Was the water chemistry data collected for the study or compiled from other sour
 What are the water chemistry data sources?
 Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?
 If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer "N/A".
+What is the geographic bounding box of the study area, in decimal degrees? Respond in the format: West, East, South, North. Only return the four float values separated by commas.
 What are the future work recommendations for this study? Please be detailed.

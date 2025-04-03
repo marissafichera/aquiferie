@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-studyarea = 'AlbuquerqueBasin'
+studyarea = 'EstanciaBasin'
 ROOT = studyarea
 
 def view_incorrect_evals(csv):
@@ -30,10 +30,20 @@ def view_incorrect_evals(csv):
     output_df.to_csv(os.path.join(ROOT, f"ai_incorrect_answers_{studyarea}.csv"), index=False)
 
 
-def main():
-    csv = os.path.join(ROOT, f'{studyarea}_aquiferinsights_selfeval.csv')
+def view_bounding_boxes(csv):
+    # Load your CSV
+    df = pd.read_csv(csv)
+    print(df.columns)
+    bbox_answers = df['What is the geographic bounding box of the study area, in decimal degrees?']
+    print(bbox_answers)
 
-    view_incorrect_evals(csv)
+
+def main():
+    csv = os.path.join(ROOT, f'{studyarea}_aquiferinsights_selfeval_v1.csv')
+    view_bounding_boxes(csv)
+
+
+    # view_incorrect_evals(csv)
 
 
 if __name__ == '__main__':
