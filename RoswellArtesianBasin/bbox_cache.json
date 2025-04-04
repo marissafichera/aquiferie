@@ -28,5 +28,35 @@
     104.2,
     32.2,
     34.0
+  ],
+  "The report does not provide explicit bounding coordinates. However, based on the locations mentioned (Bitter Lake National Wildlife Refuge near Roswell, plus sampling sites extending west into the Sacramento Mountains), the study area appears to span roughly from about 32.9\u00b0N to 34.0\u00b0N and from about 105.8\u00b0W to 104.2\u00b0W.\n\no3-mini Evaluation:\nCorrect?: No\n\nExplanation: The report does not contain any explicit geographic bounding box coordinates. The provided answer infers numbers (approximately 32.9\u00b0N to 34.0\u00b0N and 105.8\u00b0W to 104.2\u00b0W) based on general location names (Bitter Lakes Refuge, Roswell, Sacramento Mountains), but these values are not directly supported by any quoted coordinates or explicit descriptions in the report.\n\nCorrected Answer (if needed): The report does not provide explicit decimal degree coordinates for the study area. It only references location names such as Bitter Lakes (including Lake St. Francis and Sinkhole 59 in the Bitter Lakes Refuge), the city of Roswell, and the Sacramento Mountains, so any bounding box (e.g., roughly 32\u201334\u00b0N and 105\u2013104\u00b0W) is only an approximation and not directly specified in the report.": [
+    105.8,
+    104.2,
+    32.9,
+    34.0
+  ],
+  "A convenient way to estimate the bounding box is to note that the smallest UTM easting (456,324\u202fm) and northing (3,686,890\u202fm) occur at opposite corners from the largest easting (562,456\u202fm) and largest northing (3,709,166\u202fm).  Converting these extremes (Zone 13\u202fN, NAD83) to decimal degrees yields approximately:\n\n\u2022 Western boundary: \u2013105.31\u00b0  \n\u2022 Eastern boundary: \u2013104.16\u00b0  \n\u2022 Southern boundary:  33.31\u00b0  \n\u2022 Northern boundary:  33.51\u00b0  \n\nThus, the study area spans roughly 0.2\u00b0 of latitude and 1.15\u00b0 of longitude in southeastern New Mexico.\n\no3-mini Evaluation:\nCorrect?: Yes\n\nExplanation: The answer correctly identifies the extreme UTM coordinates provided in the report (e.g., from the Government Spring sample at 456,324\u202fm east, 3,709,166\u202fm north and the Lea Lake Spring sample at 562,456\u202fm east, 3,686,890\u202fm north). It then accurately converts these using Zone 13\u202fN (NAD83) to yield approximate decimal degree boundaries.\n\nCorrected Answer (if needed): N/A": [
+    -105.31,
+    -104.16,
+    33.31,
+    33.51
+  ],
+  "No exact lat/long boundaries are given in the text. However, from place\u2010names mentioned (Roswell at about 33.4\u00b0N, 104.5\u00b0W; Artesia near 32.8\u00b0N, 104.4\u00b0W; the Sacramento Mountains to the west at roughly 105.1\u00b0W; and the Pecos River corridor near 104.2\u00b0W), a reasonable bounding rectangle for the Roswell Artesian Basin study area is approximately:\n\n\u2022 Northern boundary: 34.0\u00b0N  \n\u2022 Southern boundary: 32.7\u00b0N  \n\u2022 Western boundary: \u2212105.1\u00b0W  \n\u2022 Eastern boundary: \u2212104.2\u00b0W  \n\no3-mini Evaluation:\nCorrect?: No  \nExplanation: The report does not provide any specific decimal\u2010degree boundaries. The original answer infers coordinate values from place names (e.g., Roswell, Artesia, the Sacramento Mountains, Pecos River) that are not explicitly stated in the text. There is no quoted text or data in the report that supports the numeric boundaries given.  \nCorrected Answer (if needed): The report does not specify an exact geographic bounding box in decimal degrees. Any coordinate estimates would be speculative because the text only references regionally relevant place names (e.g., Roswell, Artesia, the Sacramento Mountains, the Pecos River corridor) without providing precise latitudinal or longitudinal limits.": [
+    -105.1,
+    -104.2,
+    32.7,
+    34.0
+  ],
+  "Based on the listed NAD83 easting/northing coordinates (roughly in UTM Zone 13), the study sites span approximately from 33.35\u00b0N to 33.51\u00b0N in latitude and from about \u2212104.53\u00b0W to \u2212104.32\u00b0W in longitude. A concise bounding box in decimal degrees is therefore:\n\n\u2022 West: \u2212104.53\u00b0\n\u2022 East: \u2212104.32\u00b0\n\u2022 South: 33.35\u00b0\n\u2022 North: 33.51\u00b0\n\no3-mini Evaluation:\nCorrect?: No\n\nExplanation: The original answer\u2019s longitude estimates are reasonable, but the latitude range is too high. Using coordinates from Table\u202f1 (e.g. eastings from \u2248543500 to 562456 and northings from \u22483686890 to 3705982, NAD83 in UTM Zone 13), a conversion shows that the latitude span is closer to about 33.20\u00b0N to 33.37\u00b0N\u2014not 33.35\u00b0N to 33.51\u00b0N. For example, the lowest northing (3686890 m) converts roughly to \u224833.20\u00b0N and the highest (3705982 m) to \u224833.37\u00b0N, while the eastings yield longitudes of about \u2013104.53\u00b0 (west) and \u2013104.32\u00b0 (east).\n\nCorrected Answer (if needed):\n\u2022 West: \u2013104.53\u00b0\n\u2022 East: \u2013104.32\u00b0\n\u2022 South: \u224833.20\u00b0N\n\u2022 North: \u224833.37\u00b0N\n\nReference: The NAD83 coordinate values in Table\u202f1 (e.g., \u201cRAB-2 Rogers well\u201d with Easting 543499 and \u201cBLSP Lea Lake spring\u201d with Easting 562456, along with the corresponding northings) support these corrected bounds.": [
+    -104.53,
+    -104.32,
+    33.2,
+    33.37
+  ],
+  "The report does not provide exact latitude\u2010longitude boundaries. Bitter Lake National Wildlife Refuge covers about 158\u202fkm\u00b2 on the northeast edge of Roswell, New Mexico, but no specific bounding coordinates appear in the text. Based on its approximate location and extent, a reasonable inferred bounding box (in decimal degrees) would be roughly:\n\n\u2022 Southwest corner: 33.40\u202fN, \u2212104.52\u202fW  \n\u2022 Northeast corner: 33.50\u202fN, \u2212104.40\u202fW  \n\n(This is an estimate only, as the document does not give precise coordinates.)\n\no3-mini Evaluation:\nCorrect?: No\n\nExplanation: The report does not provide any specific latitude\u2013longitude coordinates or numeric boundaries. While it describes Bitter Lake National Wildlife Refuge as covering roughly 158 km\u00b2 on the northeast outskirts of Roswell, New Mexico, no explicit coordinates or geographic bounding box is given. The provided estimate (SW: 33.40\u202fN, \u2212104.52\u202fW and NE: 33.50\u202fN, \u2212104.40\u202fW) is inferred without support from the text.\n\nCorrected Answer (if needed): The report does not include exact latitude\u2013longitude boundaries. It only notes that Bitter Lake National Wildlife Refuge covers about 158 km\u00b2 on the northeast edge of Roswell, New Mexico. Thus, a precise bounding box in decimal degrees cannot be determined from the provided information.": [
+    -104.52,
+    -104.4,
+    33.4,
+    33.5
   ]
 }

@@ -8,13 +8,13 @@ from transformers import pipeline
 import openai
 
 # === CONFIGURATION ===
-studyarea = 'RoswellArtesianBasin'
+studyarea = 'LaJenciaBasin'
 CSV_PATH = rf"{studyarea}\{studyarea}_aquiferinsights_selfeval.csv"
 QUESTIONS_TXT_PATH = "rank_insights_questions.txt"
 CACHE_FILE = fr"{studyarea}\qa_cache.json"
 BBOX_CACHE_FILE = fr"{studyarea}\bbox_cache.json"
 OUTPUT_CSV = fr"{studyarea}\simplified_binary_answers.csv"
-OUTPUT_SHP = fr"{studyarea}\simplified_reports_with_bbox.shp"
+OUTPUT_SHP = fr"{studyarea}\{studyarea}_reports_bbox.shp"
 BBOX_COL = "What is the geographic bounding box of the study area, in decimal degrees?"
 client = openai.OpenAI(api_key='sk-proj-UsTt8Y55T1eFBUvULb-lazHiCRdX'
                                '-9VUNJa3UAxObyJYREltqifJPK3btItM7bLqm40AfQ1JQfT3BlbkFJNZza_UXf'
@@ -120,30 +120,45 @@ def main():
         json.dump(answer_cache, f, indent=2)
     binary_df.to_csv(OUTPUT_CSV, index=False)
 
-    # Bounding box extraction
-    binary_df["bounding_box_raw"] = df[BBOX_COL]
-    openai_client = client
-    bbox_cache = json.load(open(BBOX_CACHE_FILE)) if os.path.exists(BBOX_CACHE_FILE) else {}
+    use_ai_for_bbox = 'no'
+    if use_ai_for_bbox == 'yes':
+        # Bounding box extraction
+        binary_df["bounding_box_raw"] = df[BBOX_COL]
+        openai_client = client
+        bbox_cache = json.load(open(BBOX_CACHE_FILE)) if os.path.exists(BBOX_CACHE_FILE) else {}
 
-    test_text = binary_df["bounding_box_raw"].dropna().iloc[0]
-    print("Testing extract_bbox_with_openai on one value:\n", test_text)
+        test_text = binary_df["bounding_box_raw"].dropna().iloc[0]
+        print("Testing extract_bbox_with_openai on one value:\n", test_text)
 
-    result = extract_bbox_with_openai(test_text, openai_client, bbox_cache)
-    print("Result:", result)
+        result = extract_bbox_with_openai(test_text, openai_client, bbox_cache)
+        print("Result:", result)
 
-    bbox_parsed = binary_df["bounding_box_raw"].apply(lambda x: extract_bbox_with_openai(x, openai_client, bbox_cache))
+        bbox_parsed = binary_df["bounding_box_raw"].apply(lambda x: extract_bbox_with_openai(x, openai_client, bbox_cache))
 
-    binary_df["West"] = bbox_parsed.apply(lambda x: x[0] if x else None)
-    binary_df["East"] = bbox_parsed.apply(lambda x: x[1] if x else None)
-    binary_df["South"] = bbox_parsed.apply(lambda x: x[2] if x else None)
-    binary_df["North"] = bbox_parsed.apply(lambda x: x[3] if x else None)
+        binary_df["West"] = bbox_parsed.apply(lambda x: x[0] if x else None)
+        binary_df["East"] = bbox_parsed.apply(lambda x: x[1] if x else None)
+        binary_df["South"] = bbox_parsed.apply(lambda x: x[2] if x else None)
+        binary_df["North"] = bbox_parsed.apply(lambda x: x[3] if x else None)
 
-    # Ensure longitudes are negative (western hemisphere)
-    binary_df["West"] = binary_df["West"].apply(lambda x: -abs(x) if pd.notnull(x) else None)
-    binary_df["East"] = binary_df["East"].apply(lambda x: -abs(x) if pd.notnull(x) else None)
+        # Ensure longitudes are negative (western hemisphere)
+        binary_df["West"] = binary_df["West"].apply(lambda x: -abs(x) if pd.notnull(x) else None)
+        binary_df["East"] = binary_df["East"].apply(lambda x: -abs(x) if pd.notnull(x) else None)
 
-    with open(BBOX_CACHE_FILE, 'w') as f:
-        json.dump(bbox_cache, f, indent=2)
+        with open(BBOX_CACHE_FILE, 'w') as f:
+            json.dump(bbox_cache, f, indent=2)
+
+    if use_ai_for_bbox == 'no':
+        bbox_column = 'What is the geographic bounding box of the study area, in decimal degrees? Respond in the format: West, East, South, North. Only return the four float values separated by commas.'
+        bbox_split = df_selected[bbox_column].str.split(',', expand=True)
+        bbox_split.columns = ['West', 'East', 'South', 'North']
+        bbox_split = bbox_split.apply(pd.to_numeric, errors='coerce')
+        bbox_split['West'] = bbox_split['West'].apply(lambda x: -abs(x) if pd.notnull(x) else None)
+        bbox_split['East'] = bbox_split['East'].apply(lambda x: -abs(x) if pd.notnull(x) else None)
+
+        binary_df['West'] = bbox_split['West']
+        binary_df['East'] = bbox_split['East']
+        binary_df['South'] = bbox_split['South']
+        binary_df['North'] = bbox_split['North']
 
     # Create geometry and save shapefile
     binary_df["geometry"] = binary_df.apply(row_to_geometry, axis=1)

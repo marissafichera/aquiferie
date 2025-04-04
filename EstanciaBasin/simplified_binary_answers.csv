@@ -1,7 +1,7 @@
 Report,Did the study define the aquifer extent in 2D?,"Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?","Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?","Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?","Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?","Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?","Did the study produce water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","Does the study include water chemistry data (e.g. major ions, isotopes, pH, salinity, specific conductance)?","Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?",total
-Bartolino2010_GWResourcesOfTheEastMtnAreaNM.pdf,1,0,1,1,1,0,0,1,0,5
+Bartolino2010_GWResourcesOfTheEastMtnAreaNM.pdf,1,0,1,1,1,0,0,1,0.5,5.5
 Land2016_Estancia_Basin_FBWQNM.pdf,1,0,1,1,1,0,0,1,0,5
 Menking2000_EvaporationFromGWDischargePlayasEstanciaBasin.pdf,0,0,0,0,0,0,0,0,0,0
 OFR-609.pdf,1,1,1,0,1,1,1,1,0,7
-Rice2014_EstimatesGWRechargeRatesSourcesEastMtnArea.pdf,0,0,0,1,0,1,0,1,0,3
+Rice2014_EstimatesGWRechargeRatesSourcesEastMtnArea.pdf,0,0,0,1,1,1,0,1,0,4
 TDEMEstancia2005.pdf,0,0,1,1,0,0,0,0,0,2

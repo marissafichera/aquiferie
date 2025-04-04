@@ -7,4 +7,5 @@ Did the study quantify recharge and discharge rates or amounts? If yes, what dat
 Did the study produce water table elevation, depth to water, piezometric surface, or potentiometric surface maps?
 Does the study include water chemistry data (e.g. major ions, isotopes, pH, salinity, specific conductance)?
 Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?
+What is the geographic bounding box of the study area, in decimal degrees? Respond in the format: West, East, South, North. Only return the four float values separated by commas.
 Report

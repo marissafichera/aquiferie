@@ -12,7 +12,7 @@ import self_evaluation
 import time
 
 # Configuration
-studyarea = 'EspanolaBasin'
+studyarea = 'TularosaBasin'
 # REPORTS_CSV = f"{studyarea}/{studyarea}_aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
