@@ -1,4 +1,4 @@
-What is the title of the study?,What is the name of the aquifer(s) focused on in the study?,Did the study define the aquifer extent in 2D?,"Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?",Did the study publish a digital product that defined the aquifer extent?,"Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?","Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?","Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?","Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?","Did the study produce water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","What data was used to create the water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","Were water levels collected for the study, compiled from other sources, or both?","Does the study include water chemistry data (e.g. major ions, isotopes, pH, salinity, specific conductance)?",Was the water chemistry data collected for the study or compiled from other sources?,What are the water chemistry data sources?,"Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?","If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer ""N/A"".",What are the future work recommendations for this study? Please be detailed.,Report
+What is the title of the study?,What is the name of the aquifer(s) focused on in the study?,Did the study define the aquifer extent in 2D?,"Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?",Did the study publish a digital product that defined the aquifer extent?,"Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?","Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?","Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?","Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?","Did the study produce water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","What data was used to create the water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","Were water levels collected for the study, compiled from other sources, or both?","Does the study include water chemistry data (e.g. major ions, isotopes, pH, salinity, specific conductance)?",Was the water chemistry data collected for the study or compiled from other sources?,What are the water chemistry data sources?,"Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?","If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer ""N/A"".",What are the future work recommendations for this study? Please be detailed.,Report,"What is the geographic bounding box of the study area, in decimal degrees? Respond in the format: West, East, South, North. Only return the four float values separated by commas."
 "Based on the text, the study is most likely titled “Groundwater Assessment of Union County.”
 
 o3-mini Evaluation:
@@ -117,7 +117,7 @@ Correct?: Yes
 
 Explanation: The answer accurately reflects the report's suggestions. It references the need for additional field measurements and expanded sampling—“more sampling for water chemistry and age dating over a larger area than the present study”—as well as the focus on understanding recharge processes, including the investigation of confining shales and possible recharge from playas and volcanic terrains. The mention of further hydrogeologic modeling to evaluate transmissivity, hydraulic gradients, and porosity is consistent with the study’s approach to quantifying groundwater flow and travel times.
 
-Corrected Answer (if needed): N/A",OFR-555_Union_County.pdf
+Corrected Answer (if needed): N/A",OFR-555_Union_County.pdf,"-103.26, -103.07, 35.89, 36.61"
 "It is not stated verbatim, but from the text headings and context, the study appears to be titled (or most likely titled):  
 “Union County & Clayton Underground Water Basin, Northeast New Mexico.”
 
@@ -238,7 +238,7 @@ Corrected Answer (if needed): The report excerpt does not include an explicit se
 • Acquiring better information on screened intervals in wells, which would enhance the identification of the water-supplying formation. 
 • Refining structure contours on the Dakota Formation and the buried bedrock surface by incorporating more detailed drilling or geophysical survey data to reduce uncertainties from assumptions. 
 • Extending monitoring of water-level changes over longer periods to confirm trends observed in areas like Capulin.
-These inferred recommendations address the highlighted uncertainties, although no direct “future work” section is provided in the report text.",OFR570_UnionCounty_Clayton_WaterBasin_report.pdf
+These inferred recommendations address the highlighted uncertainties, although no direct “future work” section is provided in the report text.",OFR570_UnionCounty_Clayton_WaterBasin_report.pdf,"-104.53, -103.04, 35.87, 37.00"
 "The excerpt does not explicitly provide the paper’s title. However, based on its content, it is most likely titled along the lines of:  
 “Groundwater isotopic composition and recharge patterns in a heterogeneous, partially compartmentalized High Plains aquifer across a regional elevation gradient in northeastern New Mexico.”
 
@@ -352,7 +352,7 @@ Correct?: No
 
 Explanation: The provided report excerpt does not include any explicit “future work” recommendations or a dedicated section outlining them. The original answer infers potential directions by interpreting the cited references, but these themes are not directly stated in the text.
 
-Corrected Answer (if needed): The report excerpt does not present explicit recommendations for future work. Although the list of references (e.g., Steward and Allen 2016; Wood and Sanford 1995; Wahi et al. 2008; Vachon et al. 2010; USGS 2020) suggests that related studies have focused on groundwater depletion, hydrogeologic monitoring, chemical/isotopic methods, and spatial data integration, none of these themes are formally identified as future steps within the excerpt itself.",Phan2021_HighPlainsGWIsotopicCompositionNortheasternNM.pdf
+Corrected Answer (if needed): The report excerpt does not present explicit recommendations for future work. Although the list of references (e.g., Steward and Allen 2016; Wood and Sanford 1995; Wahi et al. 2008; Vachon et al. 2010; USGS 2020) suggests that related studies have focused on groundwater depletion, hydrogeologic monitoring, chemical/isotopic methods, and spatial data integration, none of these themes are formally identified as future steps within the excerpt itself.",Phan2021_HighPlainsGWIsotopicCompositionNortheasternNM.pdf,"-105.2, -103.0, 34.9, 37.0"
 "The title of the study is ""Hydrogeology of Eastern Union County, Northeast New Mexico.""
 
 o3-mini Evaluation:
@@ -479,7 +479,7 @@ Correct?: Yes
 
 Explanation: The answer accurately summarizes the report’s suggestions for further work. For example, the report discusses the need for a refined hydrogeologic conceptual model (e.g., “the water chemistry, age-dating results, and new and historical water-level data are consistent with the geologic framework…” and mentions induced leakage across units due to pumping), further investigation into recharge processes (e.g., “the lack of measurable tritium in most wells and uncorrected 14C ages… show that significant recharge is not occurring”), expanded monitoring of age-dating and water chemistry, and targeted studies on unique water types like well UC-19’s distinct Na-HCO₃ signature. These points support refining the conceptual model, improving recharge understanding, expanding monitoring, developing groundwater models, and investigating distinct local compartments.
 
-Corrected Answer (if needed): No correction is necessary.",Rawling2014_nmg_v36_n4_p64.pdf
+Corrected Answer (if needed): No correction is necessary.",Rawling2014_nmg_v36_n4_p64.pdf,"-104.5, -103.0, 36.0, 37.0"
 "The title is: “Groundwater Governance and the Growth of Center Pivot Irrigation in Cimarron County, OK and Union County, NM: Implications for Community Vulnerability to Drought.”
 
 o3-mini Evaluation:
@@ -594,7 +594,7 @@ Correct?: Yes
 
 Explanation: The answer correctly notes that future work should incorporate a broader and more detailed array of ecological and agricultural data—such as saturation thickness, crop circle size/adjustments, and agricultural census data—as mentioned in the report (""Future research could be expanded to add more detailed information about ecological data such as saturation thickness, crop circle size and adjustments, agricultural change from agricultural census data...""). It also accurately reflects the report’s recommendation for building on mixed-methods approaches to better understand the complexity of human–environment perceptions and drivers of change.
 
-Corrected Answer (if needed): No correction needed.",Wenger2017_water-09-00039-v2.pdf
+Corrected Answer (if needed): No correction needed.",Wenger2017_water-09-00039-v2.pdf,"-104.9, -101.6, 35.6, 37.0"
 "The title of the study is “Groundwater Resources of Union County, New Mexico: A Progress Report.”
 
 o3-mini Evaluation:
@@ -707,4 +707,4 @@ Correct?: Yes
 
 Explanation: The original answer accurately reflects details from the report. It notes the recommendations to continue detailed geologic mapping, maintain static water-level monitoring, and to compare stable isotope data from selected groundwater samples with precipitation samples. For example, the report states, ""Future work includes comparison of stable isotope data for select groundwater samples (Blumenberg, 2018) to precipitation samples currently being collected, as well as continued detailed geologic mapping and monitoring of static water levels."" These points support the answer.
 
-Corrected Answer (if needed): N/A",Zeigler2019_GroundwaterResourcesUnionCountyNM.pdf
+Corrected Answer (if needed): N/A",Zeigler2019_GroundwaterResourcesUnionCountyNM.pdf,"-105.0, -97.0, 31.0, 44.0"

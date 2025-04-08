@@ -1,4 +1,4 @@
-What is the title of the study?,What is the name of the aquifer(s) focused on in the study?,Did the study define the aquifer extent in 2D?,"Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?",Did the study publish a digital product that defined the aquifer extent?,"Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?","Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?","Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?","Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?","Did the study produce water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","What data was used to create the water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","Were water levels collected for the study, compiled from other sources, or both?","Does the study include water chemistry data (e.g. major ions, isotopes, pH, salinity, specific conductance)?",Was the water chemistry data collected for the study or compiled from other sources?,What are the water chemistry data sources?,"Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?","If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer ""N/A"".",What are the future work recommendations for this study? Please be detailed.,Report
+What is the title of the study?,What is the name of the aquifer(s) focused on in the study?,Did the study define the aquifer extent in 2D?,"Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?",Did the study publish a digital product that defined the aquifer extent?,"Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?","Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?","Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?","Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?","Did the study produce water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","What data was used to create the water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","Were water levels collected for the study, compiled from other sources, or both?","Does the study include water chemistry data (e.g. major ions, isotopes, pH, salinity, specific conductance)?",Was the water chemistry data collected for the study or compiled from other sources?,What are the water chemistry data sources?,"Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?","If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer ""N/A"".",What are the future work recommendations for this study? Please be detailed.,Report,"What is the geographic bounding box of the study area, in decimal degrees? Respond in the format: West, East, South, North. Only return the four float values separated by commas."
 "It is titled “Earthquakes in the Raton Basin.”
 
 o3-mini Evaluation:
@@ -113,7 +113,7 @@ Corrected Answer (if needed): N/A","Future work the authors indicate or strongly
 o3-mini Evaluation:
 Correct?: Yes  
 Explanation: The provided answer accurately reflects the report. For example, the report notes that although hydraulic fracturing occurs in the basin, its impact on seismicity hasn't been quantified (""...we have not assessed the impact hydraulic fracturing may have on the potential for earthquakes in the Raton Basin.""), recommends developing a geomechanical model to better understand the stress regime (""...a geomechanical model of the basin would be potentially beneficial.""), mentions uncertainty in earthquake depth with a call for future study (""...this is an interesting topic for future study.""), and suggests further analysis of fault continuity and en echelon splays (""...it is possible that the 2005 earthquake took place on the fault"" and discussion on en echelon splays).  
-Corrected Answer (if needed): No correction needed.",JGR Solid Earth - 2017 - Nakai - A Possible Causative Mechanism of Raton Basin  New Mexico and Colorado Earthquakes Using.pdf
+Corrected Answer (if needed): No correction needed.",JGR Solid Earth - 2017 - Nakai - A Possible Causative Mechanism of Raton Basin  New Mexico and Colorado Earthquakes Using.pdf,"-105.5, -103.5, 36.0, 38.0"
 "None of the provided references or excerpts explicitly state the study’s title. From the context—focusing on aquifer geometry, geologic mapping, and induced seismicity in the Raton Basin region—it appears the report is an aquifer‐focused or hydrogeologic study of the Raton Basin. However, a specific title cannot be found in the text.
 
 o3-mini Evaluation:
@@ -249,7 +249,7 @@ Correct?: Yes
 
 Explanation: The answer properly captures the key recommendation from the report that future work should improve and refine the representation of basement hydrogeologic properties. It mirrors the report’s emphasis on the sensitivity of pore pressure diffusion to basement diffusivity, noting the need to use more realistic, depth-dependent diffusivity models and to explore related uncertainties. For example, the report states, “Given the sensitivity to basement diffusivity, future modeling should carefully consider the hydrogeologic properties of the basement,” and discusses how differences in diffusivity assumptions affect pressure propagation. The answer’s detailed suggestions—such as enhanced basement characterization, expanded sensitivity studies, improved resolution of fault and basement properties, and incorporation of heterogeneities—align well with the report’s content.
 
-Corrected Answer (if needed): None needed.",JGR Solid Earth - 2023 - Stokes - Pore Pressure Diffusion and Onset of Induced Seismicity.pdf
+Corrected Answer (if needed): None needed.",JGR Solid Earth - 2023 - Stokes - Pore Pressure Diffusion and Onset of Induced Seismicity.pdf,"-105.3, -104.3, 36.5, 37.5"
 "Based on the text provided, the study is titled “FRUITLAND OUTCROP ISOTOPIC & GEOCHEMICAL INVESTIGATION.”
 
 o3-mini Evaluation:
@@ -387,7 +387,7 @@ Correct?: Yes
 
 Explanation: The answer accurately reflects the report's recommendations. It includes the need to determine the stratigraphy at domestic wells (using well records and geophysical data), monitoring static water levels and collecting isotopic/geochemical data over time, comparing new CBM well data with current samples before production, measuring streamflow above and below the Outcrop, and adapting management practices by river basin. For example, the report states, ""future fieldwork should focus on determining the stratigraphy at sampled domestic wells... as well as monitoring for changes to the static water level... accompanied by isotopic and geochemical parameters,"" and later suggests, ""river flows could be measured... with the goal of monitoring baseflow levels"" and tailoring no-drilling buffer distances regionally.
 
-Corrected Answer (if needed): (No correction needed.)",Kroepsch2003_EnvironmentalConflictEnergyWaterNexus.pdf
+Corrected Answer (if needed): (No correction needed.)",Kroepsch2003_EnvironmentalConflictEnergyWaterNexus.pdf,"-108.2, -107.0, 37.0, 37.5"
 "Based on the information provided, the title of the study is “Fresh and Brackish Water Quality in New Mexico.”
 
 o3-mini Evaluation:
@@ -502,7 +502,7 @@ Correct?: Yes
 
 Explanation: The answer accurately reflects recommendations inferred from the report. For example, the report states that ""very large regions of New Mexico lack sufficient data to assess the brackish water resources"" and that ""most of the data compiled... are from existing water supply wells"" (representing mainly shallow intervals). This supports the need to collect additional data, target deeper aquifers, enhance water‐quality sampling, update databases, and integrate geological information.
 
-Corrected Answer (if needed): No correction needed.",Land2016_Raton_Las_Vegas_Basin_FBWQNM.pdf
+Corrected Answer (if needed): No correction needed.",Land2016_Raton_Las_Vegas_Basin_FBWQNM.pdf,"-106.0, -104.0, 35.0, 37.0"
 "The title of the study is: “Geothermal Gradient and its role on induced seismicity in Raton Basin, Colorado and New Mexico.”
 
 o3-mini Evaluation:
@@ -625,7 +625,7 @@ Correct?: Yes
 
 Explanation: The answer accurately reflects the report’s future work recommendations. It mentions refining the model grid for greater resolution (referring to the limitations with PetraSim’s 200,000-cell limit and the potential for using an upgraded version), obtaining more comprehensive disposal/injection data (noting that pre-2006 well data for New Mexico was not available), further enhancing model input parameters (improving formation properties and fault permeability details), and potentially expanding the modeling timescale. For example, the report states, ""Therefore, ideally more refined grids in the area of the disposal well sites may show the most change"" and ""disposal well information prior to 2006 was not available for the New Mexico side of Raton Basin,"" which directly support the answer.
 
-Corrected Answer (if needed): No correction needed.",Pfeiffer2018_GeothermalGradientRatonBasin.pdf
+Corrected Answer (if needed): No correction needed.",Pfeiffer2018_GeothermalGradientRatonBasin.pdf,"-104.65,-103.50,36.90,37.90"
 "It is not explicitly stated in the excerpt, but based on the journal reference (“Environ Monit Assess (2016) 188: 208”) and the context (a “forensic analysis” of TBA detections in Raton Basin water wells), the most likely title is along the lines of:  
 “Tert-butyl alcohol in Raton Basin water wells, Southeastern Colorado: a forensic analysis.”
 
@@ -743,7 +743,7 @@ Correct?: Yes
 
 Explanation: The answer accurately reflects the recommendations detailed in the report. It directly references the need for expanded sampling and microbial analyses (including targeted MMO assays), concurrent measurements of TBA with other water quality parameters (organics, dissolved gases, methane isotopes), field monitoring of dissolved oxygen/redox potential, laboratory-scale studies using local soil and water, isotope analysis of isobutane, and testing of well completion materials. For instance, the report states: “Additional testing to evaluate potential biogenic TBA production includes microbial analyses of groundwater samples from more wells and targeted analysis of MMO…” and “extensive testing of common well completion materials used in water wells” as well as the recommendations for field and laboratory studies.
 
-Corrected Answer (if needed): N/A",Quast2016_ForensivAnalysisOfTBADetections.pdf
+Corrected Answer (if needed): N/A",Quast2016_ForensivAnalysisOfTBADetections.pdf,"-105.5, -104.5, 37.0, 38.0"
 "The study is titled: ""A Preliminary Evaluation of Vertical Separation between Production Intervals of Coalbed-Methane Wells and Water-Supply Wells in the Raton Basin, Huerfano and Las Animas Counties, Colorado, 1999–2004.""
 
 o3-mini Evaluation:
@@ -856,7 +856,7 @@ Corrected Answer (if needed): N/A","The report recommends:
 o3-mini Evaluation:
 Correct?: Yes  
 Explanation: The answer accurately reflects the report’s recommendations. For example, the report states that additional data are needed ""to better understand the effects of CBM development on the availability and sustainability of groundwater resources"" and then explicitly lists the need for ""better definitions of the hydrostratigraphic framework (three-dimensional geometry) and the hydraulic and storage properties of the aquifers and confining units,"" as well as detailed production information and monitoring of ""fluid pressures and water levels in CBM and water-supply wells."" These points correspond directly to the answer provided.  
-Corrected Answer (if needed): N/A",Watts2006_PreliminaryEvaluationVerticalSeparationCoalbedMethaneWellsandWaterSupplyWells.pdf
+Corrected Answer (if needed): N/A",Watts2006_PreliminaryEvaluationVerticalSeparationCoalbedMethaneWellsandWaterSupplyWells.pdf,"-105.5, -104.0, 37.0, 38.2"
 "The text does not explicitly state the exact title. However, based on the details provided (authors: Osborn et al., year: 2011, focus on methane in drinking water near shale gas wells), the study in question is most likely “Methane Contamination of Drinking Water Accompanying Gas-Well Drilling and Hydraulic Fracturing.”
 
 o3-mini Evaluation:
@@ -1007,4 +1007,4 @@ Corrected Answer (if needed): The study does not provide a distinct “Future Wo
 5. Long-Term Monitoring and Baseline Data – Establish baseline datasets in areas prior to drilling activities and monitor aquifers over time to assess impacts.
 6. Integration with Risk and Policy Assessments – Use the findings to inform risk evaluations and regulatory decisions regarding drinking water safety near oil and gas production areas.
 
-These directions draw on multiple report details, such as the importance of understanding gas migration, isotopic signatures, and the impact of drilling proximity on groundwater quality.",Wlodarczyk2016_ShallowAquiferGeochemRatonBasinCO.pdf
+These directions draw on multiple report details, such as the importance of understanding gas migration, isotopic signatures, and the impact of drilling proximity on groundwater quality.",Wlodarczyk2016_ShallowAquiferGeochemRatonBasinCO.pdf,"-105.3, -104.0, 37.0, 38.0"

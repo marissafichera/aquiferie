@@ -5,10 +5,12 @@ import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Polygon
 from transformers import pipeline
-import openai
+
+from openai_api_client import client
+
 
 # === CONFIGURATION ===
-studyarea = 'LaJenciaBasin'
+studyarea = 'AlbuquerqueBasin'
 CSV_PATH = rf"{studyarea}\{studyarea}_aquiferinsights_selfeval.csv"
 QUESTIONS_TXT_PATH = "rank_insights_questions.txt"
 CACHE_FILE = fr"{studyarea}\qa_cache.json"
@@ -16,9 +18,8 @@ BBOX_CACHE_FILE = fr"{studyarea}\bbox_cache.json"
 OUTPUT_CSV = fr"{studyarea}\simplified_binary_answers.csv"
 OUTPUT_SHP = fr"{studyarea}\{studyarea}_reports_bbox.shp"
 BBOX_COL = "What is the geographic bounding box of the study area, in decimal degrees?"
-client = openai.OpenAI(api_key='sk-proj-UsTt8Y55T1eFBUvULb-lazHiCRdX'
-                               '-9VUNJa3UAxObyJYREltqifJPK3btItM7bLqm40AfQ1JQfT3BlbkFJNZza_UXf'
-                               '-xYhSg0xrR5WxF1ZsYnDz44irH3Sxyfm9kh9a-vrj3c4PcwymFfw7Ivi1SO26mVZMA')
+
+
 # === LOAD ===
 def load_data(csv_path, questions_txt_path):
     with open(questions_txt_path, 'r') as f:
@@ -79,6 +80,8 @@ def extract_bbox_with_openai(text, client, bbox_cache):
             return numbers
 
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         print(f"❌ Error extracting bbox with OpenAI: {e}")
 
     # bbox_cache[text] = None
@@ -94,7 +97,8 @@ def row_to_geometry(row):
             (row["East"], row["South"]),
             (row["West"], row["South"]),
         ])
-    except:
+    except Exception as e:
+        print(f'row_to_geometry error {e}')
         return None
 
 # === MAIN ===

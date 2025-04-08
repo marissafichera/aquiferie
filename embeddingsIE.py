@@ -11,10 +11,12 @@ import re
 import self_evaluation
 import time
 
+
 # Configuration
-studyarea = 'TularosaBasin'
+studyarea = 'RioSanJoseBasin'
 # REPORTS_CSV = f"{studyarea}/{studyarea}_aquiferie_report_links.csv"  # CSV file containing report URLs
 QUESTIONS_FILE = "aquiferie_insight_prompts.txt"  # Text file containing questions (one per line)
+# QUESTIONS_FILE = "bbox_question_only.txt"  # Text file containing questions (one per line)
 DOWNLOAD_DIR = "reports"
 OUTPUT_CSV = f"{studyarea}/{studyarea}_aquiferinsights_selfeval.csv"
 EMBEDDING_MODEL = "text-embedding-3-large"
@@ -22,27 +24,26 @@ EMBEDDING_MODEL = "text-embedding-3-large"
 
 # Ensure download directory exists
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
-client = openai.OpenAI(api_key='sk-proj-UsTt8Y55T1eFBUvULb-lazHiCRdX'
-                               '-9VUNJa3UAxObyJYREltqifJPK3btItM7bLqm40AfQ1JQfT3BlbkFJNZza_UXf'
-                               '-xYhSg0xrR5WxF1ZsYnDz44irH3Sxyfm9kh9a-vrj3c4PcwymFfw7Ivi1SO26mVZMA')
+
+from openai_api_client import client
 
 
-def get_versioned_filename(base_path):
-    """Auto-version the output CSV file to avoid overwriting."""
-    if not os.path.exists(base_path):
-        return base_path
-
-    base, ext = os.path.splitext(base_path)
-    version = 1
-    while True:
-        new_path = f"{base}_v{version}{ext}"
-        if not os.path.exists(new_path):
-            return new_path
-        version += 1
-
-
-OUTPUT_CSV = get_versioned_filename(OUTPUT_CSV)
-print(f"Saving results to: {OUTPUT_CSV}")
+# def get_versioned_filename(base_path):
+#     """Auto-version the output CSV file to avoid overwriting."""
+#     if not os.path.exists(base_path):
+#         return base_path
+#
+#     base, ext = os.path.splitext(base_path)
+#     version = 1
+#     while True:
+#         new_path = f"{base}_v{version}{ext}"
+#         if not os.path.exists(new_path):
+#             return new_path
+#         version += 1
+#
+#
+# OUTPUT_CSV = get_versioned_filename(OUTPUT_CSV)
+# print(f"Saving results to: {OUTPUT_CSV}")
 
 
 def download_pdf(url, filename):
@@ -183,6 +184,16 @@ def load_questions():
         return [line.strip() for line in file.readlines() if line.strip()]
 
 
+def extract_bboxes(report, df_results):
+    question = load_questions()[0]
+    report_url = report['pdf']
+
+    best_match = search_relevant_section(question, report_url)[0]
+    answer = ask_openai(question, best_match["Text"])
+
+    df_results.loc[df_results['Report'] == report_url, f'{question}'] = answer
+
+
 def extract_answers(report):
     questions = load_questions()
     results = []
@@ -241,11 +252,13 @@ def main():
     total_start = time.perf_counter()
 
     reports = process_reports()
+    # df_results = pd.read_csv(OUTPUT_CSV)
     for i, report in enumerate(reports):
         print(f'REPORT {i+1} of {len(reports)}')
 
         start = time.perf_counter()
         generate_embeddings(report)
+        # extract_bboxes(report, df_results)
         extract_answers(report)
         end = time.perf_counter()
 
@@ -259,6 +272,8 @@ def main():
             "Report Name": report['pdf'],
             "Time (seconds)": round(elapsed, 2)
         })
+
+    # df_results.to_csv(OUTPUT_CSV, index=False)
 
     total_end = time.perf_counter()
     total_time = total_end - total_start

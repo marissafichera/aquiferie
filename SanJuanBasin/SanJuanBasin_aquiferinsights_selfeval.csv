@@ -1,4 +1,4 @@
-What is the title of the study?,What is the name of the aquifer(s) focused on in the study?,Did the study define the aquifer extent in 2D?,"Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?",Did the study publish a digital product that defined the aquifer extent?,"Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?","Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?","Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?","Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?","Did the study produce water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","What data was used to create the water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","Were water levels collected for the study, compiled from other sources, or both?","Does the study include water chemistry data (e.g. major ions, isotopes, pH, salinity, specific conductance)?",Was the water chemistry data collected for the study or compiled from other sources?,What are the water chemistry data sources?,"Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?","If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer ""N/A"".",What are the future work recommendations for this study? Please be detailed.,Report
+What is the title of the study?,What is the name of the aquifer(s) focused on in the study?,Did the study define the aquifer extent in 2D?,"Did the study define the base of the aquifer? If yes, what data was used to define the base of the aquifer?",Did the study publish a digital product that defined the aquifer extent?,"Did the study define the hydrostratigraphy of the aquifer? If yes, what data was used to define the hydrostratigraphy?","Did the study define subsurface structural controls on groundwater flow? If yes, what data was used to define the structural controls?","Did the study define recharge and discharge zones? If yes, what data was used to define recharge and discharge zones?","Did the study quantify recharge and discharge rates or amounts? If yes, what data was used to quantify recharge and discharge rates or amounts?","Did the study produce water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","What data was used to create the water table elevation, depth to water, piezometric surface, or potentiometric surface maps?","Were water levels collected for the study, compiled from other sources, or both?","Does the study include water chemistry data (e.g. major ions, isotopes, pH, salinity, specific conductance)?",Was the water chemistry data collected for the study or compiled from other sources?,What are the water chemistry data sources?,"Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?","If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer ""N/A"".",What are the future work recommendations for this study? Please be detailed.,Report,"What is the geographic bounding box of the study area, in decimal degrees? Respond in the format: West, East, South, North. Only return the four float values separated by commas."
 "The title of the study is ""Animas River Long Term Monitoring: June 2016.""
 
 o1 Evaluation:
@@ -268,7 +268,7 @@ Correct?: Yes
 
 Explanation: The answer accurately summarizes the future work recommendations as stated in the report. It includes sampling groundwater outside the Animas alluvial aquifer for improved end-member comparisons, comparing geochemical and stable isotope data from surface water and irrigation water, analyzing well site depth and distance from the river in relation to metals of concern, and installing continuous monitoring instruments (e.g., for conductivity) to capture changes between sampling events. These points reflect specific recommendations mentioned in the ""Future work"" section of the report.
 
-Corrected Answer (if needed): N/A",FTR_Animas_River_Sept_2016_LR.pdf
+Corrected Answer (if needed): N/A",FTR_Animas_River_Sept_2016_LR.pdf,"-108.09, -107.99, 36.70, 36.74"
 "The title of the study is “Water quality at Chaco Culture National Historical Park and the potential effects of hydrocarbon extraction.”
 
 o1 Evaluation:
@@ -524,7 +524,7 @@ Correct?: Yes
 
 Explanation: The answer accurately reflects the report’s recommendations for further research. The report clearly states that additional research is necessary to determine whether the observed mixing and geochemical signatures are natural or induced by hydrocarbon extraction—for example, it notes, ""whether our findings are the result of oil and gas extraction or represent the natural state of the aquifers will require more research."" The answer’s points on additional water-quality, isotopic, and noble-gas sampling, investigations into borehole integrity, temporal and spatial monitoring, and expanded geochemical characterization are consistent with the discussions in the report.
 
-Corrected Answer (if needed): N/A",Linhoff2023_WaterQualityChacoCultureNatlParkEffectsOfHydrocarbonExtraction.pdf
+Corrected Answer (if needed): N/A",Linhoff2023_WaterQualityChacoCultureNatlParkEffectsOfHydrocarbonExtraction.pdf,"-108.5, -107.5, 35.5, 36.8"
 "No specific title for the study is provided in the excerpt. It describes a project analyzing groundwater and geological conditions in the San Juan Basin near Farmington, NM, along with produced water transportation costs, but the text does not state an official title.
 
 o1 Evaluation:
@@ -777,7 +777,7 @@ Correct?: Yes
 
 Explanation: The answer accurately identifies the future work recommendations as stated in the report. For example, the report mentions that a larger-scale pilot test is planned for summer 2007 to further verify the field capabilities of SMZ columns for BTEX removal. It also details the need for improved water chemistry characterization at individual wellheads (rather than mixed samples), the creation of three-dimensional geological maps and identification of formation tops through well log interpretation, and the use of GIS to map spatial variations in water constituents (such as TDS and pH) and estimate transportation costs.
 
-Corrected Answer (if needed): No correction needed.",ofr-499.pdf
+Corrected Answer (if needed): No correction needed.",ofr-499.pdf,"-108.64, -107.29, 35.99, 37.19"
 "Based on the provided references, the most likely title of the overall report (or “study”) to which they all pertain is the Intera (2012) document:
 
 “Addendum: Assessment of potential groundwater level changes from dewatering at the proposed Roca Honda Mine, McKinley County, New Mexico.”
@@ -1044,7 +1044,7 @@ Correct?: Yes
 
 Explanation: The AI answer accurately reflects the report’s recommendations, which include gathering additional aquifer data—specifically, more thorough hydraulic conductivity measurements at multiple depths and increased water-level measurements to construct detailed potentiometric surface maps. It also appropriately notes the need to consider well spacing. For example, the report states, ""To estimate a more representative volume of extractable water, more data need to be collected. This includes hydraulic conductivity measurements throughout each aquifer at multiple depths"" and further mentions that ""water level measurements and construction of detailed potentiometric surfaces for each unit are required.""
 
-Corrected Answer (if needed): No correction needed.",ofr-566_report.pdf
+Corrected Answer (if needed): No correction needed.",ofr-566_report.pdf,"-109.05, -106.50, 34.50, 37.00"
 "The study is titled ""Groundwater Monitoring Along the Animas River, NM.""
 
 o1 Evaluation:
@@ -1323,7 +1323,7 @@ Correct?: Yes
 
 Explanation: The answer accurately captures the main future work recommendations from the report. It refers to continued and expanded groundwater monitoring due to potential long‐term trends, a recommendation to temporarily discontinue well pumping within 300 feet of the river in the event of a mine water release (especially near Inca and Cedar Hill), further investigation of the role of brines and hydrocarbon leakage (noting high chloride, barium, and low sulfate cases), assessing the spatial distribution of reducing conditions (considering factors like organic matter and septic contamination), and evaluating the contributions from sediments and irrigation canal seepage. For example, the report states, ""we recommend that in the event of another mine water release, that residents with a well within 300 feet of the river ... discontinue pumping"" and also emphasizes the need for ""continued monitoring of groundwater quality"" as well as investigating the spatial distribution of reductants.
 
-Corrected Answer (if needed): No correction is needed as the original answer correctly summarizes the report’s future work recommendations.",OFR-592_Animas_River.pdf
+Corrected Answer (if needed): No correction is needed as the original answer correctly summarizes the report’s future work recommendations.",OFR-592_Animas_River.pdf,"-108.20,-107.87,36.63,36.87"
 "No explicit title is provided in the excerpt. From the context, it appears to be a study by the New Mexico Bureau of Geology and Mineral Resources investigating how metals from the Gold King Mine spill move through the Animas and San Juan River food webs. A reasonable inference is that it focuses on metal transport, trophic interactions, and ecosystem impacts following the spill.
 
 o1 Evaluation:
@@ -1584,7 +1584,7 @@ Corrected Answer (if needed): The report does not include a dedicated “Future 
 • Investigation of Trophic Transfer and Bioaccumulation – The report points out that “trophic transfer of metals is not ruled out,” suggesting that more focused studies on how metals move from plants to invertebrates to fish would be valuable.
 • Examination of Seasonal and Spatial Variability – The seasonal differences observed in metal concentrations hint at added benefits in exploring temporal dynamics and spatial patterns (including potential differences between riverine, floodplain, and riparian zones).
 
-These points are inferred from the discussions of metal cycling, uptake by different biotic components, and the challenges described in tracking feeding relationships, but they are not explicitly spelled out as future work recommendations in the provided text.",ofr-601_gkm_effectsonbiota_animas-san-juan.pdf
+These points are inferred from the discussions of metal cycling, uptake by different biotic components, and the challenges described in tracking feeding relationships, but they are not explicitly spelled out as future work recommendations in the provided text.",ofr-601_gkm_effectsonbiota_animas-san-juan.pdf,"-108.8, -107.5, 36.0, 37.0"
 "Based on the text provided, the most likely title of the study is “Groundwater Monitoring Along the Animas River, NM.”
 
 o1 Evaluation:
@@ -1846,7 +1846,7 @@ Correct?: Yes
 
 Explanation: The answer correctly states that future work recommendations include continued, long-term monitoring of groundwater quality; targeted monitoring of areas at higher risk from direct surface water inputs (such as near irrigation canals and the river); and additional geochemical analyses—specifically evaluating redox conditions and identifying solute sources for elevated iron and manganese. This is supported by the report, which states: ""Future work suggested from the study included continued monitoring of groundwater quality to assess impacts from the GKM spill and the evaluation of areas that are at risk for potential contamination from the direct input of surface water,"" and that ""Newton et al., (2017) also recommended additional geochemical analyses to assess the occurrence of high manganese and iron concentrations, including the evaluation of redox conditions and solute source identification.""
 
-Corrected Answer (if needed): N/A",OFR-612.pdf
+Corrected Answer (if needed): N/A",OFR-612.pdf,"-108.28, -107.94, 36.63, 36.91"
 "The text does not explicitly state a formal title; however, based on the content and tasks outlined, the study appears to be a “Project Management Plan” focused on assessing the Mancos Shale in the San Juan Basin.
 
 o1 Evaluation:
@@ -2106,7 +2106,7 @@ Correct?: Yes
 
 Explanation: The answer correctly infers several recommendations from the report. For example, it notes the need to refine gas potential boundaries, referencing the report’s statement about the “lack of horizontal well development to date” to better define high gas potential areas. It also suggests expanding reservoir characterization based on the report’s discussion of the “quasi‑linear” flow regime and matrix permeability, and highlights water management strategies due to the significant water volumes required for hydraulic fracturing. Additionally, the recommendations to revisit economic thresholds for gas development and to consider land ownership/regulatory issues align with the report’s commentary on these topics.
 
-Corrected Answer (if needed): No corrected answer is needed as the original answer correctly infers future work recommendations from the report.",ofr_567.pdf
+Corrected Answer (if needed): No corrected answer is needed as the original answer correctly infers future work recommendations from the report.",ofr_567.pdf,"-109.05, -106.50, 35.30, 37.00"
 "The title of the study is ""Implementation of CCS at San Juan Basin, New Mexico: Minimization of the Impact on the Underground Drinking Water Sources.""
 
 o1 Evaluation:
@@ -2368,7 +2368,7 @@ Correct?: Yes
 
 Explanation: The answer accurately captures the future work as stated in the report. It references the need to revisit the AoR delineation method once new stratigraphic well drilling and testing data (from January 2023) are available. This aligns with the report’s statement: ""upon further characterization data available from the stratigraphic well drilling and testing in January 2023, the AoR delineation method will be revisited and will be counted in future progress as an uncertainty risk analysis."" It also correctly identifies that updated reservoir data will be used to refine AoR estimates and reduce uncertainties in risk assessments, which is consistent with the broader goals of reducing subsurface risks and optimizing injection strategies mentioned in the report.
 
-Corrected Answer (if needed): N/A",Primasari2023_CCS_SJB_ImpactOnDrinkingWaterSources.pdf
+Corrected Answer (if needed): N/A",Primasari2023_CCS_SJB_ImpactOnDrinkingWaterSources.pdf,"-108.0, -106.5, 35.5, 36.5"
 "The title of the study is ""Groundwater Flow Model Investigation of the Vulnerability of Water Resources at CCNHP—SIR 2023–5097.""
 
 o1 Evaluation:
@@ -2633,7 +2633,7 @@ Correct?: Yes
 
 Explanation: The answer accurately captures the study’s future work recommendations as outlined in the report. It references the need to verify if interaquifer mixing and associated volatile organic compounds are natural or oil-and-gas related, the refinement of contaminant travel estimates through modeling, and the examination of well completions and integrity. For instance, the report states, ""further investigation, including examination of well completion and integrity, would be necessary,"" and notes that additional work is needed to determine whether ""interaquifer mixing and the presence of volatile organic compounds"" are natural or related to oil and gas activities. It also implies that additional modeling efforts and geochemical assessments are warranted to clarify contaminant pathways and aquifer conditions.
 
-Corrected Answer (if needed): (No correction necessary.)",Shephard2023_GWFlowModelInvestigationWaterResourcesChacoCultureNatlHistoricalPark.pdf
+Corrected Answer (if needed): (No correction necessary.)",Shephard2023_GWFlowModelInvestigationWaterResourcesChacoCultureNatlHistoricalPark.pdf,"-109.01092, -107.20421, 35.13976, 36.68806"
 "The sections provided do not explicitly state the title of the study. Based on the context—analyzing uncertainty in mine dewatering for uranium extraction in the Westwater Canyon aquifer of the San Juan Basin—a reasonable inference would be that the study is titled something along the lines of:  
 “Uncertainty Analysis of Dewatering Requirements for Uranium Mining in the Westwater Canyon Aquifer, San Juan Basin.”
 
@@ -2880,7 +2880,7 @@ o3-mini Evaluation:
 
 Correct?: Yes  
 Explanation: The answer accurately covers the recommendations stated in the report. It references the need to test and refine the statistical distributions (including potential lognormal behavior), gather more site‑specific parameter data (especially for transmissivity), explore how different distributions affect model outputs, and perform further sensitivity analyses. For example, the report states that “this statistical distribution was not tested but future work could be preformed so that the signiﬁcance of this type of distribution can be explored” and later mentions that “Gathering more information about these parameters could allow for a most customized distribution” which supports the original answer.  
-Corrected Answer (if needed): N/A",Steinhaus2014_Water Resources Impacts of Uranium Mining in the San Juan Basin.pdf
+Corrected Answer (if needed): N/A",Steinhaus2014_Water Resources Impacts of Uranium Mining in the San Juan Basin.pdf,"0.0,0.0,0.0,0.0"
 "The title of the study is “Hydrologic Assessment and Numerical Simulation of Groundwater Flow, San Juan Mine, San Juan County, N. Mex.”
 
 o1 Evaluation:
@@ -3134,4 +3134,4 @@ o3-mini Evaluation:
 Correct?: Yes  
 Explanation: The AI-generated answer accurately reflects the report’s recommendations. It explicitly cites the required suggestions, including seepage investigations of specified rivers, continuation of monitoring well GC, installation of additional wells in the key geologic units (Kfn8, Kpc, and Kls/Kch), placement of an upgradient Qal/Qnt well near Westwater Arroyo, investigation into high dissolved solids at the Shumway Arroyo backwater reach, and the need to synthesize basin-scale interdisciplinary data. These details match the report's “Suggestions for Further Data Collection” section.
 
-Corrected Answer (if needed): No correction is necessary as the answer is complete and accurate.",Stewart2018_HydrologicAssessmentNumericalSimulationGWflowSanJuanCounty.pdf
+Corrected Answer (if needed): No correction is necessary as the answer is complete and accurate.",Stewart2018_HydrologicAssessmentNumericalSimulationGWflowSanJuanCounty.pdf,"-108.50,-108.08,36.75,37.00"

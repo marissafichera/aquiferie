@@ -1,0 +1,1 @@
+What is the geographic bounding box of the study area, in decimal degrees? Respond in the format: West, East, South, North. Only return the four float values separated by commas.
