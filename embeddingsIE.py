@@ -182,8 +182,6 @@ def ask_openai(query, relevant_text):
     Answer the following query clearly and concisely. If the section does not 
     explicitly contain the answer, infer the best possible response from the available data, but keep the 
     answer concise: {query}
-    
-    If no information is provided in the report, reply 'Not specified'.
     """
     response = client.chat.completions.create(model="o1", messages=[{"role": "user", "content": prompt}],
                                               )
