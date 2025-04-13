@@ -8,7 +8,7 @@ main_folder = r"C:\Users\mfichera\PycharmProjects\aquiferie"
 output_shapefile = r"C:\Users\mfichera\PycharmProjects\aquiferie\combined_reports_bbox.shp"
 
 # === Step 2: Find all shapefiles recursively ===
-shapefile_list = glob.glob(os.path.join(main_folder, "*", "*_reports_bbox.shp"))
+shapefile_list = glob.glob(os.path.join(main_folder, "*", "*_reports_bbox*.shp"))
 
 print(f"Found {len(shapefile_list)} shapefiles.")
 

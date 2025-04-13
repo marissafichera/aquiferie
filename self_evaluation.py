@@ -49,7 +49,7 @@ def evaluate_answer(model_name, relevant_text, question, answer):
     return response.choices[0].message.content.strip()
 
 
-def run_side_by_side(pdf_filename, question, answer):
+def run_side_by_side(config, pdf_filename, question, answer):
     print(f"\nEvaluating: {pdf_filename}\nQuestion: {question}\nAnswer: {answer}\n")
 
     relevant_text = embeddingsIE.search_relevant_section(question, pdf_filename)[0]

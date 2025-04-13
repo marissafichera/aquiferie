@@ -10,13 +10,13 @@ from openai_api_client import client
 
 
 # === CONFIGURATION ===
-studyarea = 'AlbuquerqueBasin'
-CSV_PATH = rf"{studyarea}\{studyarea}_aquiferinsights_selfeval.csv"
+studyarea = 'EspanolaBasin'
+CSV_PATH = rf"{studyarea}\{studyarea}_aquiferinsights_selfeval_v1.csv"
 QUESTIONS_TXT_PATH = "rank_insights_questions.txt"
 CACHE_FILE = fr"{studyarea}\qa_cache.json"
 BBOX_CACHE_FILE = fr"{studyarea}\bbox_cache.json"
-OUTPUT_CSV = fr"{studyarea}\simplified_binary_answers.csv"
-OUTPUT_SHP = fr"{studyarea}\{studyarea}_reports_bbox.shp"
+OUTPUT_CSV = fr"{studyarea}\simplified_binary_answers_v1.csv"
+OUTPUT_SHP = fr"{studyarea}\{studyarea}_reports_bbox_v1.shp"
 BBOX_COL = "What is the geographic bounding box of the study area, in decimal degrees?"
 
 
@@ -105,7 +105,7 @@ def row_to_geometry(row):
 def main():
     df, selected_questions = load_data(CSV_PATH, QUESTIONS_TXT_PATH)
     df_selected = df[["Report"] + selected_questions].copy()
-    df_selected[selected_questions] = df_selected[selected_questions].applymap(trim_answer)
+    df_selected[selected_questions] = df_selected[selected_questions].map(trim_answer)
 
     # Load QA cache and classifier
     answer_cache = json.load(open(CACHE_FILE)) if os.path.exists(CACHE_FILE) else {}

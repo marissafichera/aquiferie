@@ -1,0 +1,7 @@
+What is the geographic bounding box of the study area, in decimal degrees? Respond in the format: West, East, South, North. Only return the four float values separated by commas, with no text.
+What geologic formations or units does the study focus on? List the names as they appear in the report.
+According to the report, are the primary geologic units or aquifers studied considered shallow (<1,000 ft), deep (>1,000 ft), or both? Return only one of: 'Shallow', 'Deep', 'Both', or 'Not specified'.
+According to the report, are there brackish or non-potable water resources present in the study area? Return only 'Yes', 'No', or 'Not specified'.
+What is the reported range of total dissolved solids (TDS), specific conductance, conductivity, or salinity data in the report? Return the range with units, for example: '500–5,000 mg/L' or '1,000–7,000 µS/cm'. If not specified, reply 'Not specified'.
+What is the estimated volume of brackish or non-potable water resources reported in the study? Return a number or range with units (e.g., '5,000 acre-feet' or '10,000–20,000 acre-feet'). If not specified, reply 'Not specified'.
+What is the estimated volume of fresh or potable water resources reported in the study? Return a number or range with units (e.g., '10,000 acre-feet' or '15,000–25,000 acre-feet'). If not specified, reply 'Not specified'.
