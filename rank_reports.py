@@ -125,6 +125,7 @@ def main():
     binary_df.to_csv(OUTPUT_CSV, index=False)
 
     use_ai_for_bbox = 'no'
+
     if use_ai_for_bbox == 'yes':
         # Bounding box extraction
         binary_df["bounding_box_raw"] = df[BBOX_COL]

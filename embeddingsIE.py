@@ -13,16 +13,12 @@ import time
 from openai_api_client import client
 
 
-
-
-
-
 def setup_model(study_area):
     config = {'study_area': study_area,
 
-              'questions_file': 'aquiferie_insight_prompts2.txt',
+              'questions_file': 'aquiferie_insight_prompts.txt',
               'download_dir': 'reports',
-              'output_csv': os.path.join(study_area, f'{study_area}_test.csv'),
+              'output_csv': os.path.join(study_area, f'{study_area}_aquiferinsights_selfeval.csv'),
               'embedding_model': 'text-embedding-3-large'
 
               }

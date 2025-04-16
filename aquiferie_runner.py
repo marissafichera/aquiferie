@@ -1,43 +1,54 @@
 
 from embeddingsIE import setup_model, do_model
-import embeddingsIE
-
-
 
 new_studyareas = ['BrackishWater',
                   'AprilReports_Misc']
 
 
-studyareas = ['SanJuanBasin',
-              'RioArribaCounty',
-              'AcomaBasin',
-              'RioSanJoseBasin',
-              'SanAgustinPlains',
-              'GilaSanFrancisco',
-              'MimbresBasin',
-              'BootheelBasinAndRange',
-              'RatonBasin',
-              'UnionCounty',
-              'EstanciaBasin',
-              'HighPlains',
-              'SacramentoMountainsPecosSlope',
-              'RoswellArtesianBasin',
-              'DelawareBasin',
-              'CapitanReefAquifer',
-              'SaltBasin',
-              'SanLuisBasin',
-              'EspanolaBasin',
-              'SantoDomingoBasin',
-              'AlbuquerqueBasin',
-              'SocorroBasin',
-              'LaJenciaBasin',
-              'SanMarcialBasin',
-              'EngleBasin',
-              'PalomasBasin',
-              'JornadaDelMuertoBasin',
-              'TularosaBasin',
-              'MesillaBasin',
-              'MISC_AREAS']
+# studyareas = ['SanJuanBasin',
+#               'RioArribaCounty',
+#               'AcomaBasin',
+#               'RioSanJoseBasin',
+#               'SanAgustinPlains',
+#               'GilaSanFrancisco',
+#               'MimbresBasin',
+#               'BootheelBasinAndRange',
+#               'RatonBasin',
+#               'UnionCounty',
+#               'EstanciaBasin',
+#               'HighPlains',
+#               'SacramentoMountainsPecosSlope',
+#               'RoswellArtesianBasin',
+#               'DelawareBasin',
+#               'CapitanReefAquifer',
+#               'SaltBasin',
+#               'SanLuisBasin',
+#               'EspanolaBasin',
+#               'SantoDomingoBasin',
+#               'AlbuquerqueBasin',
+#               'SocorroBasin',
+#               'LaJenciaBasin',
+#               'SanMarcialBasin',
+#               'EngleBasin',
+#               'PalomasBasin',
+#               'JornadaDelMuertoBasin',
+#               'TularosaBasin',
+#               'MesillaBasin',
+#               'MISC_AREAS']
+
+# studyareas = ['SantoDomingoBasin',
+#               'AlbuquerqueBasin',
+#               'SocorroBasin',
+#               'LaJenciaBasin',
+#               'SanMarcialBasin',
+#               'EngleBasin',
+#               'PalomasBasin',
+#               'JornadaDelMuertoBasin',
+#               'TularosaBasin',
+#               'MesillaBasin',
+#               'MISC_AREAS']
+
+# studyareas = ['MISC_AREAS']
 
 
 def main():
