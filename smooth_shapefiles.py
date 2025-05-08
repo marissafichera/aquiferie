@@ -25,13 +25,13 @@ def chaikin_coords(coords, refinements):
     return coords
 
 # === Load your combined shapefile ===
-gdf = gpd.read_file(r"C:\Users\mfichera\PycharmProjects\aquiferie\combined_reports_bbox.shp")
+gdf = gpd.read_file(r"C:\Users\mfichera\PycharmProjects\aquiferie\reports_bboxes_oldresearchincluded.shp")
 
 # === Apply smoothing ===
 gdf['geometry'] = gdf['geometry'].apply(lambda geom: chaikin_smoothing(geom, refinements=2))
 
 # === Export smoothed shapefile ===
-output_smoothed = r"C:\Users\mfichera\PycharmProjects\aquiferie\combined_reports_bbox_smoothed.shp"
+output_smoothed = r"C:\Users\mfichera\PycharmProjects\aquiferie\reports_bboxes_oldresearchincluded_smoothed.shp"
 gdf.to_file(output_smoothed)
 
 print(f"✅ Smoothed shapefile saved to: {output_smoothed}")

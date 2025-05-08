@@ -1,0 +1,2 @@
+Does the study report specific hydrogeologic properties such as porosity, permeability, storage coefficients, specific storage, specific yield, hydraulic conductivity, and/or transmissivity?
+If specific hydrogeologic properties were published, how were they determined? If no specific hydrogeologic properties were reported, answer "N/A".

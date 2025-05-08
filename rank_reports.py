@@ -10,13 +10,13 @@ from openai_api_client import client
 
 
 # === CONFIGURATION ===
-studyarea = 'EspanolaBasin'
-CSV_PATH = rf"{studyarea}\{studyarea}_aquiferinsights_selfeval_v1.csv"
-QUESTIONS_TXT_PATH = "rank_insights_questions.txt"
+studyarea = 'AprilReports_Misc'
+CSV_PATH = rf"{studyarea}\{studyarea}_aquiferinsights_selfeval.csv"
+QUESTIONS_TXT_PATH = "hydrogeoprops_questions.txt"
 CACHE_FILE = fr"{studyarea}\qa_cache.json"
 BBOX_CACHE_FILE = fr"{studyarea}\bbox_cache.json"
-OUTPUT_CSV = fr"{studyarea}\simplified_binary_answers_v1.csv"
-OUTPUT_SHP = fr"{studyarea}\{studyarea}_reports_bbox_v1.shp"
+OUTPUT_CSV = fr"{studyarea}\simplified_binary_answers.csv"
+OUTPUT_SHP = fr"{studyarea}\{studyarea}_reports_bbox.shp"
 BBOX_COL = "What is the geographic bounding box of the study area, in decimal degrees?"
 
 
